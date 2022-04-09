@@ -13,7 +13,7 @@
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
     <?php $this->header(); ?>
 </head>
 <body class="home">

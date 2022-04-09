@@ -9,10 +9,10 @@
       </div>
     </footer>
     <script src="<?php $this->options->themeUrl('/js/jquery3.6.0.js'); ?>"></script>
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/zoom/zoom.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/zoom.css'); ?>">
     <img src="" alt="" class="bigimg">
     <div class="mask"></div>
-    <script src="<?php $this->options->themeUrl('/zoom/zoom.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/js/zoom.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
 </body>
 </html>

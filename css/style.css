@@ -1,5 +1,5 @@
 
-@import "./font/css.css";
+@import "../font/css.css";
 
 ::-webkit-scrollbar {
   /* 滚动条整体部分 */
@@ -356,7 +356,6 @@ article {
 }
 
 .content h3 {
-	color: rgba(0,0,0,.44);
 	font-size: 20px;
 	margin-top: 30px;
 	margin-bottom: 10px
@@ -395,7 +394,7 @@ article {
 }
 
 .post-tags a {
-	padding-left: 10px;
+	padding-right: 10px;
 	color: #999;
 	font-size: 15px
 }
@@ -572,6 +571,14 @@ article {
 .place {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.place span::before {
+    content:'【';
+}
+
+.place span::after {
+    content:'】';
 }
 
 .tags-list {

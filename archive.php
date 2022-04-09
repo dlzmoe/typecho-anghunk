@@ -27,7 +27,11 @@
             <p>你想查看的页面已被转移或删除了</p>
         </div>
         <?php endif; ?>
-    <?php $this->pageNav('&laquo; 上一页', '下一页 &raquo;'); ?>
+       <nav class="blog-nav">
+<?php $this->pageLink('<span>上一页</span>'); ?>
+<?php $this->pageLink('<span>下一页</span>','next'); ?>
+
+</nav>
     
 <?php $this->need('footer.php'); ?>
 </main>

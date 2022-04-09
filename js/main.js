@@ -13,5 +13,6 @@ $(function(){
     $('.atk-content img').wrap('<div class="imgbox"></div>')
     var obj = new zoom('mask', 'bigimg', 'smallimg');
     obj.init();
+
 })
 
