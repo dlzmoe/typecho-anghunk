@@ -2,13 +2,17 @@
 
 Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
-演示: [https://imhan.cn](https://imhan.cn)
+作者博客: [https://imhan.cn](https://imhan.cn)
 
-评论使用artalk，没有使用typecho自带的，可以选择在 `comments.php` 文件中替换成typecho原生评论。
+演示网址: [https://imhan.cn](https://imhan.cn)
 
-如何部署 [artalk](https://artalk.js.org/) ?
+仓库地址: [https://github.com/anghunk/Typecho-theme-Anghunk](https://github.com/anghunk/Typecho-theme-Anghunk)
 
-新主题可能会有一些小bug，使用时出现问题提[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我会在最快时间内解决。
+评论使用artalk，没有使用typecho自带的评论功能，你也可以选择在 `comments.php` 文件中替换成typecho原生评论。
+
+>如何部署 [artalk](https://artalk.js.org/) ?
+
+新主题可能会有一些小bug，使用时出现问题请提[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我会在最快时间内解决。
 
 ## 如何使用
 
@@ -21,6 +25,10 @@ Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 ```js
 var s1 = '2020-06-14'; // 如2020-06-14 ，填入你建立网站的日期。
 ```
+
+## 图片展示
+
+![](./screenshot.png)
 
 ## LICENSE
 
