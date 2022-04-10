@@ -9,7 +9,7 @@
         el: "#artalk",
         pageKey:   '<?php $this->permalink() ?>',
         pageTitle: '<?php $this->title() ?>',
-        server: 'https://artalk.imhan.cn/api',
+        server: '',  // 如 https://xxx.com/api
         site: "不如吃茶去",
         placeholder: '说点什么...（支持markdown语法）',
         noComment: '「此时无声胜有声」',
