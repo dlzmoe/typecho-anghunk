@@ -1,11 +1,6 @@
 $(function(){
     
-    var s1 = '2020-06-14';
-    s1 = new Date(s1.replace(/-/g, "/"));
-    s2 = new Date();
-    var days = s2.getTime() - s1.getTime();
-    var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
-    document.getElementById('days').innerHTML = number_of_days;
+    
     
     $('.content img').addClass('smallimg')
     $('.content img').wrap('<div class="imgbox"></div>')
@@ -13,6 +8,12 @@ $(function(){
     $('.atk-content img').wrap('<div class="imgbox"></div>')
     var obj = new zoom('mask', 'bigimg', 'smallimg');
     obj.init();
-
+    
+    $("#autoMenu").autoMenu({
+        levelOne : 'h2', //一级标题
+        levelTwo : 'h3',  //二级标题（暂不支持更多级）
+        offTop : 100 //滚动切换导航时离顶部的距离
+    });
+    
 })
 

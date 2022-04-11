@@ -1,5 +1,6 @@
 <div class="comments">
-    <h3>评论</h6>
+    <hr>
+    <h6>评论</h6>
     <div id="artalk"></div>
     <link href="https://cdn.imhan.cn/list/artalk.css" rel="stylesheet" />
     <script src="https://cdn.imhan.cn/list/artalk.min.js"></script>
@@ -9,7 +10,7 @@
         el: "#artalk",
         pageKey:   '<?php $this->permalink() ?>',
         pageTitle: '<?php $this->title() ?>',
-        server: '',  // 如 https://xxx.com/api
+        server: 'https://artalk.imhan.cn/api',
         site: "不如吃茶去",
         placeholder: '说点什么...（支持markdown语法）',
         noComment: '「此时无声胜有声」',

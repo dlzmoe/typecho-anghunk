@@ -8,7 +8,7 @@
 $this->need('header.php'); ?>
 <div id="container">
     <div class="tags">
-		<h2 class="post-title"><?php $this->title() ?></h2>
+		<h1 class="post-title"><?php $this->title() ?></h1>
         <div class="post-content">
             <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=99999')->to($tags); ?>
             <?php if($tags->have()): ?>

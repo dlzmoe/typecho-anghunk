@@ -210,14 +210,25 @@ input[disabled] {
 
 .footer {
     border-top: 1px dotted #999;
-	margin-top: 20px
+	margin-top: 20px;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	font-size:15px;
 }
 
-.footer p {
-	font-size: 10px;
-	color: #999
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
+.footer .container p {
+    margin: 0;
+}
+
+.footer .container em {
+    padding: 0 6px;
+}
 
 article {
 	margin-bottom: 16px;
@@ -290,6 +301,7 @@ article {
 .posttime {
 	color: #333;
     margin-right: 8px;
+    font-size: 16px;
 }
 
 .post-title {
@@ -320,7 +332,8 @@ article {
 }
 
 .content strong {
-	font-weight: 700
+	font-weight: 700;
+	font-size: 19px;
 }
 
 .content em {
@@ -331,6 +344,10 @@ article {
 	margin-left: 30px;
 	margin-bottom: 12px;
 	padding-top: 2px
+}
+
+.content img {
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
 }
 
 .content li:before {
@@ -422,10 +439,6 @@ article {
 
 .next {
 	float: right
-}
-
-#comments {
-	padding: 10px
 }
 
 .comment-list .comment-body {
@@ -552,6 +565,11 @@ article {
 	padding: 5px 0
 }
 
+.comments h6 {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
 .comment-reply-title {
 	font-size: 18px;
 	color: rgba(0,0,0,.44)
@@ -568,6 +586,15 @@ article {
     padding: 10px;
 }
 
+.comments>hr{
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: #bbb;
+    margin: 20px auto;
+    border: none;
+    outline: none;
+}
 .place {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -605,6 +632,23 @@ article {
     color: #666;
     margin: 0;
     font-size: 15px;
+}
+
+.archives-item-title {
+    font-size: 20px;
+}
+
+.autoMenu ul li {
+    color: #444;
+}
+
+.autoMenu ul li.sub{
+    font-size: 14px;
+    color: #888;
+}
+
+.autoMenu ul li.active {
+    text-decoration: underline;
 }
 
 @media (max-width:800px) {
@@ -651,6 +695,18 @@ article {
     }
     .block-title {
         font-weight: 600;
+    }
+    
+    .autoMenu {
+        display: none;
+    }
+    
+    .footer .container {
+        display: block;
+    }
+    
+    .footer .container em {
+        display: none;
     }
 }
 

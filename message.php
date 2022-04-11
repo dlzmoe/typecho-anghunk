@@ -8,7 +8,7 @@
 $this->need('header.php'); ?>
 <div id="container">
     <header>
-        <h2 class="post-title"><?php $this->title() ?></h2>
+        <h1 class="post-title"><?php $this->title() ?></h1>
     </header>
     <div class="content" itemprop="articleBody">
         <?php $this->content(); ?>

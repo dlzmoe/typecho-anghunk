@@ -2,7 +2,7 @@
 <?php $this->need('header.php'); ?>
 <div id="container">
     <header>
-        <h2 class="post-title"><?php $this->title() ?></h2>
+        <h1 class="post-title"><?php $this->title() ?></h1>
         <div class="post-time">
             <time><?php $this->date('Y年m月d日'); ?></time> / 
             <span>阅读: <?php get_post_view($this) ?></span> / 
@@ -11,6 +11,7 @@
         
     </header>
     <div class="content">
+        
         <?php $this->content(); ?>
     </div>
     

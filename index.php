@@ -1,6 +1,6 @@
 <?php
 /**
- * 简单整洁的博客主题
+ * 简单整洁的主题，作者博客 <a href="https://imhan.cn" target="_blank">https://imhan.cn</a>
  * @package Anghunk 
  * @author 子舒
  * @version 1.0

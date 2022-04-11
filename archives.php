@@ -8,7 +8,7 @@
 $this->need('header.php'); ?>
 <div id="container">
     <div class="archive">
-		<h2 class="post-title"><?php $this->title() ?></h2>
+		<h1 class="post-title"><?php $this->title() ?></h1>
         <div class="post-content">
             <ul>
                 <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y 年 m 月')->to($archives); ?>
@@ -16,7 +16,7 @@ $this->need('header.php'); ?>
                 
                     <li class="archives-item">
                         <div class="archives-item-content">
-                            <h3 class="archives-item-title"><a href="<?php $archives->permalink(); ?>"><?php $archives->date(); ?></a></h3>
+                            <h4 class="archives-item-title"><a href="<?php $archives->permalink(); ?>"><?php $archives->date(); ?></a></h4>
                             <?php
                             $year = $archives->year;
                             $month = $archives->month;

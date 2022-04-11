@@ -3,7 +3,6 @@
 .bigbox{width:840px;background:#fff;border:1px solid #ededed;margin:0 auto;border-radius:10px;overflow:hidden;padding:10px}
 .bigbox>.imgbox{width:400px;height:250px;float:left;border-radius:5px;overflow:hidden;margin:0 10px 10px 10px}
 .bigbox>.imgbox>i{width:100%}
-.imgbox{display:inline}
 .imgbox:hover{cursor:zoom-in}
 .mask:hover{cursor:zoom-out}
 .mask>i{position:fixed;right:10px;top:10px;width:60px;color:#fff;font-size:34px}
