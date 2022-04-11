@@ -28,10 +28,14 @@
         </div>
         <?php endif; ?>
        <nav class="blog-nav">
-<?php $this->pageLink('<span>上一页</span>'); ?>
-<?php $this->pageLink('<span>下一页</span>','next'); ?>
-
-</nav>
+        <?php $this->pageLink('<span>上一页</span>'); ?>
+        <?php $this->pageLink('<span>下一页</span>','next'); ?>
+        
+        </nav>
     
 <?php $this->need('footer.php'); ?>
-</main>
+</div>
+
+</body>
+</html>
+

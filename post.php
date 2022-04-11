@@ -10,13 +10,12 @@
         </div>
         
     </header>
-    <div class="content">
-        
-        <?php $this->content(); ?>
-    </div>
-    
-   
-    <?php $this->need('comments.php'); ?>
-    <?php $this->need('footer.php'); ?>
+<div class="content"> 
+    <?php $this->content(); ?>
+</div>
+<?php $this->need('comments.php'); ?>
+<?php $this->need('footer.php'); ?>
 </div>
 
+</body>
+</html>

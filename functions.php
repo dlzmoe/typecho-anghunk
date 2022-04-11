@@ -50,7 +50,7 @@ function themeConfig($form)
     $bannerbg = new Typecho_Widget_Helper_Form_Element_Text('bannerbg', NULL, 'https://imhan.cn/usr/themes/Anghunk/screenshot.png', _t('首页大图'), _t('在这里填入一个图片URL地址, 以在网站首页顶部显示一个背景图片，建议高度为宽度的1/2，达到一个合适的效果。'));
     $form->addInput($bannerbg);
 
-    $bannertext = new Typecho_Widget_Helper_Form_Element_Textarea('bannertext', NULL, '早上好啊！', _t('首页描述的文字'), _t('在这里填入一段话，将会显示在首页'));
+    $bannertext = new Typecho_Widget_Helper_Form_Element_Textarea('bannertext', NULL, '七碗受至味，一壶得真趣，空持百千偈，不如吃茶去。 ---赵朴初', _t('首页描述的文字'), _t('在这里填入一段话，将会显示在首页'));
     $form->addInput($bannertext);
     
     $footerbeian = new Typecho_Widget_Helper_Form_Element_Text('footerbeian', NULL, NULL, _t('备案号'), _t('如果你的网站备案，请在这里填写备案号，否则请空着它。'));

@@ -1,7 +1,8 @@
 $(function(){
-    
-    
-    
+      // 代码高亮
+  $("pre,code").addClass("prettyprint");
+  prettyPrint();
+  
     $('.content img').addClass('smallimg')
     $('.content img').wrap('<div class="imgbox"></div>')
     $('.atk-content img').addClass('smallimg')
@@ -14,6 +15,6 @@ $(function(){
         levelTwo : 'h3',  //二级标题（暂不支持更多级）
         offTop : 100 //滚动切换导航时离顶部的距离
     });
-    
+
 })
 
