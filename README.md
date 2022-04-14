@@ -1,5 +1,7 @@
 ## Typecho-theme-Anghunk
 
+![](./screenshot.png)
+
 Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
 演示网址: [https://imhan.cn](https://imhan.cn)

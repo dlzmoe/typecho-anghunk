@@ -27,8 +27,6 @@
                 <?php while($pages->next()): ?>
                     <li class="menu-item<?php if($this->is('page', $pages->slug)): ?> current-menu-item<?php endif; ?>"><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
-                <!--<li class="menu-item"><a class="search-form-input">Search</a></li>-->
-                <li class="menu-item"><a href="/feed" title="Rss" target="_blank">Rss</a></li>
             </ul>
             
             </nav>

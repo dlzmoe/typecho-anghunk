@@ -57,11 +57,15 @@ button,input,textarea {
 button:focus,input:focus,textarea:focus {
 	outline: 0
 }
+
+* {
+	font-family: 'Noto Serif SC', serif !important;
+}
+
 body {
 	line-height: 1.8;
 	color: #000;
 	font-family: Palatino,palatino linotype,palatino lt std,source-han-serif-sc,'source han serif sc','source han serif cn','source han serif tc','source han serif tw','source han serif','noto serif cjk sc',songti sc,microsoft yahei,serif;
-	font-family: 'Noto Serif SC', serif;
 	background: #fff;
 	font-size: 17px;
 }
@@ -98,7 +102,7 @@ blockquote {
 	font-weight: 400;
 	letter-spacing: .01rem;
 	margin: 30px 0;
-	padding-left: 20px
+	padding-left: 16px
 }
 
 a:active,a:hover {
@@ -121,7 +125,7 @@ code {
 	word-wrap: break-word;
 	word-break: break-word;
 	letter-spacing: 0;
-	font-size: 16px;
+	font-size: 15px;
 	font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
 	border-radius: 3px;
 	background: #eee;
@@ -165,7 +169,8 @@ input[disabled] {
 .home {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px 0 !important;
+    overflow: initial !important;
     display: flex;
 }
 .header {
@@ -220,6 +225,42 @@ input[disabled] {
 
 .footer .container em {
     padding: 0 6px;
+}
+
+.footer .top {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    display: none;
+}
+
+.footer .top:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.footer .top i {
+    display: inline-block;
+    width: 17px;
+    height: 2px;
+    background: #555;
+    position: absolute;
+    top: 50%;
+}
+
+.footer .top i:nth-child(1) {
+    transform: rotate(45deg);
+    right: 20%;
+}
+
+.footer .top i:nth-child(2) {
+    transform: rotate(-45deg);
+    left: 20%;
 }
 
 article {
@@ -292,7 +333,7 @@ article {
 
 .posttime {
 	color: #333;
-    margin-right: 8px;
+    margin-right: 10px;
     font-size: 16px;
 }
 
@@ -392,6 +433,13 @@ article {
 .content a {
 	text-decoration: underline;
 	word-break: break-all;
+	transition: all 0.1s linear;
+	padding: 0 4px;
+}
+
+.content a:hover {
+    background: #000;
+    color: #fff;
 }
 
 .post-tags {
@@ -623,7 +671,8 @@ article {
     font-style: italic;
     color: #666;
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
+    font-family: cursive;
 }
 
 .archives-item-title {
@@ -706,4 +755,3 @@ article {
         display: none;
     }
 }
-
