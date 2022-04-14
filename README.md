@@ -1,6 +1,6 @@
 ## Typecho-theme-Anghunk
 
-![](./screenshot.png)
+![](./css/theme-logo.png)
 
 Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
