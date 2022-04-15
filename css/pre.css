@@ -8,12 +8,16 @@ code.prettyprint{
 pre.prettyprint,
 pre code.prettyprint{
   background: #2b303b; 
-  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
   line-height: 2;
   padding: 10px;
   border-radius:3px;
   white-space: pre;
   overflow-x: scroll;
+}
+
+pre code.prettyprint * {
+    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
 }
 
 .prettyprint code {

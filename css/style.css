@@ -173,7 +173,7 @@ input[disabled] {
     overflow: initial !important;
     display: flex;
 }
-.header {
+header.header {
     width: 260px;
     text-align: right;
     padding-right: 30px;
@@ -309,6 +309,10 @@ article {
 	line-height: 1;
 	padding: 10px 0;
 	font-size: 17px;
+}
+
+.topNav-items li a:hover {
+    cursor: pointer;
 }
 
 #nav-menu,.main-content {
@@ -672,7 +676,7 @@ article {
     color: #666;
     margin: 0;
     font-size: 16px;
-    font-family: cursive;
+    font-family: cursive !important;
 }
 
 .archives-item-title {
@@ -697,14 +701,14 @@ article {
         display: block;
         padding: 0;
     }
-    .header {
+    header.header {
         width: 100%;
         padding: 0 20px;
         text-align: left;
         position: relative;
         margin-top: 30px;
     }
-    .header:after{
+    header.header:after{
         content: '';
         position: absolute;
         left: 50%;
@@ -753,5 +757,13 @@ article {
     
     .footer .container em {
         display: none;
+    }
+    
+    .content {
+        padding: 10px 0;
+    }
+    
+    .comments {
+        padding: 10px 0;
     }
 }

@@ -17,7 +17,7 @@ $this->need('header.php'); ?>
     
 <?php $this->need('footer.php'); ?>
 </div>
-
+</div>
 </body>
 </html>
 

@@ -14,19 +14,23 @@
       <i></i>
   </div>
 </footer>
-<script>
-    var s1 = '<?php $this->options->footerbuild(); ?>';
-    s1 = new Date(s1.replace(/-/g, "/"));
-    s2 = new Date();
-    var days = s2.getTime() - s1.getTime();
-    var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
-    document.getElementById('days').innerHTML = number_of_days;
-</script>
-<script src="<?php $this->options->themeUrl('/js/jquery3.6.0.js'); ?>"></script>
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/css/zoom.css'); ?>">
-<img src="" alt="" class="bigimg">
-<div class="mask"></div>
-<script src="<?php $this->options->themeUrl('/js/zoom.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
+<div>
+    <script>
+        var s1 = '<?php $this->options->footerbuild(); ?>';
+        s1 = new Date(s1.replace(/-/g, "/"));
+        s2 = new Date();
+        var days = s2.getTime() - s1.getTime();
+        var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+        document.getElementById('days').innerHTML = number_of_days;
+    </script>
+    <script src="<?php $this->options->themeUrl('/js/jquery3.6.0.js'); ?>"></script>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/zoom.css'); ?>">
+    <img src="" alt="" class="bigimg">
+    <div class="mask"></div>
+    <script src="<?php $this->options->themeUrl('/js/zoom.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>   
+    <?php $this->footer(); ?>
+</div>
+

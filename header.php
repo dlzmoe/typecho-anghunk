@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/pre.css'); ?>">
     <?php $this->header(); ?>
 </head>
-<body class="home">
+<body>
+  <div class="home">
     <header class="header">
       <div class="site-header">
           <a id="go-back-home" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->headertitle(); ?></a>
@@ -27,10 +28,10 @@
                 <?php while($pages->next()): ?>
                     <li class="menu-item<?php if($this->is('page', $pages->slug)): ?> current-menu-item<?php endif; ?>"><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
+                <!--<li class="menu-item"><a class="search-form-input">Search</a></li>-->
             </ul>
-            
-            </nav>
-            <div class="autoMenu" id="autoMenu" data-autoMenu></div>
+          </nav>
+          <div class="autoMenu" id="autoMenu" data-autoMenu></div>
       </div>
     </header>
    

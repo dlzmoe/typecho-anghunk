@@ -42,6 +42,7 @@ $this->need('header.php'); ?>
     </div>
 <?php $this->need('footer.php'); ?>
 </div>
+</div>
 </body>
 </html>
 

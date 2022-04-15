@@ -9,6 +9,6 @@
     </div>
    <?php $this->need('footer.php'); ?>
 </div>
-
+</div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-<div id="container">
+    <div id="container">
         <?php if ($this->have()): ?>
         <div class="place"><?php $this->archiveTitle(array(
             'category'  =>  _t('分类<span> %s </span>下的文章'),
@@ -32,8 +32,9 @@
         <?php $this->pageLink('<span>下一页</span>','next'); ?>
         
         </nav>
-    
-<?php $this->need('footer.php'); ?>
+        
+    <?php $this->need('footer.php'); ?>
+    </div>
 </div>
 
 </body>
