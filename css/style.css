@@ -58,16 +58,18 @@ button:focus,input:focus,textarea:focus {
 	outline: 0
 }
 
-* {
-	font-family: 'Noto Serif SC', serif !important;
-}
-
 body {
 	line-height: 1.8;
 	color: #000;
 	font-family: Palatino,palatino linotype,palatino lt std,source-han-serif-sc,'source han serif sc','source han serif cn','source han serif tc','source han serif tw','source han serif','noto serif cjk sc',songti sc,microsoft yahei,serif;
 	background: #fff;
 	font-size: 17px;
+}
+
+@media (min-width:520px){
+    * {
+    	font-family: 'Noto Serif SC', serif !important;
+    }
 }
 
 ol,ul {
@@ -267,6 +269,12 @@ article {
 	margin-bottom: 20px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+}
+
+.index-content {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 .archive {
@@ -766,4 +774,22 @@ article {
     .comments {
         padding: 10px 0;
     }
+    
+    .post-title {
+        padding: 10px 0 0;
+    }
 }
+
+.pjax-loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #747474;
+    transition: opacity .4s;
+}
+.pjax-loading.active{ 
+    width:100%;
+}
+

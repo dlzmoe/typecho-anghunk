@@ -13,6 +13,8 @@
       <i></i>
       <i></i>
   </div>
+  <div class="pjax-loading"></div>
+
 </footer>
 <div>
     <script>
@@ -30,7 +32,27 @@
     <script src="<?php $this->options->themeUrl('/js/zoom.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>   
+    <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+    <script>
+        var pjax = new Pjax({
+          selectors: [
+            "title",
+            'body'
+          ],
+          cacheBust: false
+        })
+        function pjax_reload(){
+            var comment = document.getElementById("artalk");
+        }
+        document.addEventListener('pjax:send', function (){
+            document.querySelector(".pjax-loading").classList.add("active");
+        });
+        document.addEventListener('pjax:complete', function (){
+            document.querySelector(".pjax-loading").classList.remove("active");
+            pjax_reload(); 
+        });
+    </script>
     <?php $this->footer(); ?>
 </div>
 

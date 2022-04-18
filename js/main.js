@@ -1,7 +1,7 @@
 $(function(){
       // 代码高亮
-  $("pre,pre code").addClass("prettyprint");
-  prettyPrint();
+    $("pre,pre code").addClass("prettyprint");
+    prettyPrint();
   
     $('.content img').addClass('smallimg')
     $('.content img').wrap('<div class="imgbox"></div>')
@@ -10,15 +10,9 @@ $(function(){
     var obj = new zoom('mask', 'bigimg', 'smallimg');
     obj.init();
     
-    $("#autoMenu").autoMenu({
-        levelOne : 'h2', //一级标题
-        levelTwo : 'h3',  //二级标题（暂不支持更多级）
-        offTop : 100 //滚动切换导航时离顶部的距离
-    });
-    
     $('.top').on('click',function () {
-            $("html, body").animate({scrollTop: 0 }, {duration: 500,easing: "swing"});
-            return false;
+        $("html, body").animate({scrollTop: 0 }, {duration: 500,easing: "swing"});
+        return false;
     });
     //绑定页面滚动事件
     $(window).bind('scroll',function(){

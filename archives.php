@@ -7,7 +7,8 @@
 
 $this->need('header.php'); ?>
 <div id="container">
-    <div class="archive">
+    <div class="main-content">
+        <div class="archive">
 		<h1 class="post-title"><?php $this->title() ?></h1>
         <div class="post-content">
             <ul>
@@ -39,6 +40,7 @@ $this->need('header.php'); ?>
                 <?php endwhile; ?>
             </ul>
         </div>
+    </div>
     </div>
 <?php $this->need('footer.php'); ?>
 </div>

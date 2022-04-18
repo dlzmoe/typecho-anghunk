@@ -35,7 +35,6 @@ $this->need('header.php');
                     <div class="block-title">
                         <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                     </div>
-    
                 </article>
             <?php endwhile; ?>
         </section>

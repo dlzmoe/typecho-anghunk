@@ -2,13 +2,10 @@
     <hr>
     <h6>评论</h6>
     <div id="artalk"></div>
-    <link href="https://cdn.jsdelivr.net/npm/artalk@2.1.8/dist/Artalk.css" rel="stylesheet">
-    <link href="https://cdn.imhan.cn/list/artalk_anghunk.css" rel="stylesheet" />
-    <script src="https://cdn.imhan.cn/list/artalk.min.js"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/artalk@2.1.8/dist/Artalk.js"></script>-->
+    
 </div>
 <script>
-    const artalk = new Artalk({
+    new Artalk({
         el: "#artalk",
         pageKey:   '<?php $this->permalink() ?>',
         pageTitle: '<?php $this->title() ?>',
@@ -32,8 +29,7 @@
           children: 300, // 子评论区域限高
         },
         versionCheck: true, // 前端版本检测
-        // darkMode: true,
-        emoticons: "https://cdn.jsdelivr.net/gh/anghunk/cdn/json/artalk_owo.json",
+        emoticons: "https://i.xiamuyourenzhang.cn/biaoqingbao.json",
     });
 
 </script>

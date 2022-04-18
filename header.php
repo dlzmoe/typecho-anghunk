@@ -15,6 +15,12 @@
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/pre.css'); ?>">
+    <!--artalk 可删除-->
+        <link href="https://cdn.jsdelivr.net/npm/artalk@2.2.2/dist/Artalk.css" rel="stylesheet">
+        <link href="https://cdn.imhan.cn/list/artalk_anghunk.css" rel="stylesheet" />
+        <script src="https://cdn.imhan.cn/list/artalk.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/artalk@2.1.8/dist/Artalk.js"></script>-->
+    <!--artalk 可删除-->
     <?php $this->header(); ?>
 </head>
 <body>
@@ -28,7 +34,7 @@
                 <?php while($pages->next()): ?>
                     <li class="menu-item<?php if($this->is('page', $pages->slug)): ?> current-menu-item<?php endif; ?>"><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
-                <!--<li class="menu-item"><a class="search-form-input">Search</a></li>-->
+                <li class="menu-item"><a class="search-form-input">Search</a></li>
             </ul>
           </nav>
           <div class="autoMenu" id="autoMenu" data-autoMenu></div>
