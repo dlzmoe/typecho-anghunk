@@ -5,8 +5,6 @@ $(function(){
   
     $('.content img').addClass('smallimg')
     $('.content img').wrap('<div class="imgbox"></div>')
-    $('.atk-content img').addClass('smallimg')
-    $('.atk-content img').wrap('<div class="imgbox"></div>')
     var obj = new zoom('mask', 'bigimg', 'smallimg');
     obj.init();
     
@@ -25,11 +23,6 @@ $(function(){
             $('.top').fadeOut('1000');
         }
     });
-    
-    $('.atk-main-editor>.atk-bottom>.atk-plug-btn-wrap').append('<span class="atk-plug-btn to-imgurl">上传图片</span>')
-    $('.to-imgurl').click(function(){
-        window.open("https://www.imgurl.org/", '_blank');
-    })
     
 })
 

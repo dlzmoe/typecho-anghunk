@@ -100,15 +100,21 @@ blockquote,q {
 }
 
 blockquote {
-	border-left: 3px solid rgba(0,0,0,.8);
+	border-left: 3px solid #d0d7de;
 	font-weight: 400;
 	letter-spacing: .01rem;
 	margin: 30px 0;
-	padding-left: 16px
+	padding-left: 16px;
+	color: #57606a;
+	font-size: 16px;
 }
 
 a:active,a:hover {
 	outline: 0
+}
+
+p {
+	word-break: break-all;
 }
 
 pre {
@@ -538,7 +544,14 @@ article {
 
 .comment-content {
 	margin-top: 10px;
-	margin-bottom: 25px
+	margin-bottom: 25px;
+	border: 1px solid #999;
+    background: #e0e0e0;
+    padding: 0 10px;
+}
+
+.comment-content p {
+    margin: 10px 0;
 }
 
 .comment-reply {
@@ -596,20 +609,19 @@ article {
 	border-radius: 3px
 }
 
-.form-submit .submit {
+.submit {
 	border: 1px solid #9E9E9E;
-	color: #9E9E9E;
-	background-color: #fff;
+	background-color: #9E9E9E;
 	display: inline-block;
 	padding: 3px 15px;
 	border-radius: 3px;
 	font-size: 14px;
-	cursor: pointer
+	cursor: pointer;
+	color: #fff;
 }
 
-.form-submit .submit:hover {
-	background-color: #9E9E9E;
-	color: #fff
+.submit:hover {
+    opacity: 0.8;
 }
 
 .comments-title {
@@ -779,6 +791,29 @@ article {
         padding: 10px 0 0;
     }
 }
+
+/*评论css样式开始*/
+#comment-form .item-input {
+    display: flex;
+    align-items: center;
+}
+
+#comment-form .item-textarea {
+    display: flex;
+    align-items: baseline;
+}
+
+#comment-form .item-textarea textarea {
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+#comment-form p label {
+    min-width: 60px;
+    color: #000;
+}
+
+/*评论css样式结束*/
 
 .pjax-loading{
     position: fixed;

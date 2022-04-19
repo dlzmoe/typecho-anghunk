@@ -33,17 +33,17 @@
     <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+    <script src="https://cdn.imhan.cn/list/pjax.min.js"></script>
     <script>
         var pjax = new Pjax({
           selectors: [
             "title",
-            'body'
+            'body',
           ],
           cacheBust: false
         })
         function pjax_reload(){
-            var comment = document.getElementById("artalk");
+            var comment = document.getElementById("comments");
         }
         document.addEventListener('pjax:send', function (){
             document.querySelector(".pjax-loading").classList.add("active");

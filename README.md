@@ -8,7 +8,7 @@ Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
 仓库地址: [https://github.com/anghunk/Typecho-theme-Anghunk](https://github.com/anghunk/Typecho-theme-Anghunk)
 
-评论使用artalk，你也可以选择在 `comments.php` 文件中替换成typecho原生评论。
+~~评论使用artalk，你也可以选择在 `comments.php` 文件中替换成typecho原生评论。~~
 
 > [如何部署 artalk ?](https://artalk.js.org/) 
 
@@ -49,7 +49,7 @@ var pjax = new Pjax({
 
 // 重新执行artalk引入的脚本。
 function pjax_reload(){
-    var comment = document.getElementById("artalk");
+    var comment = document.getElementById("comments");
 }
 document.addEventListener('pjax:send', function (){ // pjax 开始时
     document.querySelector(".pjax-loading").classList.add("active"); // loading动画开始
