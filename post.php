@@ -8,6 +8,9 @@
                     <time><?php $this->date('Y年m月d日'); ?></time> / 
                     <span>阅读: <?php get_post_view($this) ?></span> / 
                     <span class="post-tags"><?php $this->tags('', true, ''); ?></span>
+<?php if($this->user->hasLogin()):?>
+  <a href="/admin/write-post.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a>
+<?php endif;?>
                 </div>
                 
             </header>

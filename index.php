@@ -15,7 +15,7 @@ $this->need('header.php');
             <img src="<?php $this->options->bannerbg(); ?>">
             <p><?php $this->options->bannertext(); ?></p>
         </div>
-        <div class="more">我已经写了 <?php echo allpostnum(1); ?> 篇文章，更多文章请访问 <a href="/posts">全部文章</a> ，分类有
+        <div class="more">我已经写了 <?php echo allpostnum(1); ?> 篇文章，更多文章请访问 <a href="<?php $this->options->indexposts(); ?>">全部文章</a> ，分类有
             <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
             <?php while ($category->next()): ?>
             <span<?php if ($this->is('post')): ?><?php if ($this->category == $category->slug): ?> class="current"<?php endif; ?>

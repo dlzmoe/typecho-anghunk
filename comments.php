@@ -1,4 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<hr>
 <div id="comments">
   <?php $this->comments()->to($comments); ?>
     <div id="<?php $this->respondId(); ?>" class="respond">
@@ -12,6 +13,7 @@
           <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a>
           </p>
         <?php else : ?>
+          <p class="comments-hint">支持匿名评论，如果你希望得到回复，可以填写邮箱和昵称。</p>
           <p class="item-input">
             <label for="author" class="required"><?php _e('称呼'); ?></label>
             <input type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
@@ -27,7 +29,7 @@
         <?php endif; ?>
         <p class="item-textarea">
           <label for="textarea" class="required"><?php _e('内容'); ?></label>
-          <textarea placeholder="支持匿名评论，如果你希望得到回复，可以填写邮箱和昵称。" rows="8" cols="50" name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
+          <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
         </p>
         <p>
           <button type="submit" class="submit"><?php _e('提交评论'); ?></button>

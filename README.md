@@ -12,6 +12,8 @@ Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
 > ~~[如何部署 artalk ?](https://artalk.js.org/)~~
 
+>常见报错可以查看 [Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。
+
 
 ## 如何使用
 
@@ -20,8 +22,6 @@ Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 下载仓库在本地，上传到 `/usr/themes/`，并把主题文件夹改名为 `Anghunk`，否则可能会出现一些未知的问题。
 
 基本配置项目在后台管理设置。
-
-如果在部署主题过程出现bug，请提[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我会在最快时间内解决。
 
 ### 2.搜索功能
 

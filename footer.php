@@ -37,7 +37,7 @@
     <script>
         var pjax = new Pjax({
           selectors: [
-            "title",
+            'title',
             'body',
           ],
           cacheBust: false

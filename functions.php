@@ -53,6 +53,9 @@ function themeConfig($form)
     $bannertext = new Typecho_Widget_Helper_Form_Element_Textarea('bannertext', NULL, '七碗受至味，一壶得真趣，空持百千偈，不如吃茶去。 ---赵朴初', _t('首页描述的文字'), _t('在这里填入一段话，将会显示在首页'));
     $form->addInput($bannertext);
     
+    $indexposts = new Typecho_Widget_Helper_Form_Element_Text('indexposts', NULL, NULL, _t('首页<全部文章>链接'), _t('填入你的归档页面的链接，例： /posts'));
+    $form->addInput($indexposts);
+    
     $footerbeian = new Typecho_Widget_Helper_Form_Element_Text('footerbeian', NULL, NULL, _t('备案号'), _t('如果你的网站备案，请在这里填写备案号，否则请空着它。'));
     $form->addInput($footerbeian);
     
