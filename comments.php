@@ -13,10 +13,10 @@
           <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a>
           </p>
         <?php else : ?>
-          <p class="comments-hint">支持匿名评论，如果你希望得到回复，可以填写邮箱和昵称。</p>
+          <p class="comments-hint">如果你不想填写邮箱，可以留空匿名评论，不要填写 `11@11.com` 等乱码邮箱，多次看到后将会屏蔽ip</p>
           <p class="item-input">
-            <label for="author" class="required"><?php _e('称呼'); ?></label>
-            <input type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
+            <label for="author" class="required"><?php _e('昵称'); ?></label>
+            <input placeholder="(必填)" type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
           </p>
           <p class="item-input">
             <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> class="required" <?php endif; ?>><?php _e('Email'); ?></label>
@@ -24,7 +24,7 @@
           </p>
           <p class="item-input">
             <label for="url" <?php if ($this->options->commentsRequireURL) : ?> class="required" <?php endif; ?>><?php _e('网站'); ?></label>
-            <input type="url" name="url" id="url" class="text" placeholder="<?php _e('https://'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
+            <input type="url" name="url" id="url" class="text" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
           </p>
         <?php endif; ?>
         <p class="item-textarea">

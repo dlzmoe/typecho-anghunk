@@ -24,5 +24,39 @@ $(function(){
         }
     });
     
+    
+    var yiyan = '';
+    $.ajax({
+        url: 'https://api.emoao.com/api/scyy',
+        type: 'get',
+        dataType: 'json',
+        withCredentials: true,
+        async: false,
+        success: function (data) {
+            $.each(data, function (i, item) {
+                list = item.hitokoto + "------" + item.hitokoto_from 
+                yiyan += list;
+            }),
+            $("#yiyan").html(yiyan);
+            // console.log('数据请求成功')
+        },
+      
+        error: function () {
+            console.log('数据请求失败')
+        }
+    })
+    
+    $.ajax({
+        url: "https://api.emoao.com/api/60s",
+        success: function(result) {
+            $("#60s").append("<h3 class='title'>" + result.data.date +"</h3>");
+            for (i = 0; i < result.data.news.length; i++) {
+                var $aa = result.data.news[i] + "</br></br>";
+                $("#60s").append($aa)
+            }
+            $("#60s").append("<b>" + result.data.weiyu) + "</b>"
+        }
+    });
+    
 })
 
