@@ -16,15 +16,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/pre.css'); ?>">
     <?php $this->header(); ?>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b05f80d4daf19e613b1097c7c4dfd724";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+    <script><?php $this->options->baidutongji(); ?></script>
 </head>
 <body>
   <div class="home">

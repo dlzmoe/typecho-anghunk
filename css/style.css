@@ -68,7 +68,7 @@ body {
 
 @media (min-width:520px){
     * {
-    	font-family: 'Noto Serif SC', serif !important;
+    	font-family: 'Noto Serif SC', serif;
     }
 }
 
@@ -197,9 +197,8 @@ header.header {
 #container {
     max-width: 740px;
     flex: 1;
-    padding: 0px 10px 10px;
+    padding: 0px 20px 10px;
     box-sizing: border-box;
-    /*border-left: 3px solid #000;*/
     background: #fff;
     box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
 }
@@ -370,10 +369,6 @@ article {
 	margin-top: 10px
 }
 
-.content {
-	padding: 10px;
-}
-
 .content ol,.content p,.content ul {
 	margin-bottom: 20px
 }
@@ -511,14 +506,15 @@ article {
 }
 
 .comment-list .comment-body .comment-author .fn {
-	font-weight: 700
+	font-style: inherit;
+    font-size: 16px;
 }
 
 .comment-list .comment-body .comment-author .avatar {
 	float: left;
 	border-radius: 100%;
 	margin-right: 8px;
-	margin-top: 8px
+	margin-top: 8px;
 }
 
 .comment-list .comment-children {
@@ -549,6 +545,7 @@ article {
 	border: 1px solid #999;
     background: #e8eaed;
     padding: 0 10px;
+    font-size: 16px;
 }
 
 .comment-content p {
@@ -689,7 +686,7 @@ article {
 
 .tags-list li {
     margin-right: 14px;
-    padding-left: 6px;
+    padding-right: 6px;
     padding-bottom: 10px;
 }
 
@@ -730,8 +727,35 @@ article {
     padding: 10px;
 }
 
-#60s .title {
-    font-size: 20px;
+.prevornext {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.prevornext p {
+    width: 48%;
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.prevornext p a {
+    font-style: italic;
+    transition: all 0.2s linear;
+}
+
+.prevornext p:nth-child(1)::before {
+    content: '上一篇:';
+}
+
+.prevornext p:nth-child(2)::before {
+    content: '下一篇:';
+}
+
+.prevornext p a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width:1000px) {
@@ -802,6 +826,10 @@ article {
     
     .post-title {
         padding: 10px 0 0;
+    }
+    
+    .prevornext p {
+        width: 100%;
     }
 }
 

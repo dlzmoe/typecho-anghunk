@@ -8,6 +8,7 @@
         <div class="content" itemprop="articleBody">
             <?php $this->content(); ?>
         </div>
+        <?php $this->need('comments.php'); ?>
     </div>
    <?php $this->need('footer.php'); ?>
 </div>

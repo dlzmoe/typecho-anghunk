@@ -46,17 +46,5 @@ $(function(){
         }
     })
     
-    $.ajax({
-        url: "https://api.emoao.com/api/60s",
-        success: function(result) {
-            $("#60s").append("<h3 class='title'>" + result.data.date +"</h3>");
-            for (i = 0; i < result.data.news.length; i++) {
-                var $aa = result.data.news[i] + "</br></br>";
-                $("#60s").append($aa)
-            }
-            $("#60s").append("<b>" + result.data.weiyu) + "</b>"
-        }
-    });
-    
 })
 
