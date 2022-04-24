@@ -395,6 +395,7 @@ article {
 
 .content img {
     box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    
 }
 
 .content li:before {
@@ -426,22 +427,19 @@ article {
 }
 
 .content hr {
-	margin-top: 32px;
-	margin-bottom: 22px;
+    margin: 0;
 	display: block;
 	border: 0;
 	text-align: center
 }
 
 .content hr:before {
-	content: '...';
-	display: inline-block;
-	margin-left: .6em;
-	color: rgba(0,0,0,.6);
-	position: relative;
-	top: -20px;
-	font-size: 28px;
-	letter-spacing: .6em
+	content: '';
+	display: block;
+	height: 1px;
+	width: 70%;
+	margin: 20px auto;
+	background: #d6d6d6;
 }
 
 .content a {
@@ -495,29 +493,44 @@ article {
 	float: right
 }
 
+#comments>.comment-list>.comment-body {
+	border: 1px solid #999;
+    background: #e8eaed;
+    margin-bottom: 20px;
+}
+
+#comments>.comment-list>.comment-body>.comment-reply{
+    right: 10px;
+}
+
+#comments>.comment-list>.comment-body>.comment-meta{
+    right: 74px;
+}
+
 .comment-list .comment-body {
-	border-top: 1px solid rgba(0,0,0,.05);
-	padding-top: 25px;
-	position: relative
+    position: relative;
+	padding: 15px 10px 0;
+    border-top: 1px solid rgba(0,0,0,.12);
+    
 }
 
 .comment-list .comment-body .comment-author {
-	font-size: 14px
+	font-size: 14px;
+	margin-bottom: 16px;
 }
 
 .comment-list .comment-body .comment-author .fn {
 	font-style: inherit;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .comment-list .comment-body .comment-author .avatar {
 	float: left;
 	border-radius: 100%;
 	margin-right: 8px;
-	margin-top: 8px;
 }
 
-.comment-list .comment-children {
+#comments>.comment-list>.comment-body>.comment-children {
 	margin-left: 50px
 }
 
@@ -531,8 +544,11 @@ article {
 
 .comment-meta {
 	overflow: hidden;
-	font-size: 12px;
-	color: rgba(0,0,0,.44)
+	font-size: 14px;
+	color: rgba(0,0,0,.6);
+	position: absolute;
+    top: 20px;
+    right: 64px;
 }
 
 .comment-meta .says {
@@ -542,8 +558,6 @@ article {
 .comment-content {
 	margin-top: 10px;
 	margin-bottom: 25px;
-	border: 1px solid #999;
-    background: #e8eaed;
     padding: 0 10px;
     font-size: 16px;
 }
@@ -554,7 +568,7 @@ article {
 
 .comment-reply {
 	position: absolute;
-	top: 20px;
+	top: 16px;
 	right: 0
 }
 
@@ -723,10 +737,6 @@ article {
     text-decoration: underline;
 }
 
-#comments {
-    padding: 10px;
-}
-
 .prevornext {
     display: flex;
     justify-content: space-between;
@@ -831,6 +841,17 @@ article {
     .prevornext p {
         width: 100%;
     }
+    
+}
+
+@media(max-width:500px) {
+    .comment-meta {
+        position: static;
+    }
+    
+    .comment-list .comment-body .comment-author {
+        margin-bottom: 2px;
+    }
 }
 
 /*评论css样式开始*/
@@ -840,6 +861,7 @@ article {
 }
 
 #comment-form .item-input input {
+    flex: 1;
     font-size: 16px;
     padding: 0 4px;
     box-sizing: border-box;
@@ -857,6 +879,7 @@ article {
 }
 
 #comment-form .item-textarea textarea {
+    flex: 1;
     padding: 4px;
     box-sizing: border-box;
     font-size: 16px;
@@ -876,9 +899,9 @@ article {
     top: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background: #747474;
-    transition: opacity .4s;
+    height: 3px;
+    background: #31b3c7;
+    transition: opacity 0.5s;
 }
 .pjax-loading.active{ 
     width:100%;

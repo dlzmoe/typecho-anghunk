@@ -24,27 +24,19 @@ $(function(){
         }
     });
     
-    
-    var yiyan = '';
     $.ajax({
-        url: 'https://api.emoao.com/api/scyy',
-        type: 'get',
-        dataType: 'json',
-        withCredentials: true,
-        async: false,
-        success: function (data) {
-            $.each(data, function (i, item) {
-                list = item.hitokoto + "------" + item.hitokoto_from 
-                yiyan += list;
-            }),
-            $("#yiyan").html(yiyan);
-            // console.log('数据请求成功')
-        },
-      
-        error: function () {
-            console.log('数据请求失败')
-        }
-    })
+  url: 'https://api.emoao.com/api/yy?type=sc',
+  type: 'get',
+  success: function(data) {
+      console.log(data);
+      $('#hitokoto').html(data.hitokoto);
+      $('#hitokoto_from').html(data.hitokoto_from);
+  },
+  error: function(data) {
+      console.log('error', data);
+  }
+})
+
     
 })
 

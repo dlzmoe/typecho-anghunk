@@ -9,7 +9,9 @@
         <em>·</em>
         <p><a href="/feed" target="_blank">Rss订阅</a> </p>
     </div>
-    <div id="yiyan"></div>
+    <div id="yiyan">
+        <span id="hitokoto"></span> ------<span id="hitokoto_from"></span>
+    </div>
     <div class="top">
         <i></i>
         <i></i>
