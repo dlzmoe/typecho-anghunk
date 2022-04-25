@@ -1,13 +1,19 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <footer class="footer">
     <div class="container">
-        <p>© 2020 -2022  <a href="https://beian.miit.gov.cn/" target="_blank"><span><?php $this->options->footerbeian(); ?></span></a></p>
-        <em>·</em>
-        <p>网站运行: <span id="days">0</span> 天</p>
-        <em>·</em>
-        <p>访客总人数：<?php echo theAllViews();?></p>
-        <em>·</em>
-        <p><a href="/feed" target="_blank">Rss订阅</a> </p>
+        <div>
+            <p>网站运行: <span id="days">0</span> 天</p>
+            <em>·</em>
+            <p>访客总人数：<?php echo theAllViews();?></p>
+            <em>·</em>
+            <p>加载速度: <?php echo timer_stop();?></p>
+        </div>
+        <div>
+            <p>© 2020 -2022  <a href="https://beian.miit.gov.cn/" target="_blank"><span><?php $this->options->footerbeian(); ?></span></a></p>
+            <em>·</em>
+            <p><a href="/feed" target="_blank">Rss订阅</a> </p>
+        </div>
+
     </div>
     <div id="yiyan">
         <span id="hitokoto"></span> ------<span id="hitokoto_from"></span>

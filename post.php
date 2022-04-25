@@ -2,12 +2,16 @@
 <?php $this->need('header.php'); ?>
     <main id="container">
         <div class="main-content">
+            <div class="breadcrumb">
+               <a href="<?php $this->options->siteUrl(); ?>" title="<?php $this->options->title(); ?>">首页</a> &gt; <?php $this->category(); ?> 
+            </div>
             <header>
                 <h1 class="post-title"><?php $this->title() ?></h1>
                 <div class="post-time">
                     <time><?php $this->date('Y年m月d日'); ?></time> / 
                     <span>阅读: <?php get_post_view($this) ?></span> / 
-                    <span class="post-tags"><?php $this->tags('', true, ''); ?></span>
+                    <span class="post-tags"><?php $this->tags('', true, ''); ?></span> / 
+                    <span><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
                 </div>
                 
             </header>
