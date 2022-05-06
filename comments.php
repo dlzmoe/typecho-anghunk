@@ -35,7 +35,7 @@
               ?>
             </cite>
             <span> · </span>
-            <a class="comment-meta" href="<?php $comments->permalink(); ?>">
+            <a class="comment-meta">
                   <?php $singleCommentOptions->beforeDate();
                   $comments->date($singleCommentOptions->dateFormat);
                   $singleCommentOptions->afterDate();  //输出评论日期 

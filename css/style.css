@@ -365,17 +365,29 @@ article {
   border-bottom: 1px dotted #999
 }
 
+.block-title a { 
+  border-bottom: 1px dotted #fff
+}
+
 .block-title a:hover,
 .menu-item a:hover {
   border-bottom: 1px dotted #999
 }
+
 
 .block-title {
   flex: 1;
   color: #000;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.post-excerpt {
+    font-size: 16px;
+    color: #666;
 }
 
 .posttime {
@@ -687,7 +699,8 @@ article {
 }
 
 #response {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .comments-hint {
