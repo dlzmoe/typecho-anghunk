@@ -1,6 +1,5 @@
 $(function () {
   $('.content a').attr('target', '_blank')
-  $('#smiliesbutton a').html('表情')
 
   // 代码高亮
   $("pre,pre code").addClass("prettyprint");

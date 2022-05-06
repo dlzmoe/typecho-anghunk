@@ -35,13 +35,11 @@
               ?>
             </cite>
             <span> · </span>
-            <em class="comment-meta">
-              <a href="<?php $comments->permalink(); ?>">
+            <a class="comment-meta" href="<?php $comments->permalink(); ?>">
                   <?php $singleCommentOptions->beforeDate();
                   $comments->date($singleCommentOptions->dateFormat);
                   $singleCommentOptions->afterDate();  //输出评论日期 
                   ?></a>
-            </em>
         </div>
         <div class="comment-reply">
             <?php $comments->reply($singleCommentOptions->replyWord); ?>
@@ -80,23 +78,23 @@
           <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a>
           </p>
         <?php else : ?>
-          <p class="comments-hint">如果你不想填写邮箱，可以留空匿名评论，不要填写 `11@11.com` 等乱码邮箱，多次看到后将会屏蔽ip</p>
-          <p class="item-input">
-            <label for="author" class="required"><?php _e('昵称'); ?></label>
-            <input placeholder="(必填)" type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
-          </p>
-          <p class="item-input">
-            <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> class="required" <?php endif; ?>><?php _e('Email'); ?></label>
-            <input type="email" name="mail" id="mail" class="text" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
-          </p>
-          <p class="item-input">
-            <label for="url" <?php if ($this->options->commentsRequireURL) : ?> class="required" <?php endif; ?>><?php _e('网站'); ?></label>
-            <input type="url" name="url" id="url" class="text" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
-          </p>
+          <div class="item">
+              <p class="item-input">
+                <label for="author"><?php _e('昵称'); ?></label>
+                <input placeholder="昵称(必填)" type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
+              </p>
+              <p class="item-input">
+                <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label>
+                <input placeholder="邮箱(Email)" type="email" name="mail" id="mail" class="text" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
+              </p>
+              <p class="item-input">
+                <label for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>
+                <input placeholder="网站(https://)" type="url" name="url" id="url" class="text" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
+              </p>
+          </div>
         <?php endif; ?>
         <p class="item-textarea">
-          <label for="textarea" class="required"><?php _e('内容'); ?></label>
-          <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
+          <textarea placeholder="说点什么吧..." name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
           <?php $comments->smilies(); ?>
         </p>
         <p class="item-submit">
