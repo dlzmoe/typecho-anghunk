@@ -19,6 +19,7 @@
     <script><?php $this->options->baidutongji(); ?></script>
 </head>
 <body>
+  <!--<div class="loader">加载中，请稍等几秒。</div>-->
   <div class="home">
     <header class="header">
       <div class="site-header">

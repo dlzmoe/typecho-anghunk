@@ -1,8 +1,7 @@
 @import "../font/css.css";
-
 @font-face {
   font-family: 'HarmonyOS_Sans';
-  src: url('./HarmonyOSHans-Regular.woff2');
+  src: url('./HarmonyOS_Sans_SC_Medium.woff2');
 }
 
 ::-webkit-scrollbar {
@@ -58,7 +57,6 @@ textarea {
   -webkit-appearance: none;
   outline: 0;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Hiragino Sans GB", "Microsoft YaHei", STHeiti, "WenQuanYi Micro Hei", Helvetica, Arial, sans-serif
 }
 
 button:focus,
@@ -71,14 +69,14 @@ textarea:focus {
 body {
   margin: 0;
   line-height: 1.8;
-  color: #000;
+  color: #413e3e;
   background: #e8eaed;
   font-size: 17px;
 }
 
 * {
   font-family: 'HarmonyOS_Sans';
-  font-family: 'Noto Serif SC', serif;
+  /*font-family: 'Noto Serif SC', serif;*/
 }
 
 @media(max-width:800px) {
@@ -344,7 +342,7 @@ article {
   display: inline;
   line-height: 1;
   padding: 10px 0;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .topNav-items li a:hover {
@@ -366,7 +364,8 @@ article {
 }
 
 .block-title a { 
-  border-bottom: 1px dotted #fff
+  border-bottom: 1px dotted #fff;
+  font-size: 18px;
 }
 
 .block-title a:hover,
@@ -398,7 +397,7 @@ article {
 
 .post-title {
   font-weight: 800;
-  font-size: 22px;
+  font-size: 23px;
   text-align: center;
   padding: 10px 10px 0
 }
@@ -410,10 +409,14 @@ article {
   margin-top: 10px
 }
 
+.content {
+    color: #494949;
+}
+
 .content ol,
 .content p,
 .content ul {
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .content .wp-caption,
@@ -763,6 +766,10 @@ article {
   padding-bottom: 10px;
 }
 
+.tags-list li a:hover{
+    text-decoration: underline;
+}
+
 .banner {
   margin-bottom: 20px;
 }
@@ -785,6 +792,7 @@ article {
 
 .autoMenu ul li {
   color: #444;
+  font-size: 16px;
 }
 
 .autoMenu ul li.sub {
@@ -945,7 +953,6 @@ article {
   }
 
   .block-title {
-    font-weight: 600;
     font-size: 18px;
   }
 

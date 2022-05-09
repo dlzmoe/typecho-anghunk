@@ -54,6 +54,7 @@
         function pjax_reload(){
             var comment = document.getElementById("comments");
         }
+        
         document.addEventListener('pjax:send', function (){
             document.querySelector(".pjax-loading").classList.add("active");
         });
