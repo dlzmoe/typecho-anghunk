@@ -34,12 +34,12 @@
               $singleCommentOptions->afterAuthor(); //输出评论者 
               ?>
             </cite>
-            <span> · </span>
-            <a class="comment-meta">
+            <em> · </em>
+            <span class="comment-meta">
                   <?php $singleCommentOptions->beforeDate();
                   $comments->date($singleCommentOptions->dateFormat);
                   $singleCommentOptions->afterDate();  //输出评论日期 
-                  ?></a>
+                  ?></span>
         </div>
         <div class="comment-reply">
             <?php $comments->reply($singleCommentOptions->replyWord); ?>

@@ -52,16 +52,6 @@ function allpostnum($id)
 }
 
 /*
-* 总访问量
-*/
-function theAllViews()
-{
-  $db = Typecho_Db::get();
-  $row = $db->fetchAll('SELECT SUM(VIEWS) FROM `typecho_contents`');
-  echo number_format($row[0]['SUM(VIEWS)']);
-}
-
-/*
 * 下一篇
 */
 function getNextPost($archive)
