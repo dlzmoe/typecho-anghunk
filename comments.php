@@ -40,8 +40,6 @@
                   $comments->date($singleCommentOptions->dateFormat);
                   $singleCommentOptions->afterDate();  //输出评论日期 
                   ?></span>
-            <em> · </em>
-            <span><?php echo('ip归属地：'.convertips($comments->ip)) ?></span>
            
         </div>
         <div class="comment-reply">
