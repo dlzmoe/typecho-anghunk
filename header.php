@@ -22,7 +22,10 @@
   <div class="home">
     <header class="header">
       <div class="site-header">
-          <a id="go-back-home" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->headertitle(); ?></a>
+          <a id="logo" href="<?php $this->options->siteUrl(); ?>">
+              <?php $this->author->gravatar(80); ?>
+              <p><?php $this->options->headertitle(); ?></p>    
+          </a>
           <nav id="nav-menu">
             <ul class="topNav-items">
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>

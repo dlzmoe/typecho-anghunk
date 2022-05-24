@@ -29,12 +29,14 @@ $this->need('header.php');
     
         <section class="post-list">
             <?php while($this->next()): ?>
-                <article>
-                    <div class="block-title">
-                        <div class="posttime"><?php $this->date('Y/m/d'); ?></div>
-                        <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-                    </div>
-                </article>
+                <?php if($this->category != "cateslug"): ?>
+                    <article>
+                        <div class="block-title">
+                            <div class="posttime"><?php $this->date('Y/m/d'); ?></div>
+                            <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                        </div>
+                    </article>
+                <?php endif; ?>
             <?php endwhile; ?>
         </section>
        <nav class="blog-nav">

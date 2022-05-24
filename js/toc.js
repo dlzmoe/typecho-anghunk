@@ -119,7 +119,6 @@
         levelTwo : 'h3',  
         width : 240, 
         offTop : 100, 
-
     };
 
     $(function () {
