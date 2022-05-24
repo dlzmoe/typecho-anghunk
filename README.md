@@ -2,13 +2,13 @@
 
 ![](./css/theme-logo.png)
 
-Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
+>Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
 演示网址: [https://imhan.cn](https://imhan.cn)
 
 仓库地址: [https://github.com/anghunk/Typecho-theme-Anghunk](https://github.com/anghunk/Typecho-theme-Anghunk)
 
->常见报错可以查看 [Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。
+**常见报错可以查看 [Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。**
 
 
 ## 如何使用
@@ -34,12 +34,12 @@ $widget = $className::alloc();
 
 图片更新不及时，请进入上面的[演示网址](https://imhan.cn)，查看最新的主题。
 
-|![](https://anghunk.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/aa2207866648bd86280eb957a6759727.png)|![](https://anghunk.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/3e72febdf75d5f6618296823e7ecccb0.png)|
+|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/aa2207866648bd86280eb957a6759727.png)|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/3e72febdf75d5f6618296823e7ecccb0.png)|
 |---|---|
-|![](https://anghunk.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/4a7c17ee31fa19ab008471aeaf8366f2.png)|![](https://anghunk.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/a789d3f50ce39d8aa3f6933f3720c7f8.png)|
+|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/4a7c17ee31fa19ab008471aeaf8366f2.png)|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/a789d3f50ce39d8aa3f6933f3720c7f8.png)|
 
 ## LICENSE
 
 [LICENSE](./LICENSE)
 
-[作者: Anghunk](https://imhan.cn)
+[作者: zburu](https://imhan.cn)
