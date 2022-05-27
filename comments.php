@@ -40,6 +40,8 @@
                   $comments->date($singleCommentOptions->dateFormat);
                   $singleCommentOptions->afterDate();  //输出评论日期 
                   ?></span>
+            <em> · </em>
+            <?php IPhome_Plugin::get_IPhome($comments->ip); ?>
            
         </div>
         <div class="comment-reply">
@@ -113,3 +115,6 @@
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
   <?php endif; ?>
 </div>
+
+
+

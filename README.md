@@ -6,7 +6,7 @@
 
 演示网址: [https://imhan.cn](https://imhan.cn)
 
-仓库地址: [https://github.com/anghunk/Typecho-theme-Anghunk](https://github.com/anghunk/Typecho-theme-Anghunk)
+仓库地址: [https://github.com/zburu/Typecho-theme-Anghunk](https://github.com/zburu/Typecho-theme-Anghunk)
 
 **常见报错可以查看 [Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。**
 
@@ -18,6 +18,8 @@
 下载仓库在本地，上传到 `/usr/themes/`，并把主题文件夹改名为 `Anghunk`，否则可能会出现一些未知的问题。
 
 基本配置项目在后台管理设置。
+
+建议在后台 `设置 > 阅读` 中，将 `每页文章数目` 设置为20，以获得最佳阅读体验。
 
 ### 2.搜索功能
 

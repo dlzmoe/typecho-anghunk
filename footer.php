@@ -42,7 +42,7 @@
     <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-    <script src="https://cdn.imhan.cn/list/pjax.min.js"></script>
+    <script src="<?php $this->options->themeUrl('/js/pjax.js'); ?>"></script>
     <script>
         var pjax = new Pjax({
           selectors: [
