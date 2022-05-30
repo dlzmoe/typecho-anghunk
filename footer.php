@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/zoom.css'); ?>">
     <img src="" alt="" class="bigimg">
     <div class="mask"></div>
+    <script src="<?php $this->options->themeUrl('/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/zoom.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>

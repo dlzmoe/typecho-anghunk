@@ -367,11 +367,6 @@ article {
   padding: 10px
 }
 
-.breadcrumb {
-  font-size: 15px;
-  color: #666;
-}
-
 .current-menu-item a {
   border-bottom: 1px dotted #25c2a0;
   color: #25c2a0;
@@ -430,9 +425,17 @@ article {
   margin-top: 10px
 }
 
+.breadcrumb {
+    font-size: 16px;
+}
+.content {
+    margin: 20px 0;
+}
+
 .content ol,
 .content p,
 .content ul {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -491,7 +494,7 @@ article {
 
 .content h3 {
   color: #121212;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 30px;
   margin-bottom: 10px;
   padding-left: 10px;
@@ -612,8 +615,6 @@ article {
   padding-right: 0;
 }
 
-#comments>.comment-list>.comment-body>.comment-children .comment-body .comment-content {}
-
 .comment-list .depth-2 .children {
   margin-left: 0
 }
@@ -702,21 +703,6 @@ article {
   border-radius: 3px
 }
 
-.submit {
-  border: none;
-  background: -webkit-linear-gradient(0deg, #3ca5f6 0%, #a86af9 100%);
-  display: inline-block;
-  padding: 7px 22px;
-  border-radius: 3px;
-  font-size: 14px;
-  cursor: pointer;
-  color: #fff;
-}
-
-.submit:hover {
-  opacity: 0.8;
-}
-
 .comments-title {
   font-weight: 700;
   padding: 5px 0
@@ -761,6 +747,14 @@ article {
   margin: 20px auto;
   border: none;
   outline: none;
+}
+
+.page-navigator {
+    display: flex;
+}
+
+.page-navigator li {
+    margin-right: 16px;
 }
 
 .place {
@@ -809,6 +803,9 @@ article {
 
 .archives-item-title {
   font-size: 20px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .autoMenu ul li {
@@ -855,81 +852,6 @@ article {
 
 .prevornext p a:hover {
   text-decoration: underline;
-}
-
-
-/*评论css样式开始*/
-#comment-form .item {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#comment-form .item-input {
-  width: 32%;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  margin-bottom: 15px;
-
-}
-
-#comment-form .item-input input {
-  width: 100%;
-  font-size: 16px;
-  padding: 7px 10px;
-  box-sizing: border-box;
-  border: rgba(135, 150, 165, .15);
-  background: #f1f3fa;
-  transition: all 0.2s linear;
-  color: #333;
-}
-
-#comment-form .item-textarea {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-#comment-form .item-textarea textarea {
-  width: 100%;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  font-size: 16px;
-  min-height: 140px;
-  border: rgba(135, 150, 165, .15);
-  background: #f1f3fa;
-  resize: none;
-  transition: all 0.2s linear;
-  color: #333;
-}
-
-#comment-form .item-input input::placeholder,
-#comment-form .item-textarea textarea::placeholder {
-  opacity: 0.8;
-}
-
-#comment-form .item-input input:focus,
-#comment-form .item-textarea textarea:focus {
-  box-shadow: 0 0 0 0.2rem rgb(68 139 255 / 25%);
-  border-color: #448bff;
-  color: #666;
-}
-
-#comment-form p label {
-  min-width: 60px;
-  color: #000;
-  display: none;
-}
-
-#comment-form .item-submit {
-  text-align: right;
-  margin-top: -40px;
-}
-
-#smiliesbutton {
-  display: block;
-  margin-top: 8px;
 }
 
 @media (max-width:1000px) {

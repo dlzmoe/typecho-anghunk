@@ -29,30 +29,28 @@
       ?>
       <div class="comment-info">
         <div class="comment-by-author">
-            <cite class="fn"><?php $singleCommentOptions->beforeAuthor();
-              $comments->author();
-              $singleCommentOptions->afterAuthor(); //输出评论者 
-              ?>
-            </cite>
-            <em> · </em>
-            <span class="comment-meta">
-                  <?php $singleCommentOptions->beforeDate();
-                  $comments->date($singleCommentOptions->dateFormat);
-                  $singleCommentOptions->afterDate();  //输出评论日期 
-                  ?></span>
-            <em> · </em>
-            <?php IPhome_Plugin::get_IPhome($comments->ip); ?>
-           
+          <cite class="fn"><?php $singleCommentOptions->beforeAuthor();
+                            $comments->author();
+                            $singleCommentOptions->afterAuthor(); //输出评论者 
+                            ?>
+          </cite>
+          <em> · </em>
+          <span class="comment-meta">
+            <?php $singleCommentOptions->beforeDate();
+            $comments->date($singleCommentOptions->dateFormat);
+            $singleCommentOptions->afterDate();  //输出评论日期 
+            ?></span>
+
         </div>
         <div class="comment-reply">
-            <?php $comments->reply($singleCommentOptions->replyWord); ?>
+          <?php $comments->reply($singleCommentOptions->replyWord); ?>
         </div>
       </div>
-      
+
     </div>
-    <div class="comment-content">
-        <?php $comments->content(); //输出评论内容，包含 <p></p> 标签 
-        ?>
+    <div class="comment-content alert alert-secondary">
+      <?php $comments->content(); //输出评论内容，包含 <p></p> 标签 
+      ?>
     </div>
     <?php if ($comments->children) { ?>
       <div class="comment-children">
@@ -82,26 +80,32 @@
           </p>
         <?php else : ?>
           <div class="item">
-              <p class="item-input">
-                <label for="author"><?php _e('昵称'); ?></label>
-                <input placeholder="昵称(必填)" type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
-              </p>
-              <p class="item-input">
-                <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label>
-                <input placeholder="邮箱(Email)" type="email" name="mail" id="mail" class="text" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
-              </p>
-              <p class="item-input">
-                <label for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>
-                <input placeholder="网站(https://)" type="url" name="url" id="url" class="text" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
-              </p>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">昵称</span>
+              </div>
+              <input autocomplete="off" type="text" class="form-control" name="author" id="author" placeholder="">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">邮箱</span>
+              </div>
+              <input autocomplete="off" type="email" class="form-control" name="mail" id="mail" placeholder="">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">网站</span>
+              </div>
+              <input autocomplete="off" type="url" class="form-control" name="url" id="url" placeholder="https://">
+            </div>
           </div>
         <?php endif; ?>
-        <p class="item-textarea">
-          <textarea placeholder="说点什么吧..." name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
-          <?php $comments->smilies(); ?>
-        </p>
+        <div class="form-group">
+          <textarea placeholder="说点什么吧..." name="text" id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="4"><?php $this->remember('text'); ?></textarea>
+        </div>
         <p class="item-submit">
-          <button type="submit" class="submit"><?php _e('提交评论'); ?></button>
+          <button type="submit" class="btn btn-primary"><?php _e('提交评论'); ?></button>
         </p>
       </form>
     </div>
@@ -110,11 +114,8 @@
   <?php endif; ?>
 
   <?php if ($comments->have()) : ?>
-    <h4><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h4>
+    <p><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
     <?php $comments->listComments(); ?>
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
   <?php endif; ?>
 </div>
-
-
-
