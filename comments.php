@@ -39,7 +39,9 @@
             <?php $singleCommentOptions->beforeDate();
             $comments->date($singleCommentOptions->dateFormat);
             $singleCommentOptions->afterDate();  //输出评论日期 
-            ?></span>
+            ?><em> · </em>
+            <?php IPhome_Plugin::get_IPhome($comments->ip); ?></span>
+            
 
         </div>
         <div class="comment-reply">
@@ -79,27 +81,25 @@
           <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a>
           </p>
         <?php else : ?>
-          <div class="item">
-
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">昵称*</span>
-              </div>
-              <input autocomplete="off" type="text" class="text form-control" name="author" id="author" value="<?php $this->remember('author'); ?>" required>
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">邮箱</span>
-              </div>
-              <input autocomplete="off" type="email" class="text form-control" name="mail" id="mail" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?>>
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">网站</span>
-              </div>
-              <input autocomplete="off" type="url" class="text form-control" name="url" id="url" placeholder="https://" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?>>
-            </div>
+     
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" id="basic-addon1" for="author"><?php _e('昵称'); ?></label>
           </div>
+        
+          <input placeholder="昵称(必填)" type="text" name="author" id="author" class="form-control" value="<?php $this->remember('author'); ?>" required />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" id="basic-addon1" for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label></div>
+          <input placeholder="邮箱(Email)" type="email" name="mail" id="mail" class="form-control" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label></div>
+          <input placeholder="网站(https://)" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
+        </div>
+         
         <?php endif; ?>
         <div class="form-group">
           <textarea placeholder="说点什么吧..." name="text" id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="4"><?php $this->remember('text'); ?></textarea>

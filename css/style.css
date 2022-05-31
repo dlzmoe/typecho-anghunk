@@ -697,7 +697,7 @@ article {
 }
 
 .comment-reply a {
-  background: var(--color)73;
+  background: var(--color);
   color: #fff;
   font-size: 12px;
   padding: 3px 8px;
