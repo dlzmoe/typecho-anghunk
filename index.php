@@ -9,7 +9,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
-<div id="container">
+<div class="container">
     <main class="main-content">
         <div class="banner">
             <img src="<?php $this->options->bannerbg(); ?>">

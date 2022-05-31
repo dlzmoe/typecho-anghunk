@@ -6,7 +6,7 @@
 */
 
 $this->need('header.php'); ?>
-<div id="container">
+<div class="container">
     <div class="main-content">
         <div class="archive">
 		<h1 class="post-title"><?php $this->title() ?></h1>

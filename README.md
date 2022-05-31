@@ -4,11 +4,11 @@
 
 >Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
 
-演示网址: [https://imhan.cn](https://imhan.cn)
+演示网址: [https://zburu.com](https://zburu.com)
 
 仓库地址: [https://github.com/zburu/Typecho-theme-Anghunk](https://github.com/zburu/Typecho-theme-Anghunk)
 
-**常见报错可以查看 [Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/anghunk/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。**
+**常见报错可以查看 [Issues](https://github.com/zburu/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/zburu/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。**
 
 
 ## 如何使用
@@ -34,7 +34,7 @@ $widget = $className::alloc();
 
 ## 图片展示
 
-图片更新不及时，请进入上面的[演示网址](https://imhan.cn)，查看最新的主题。
+图片更新不及时，请进入上面的[演示网址](https://zburu.com)，查看最新的主题。
 
 |![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/aa2207866648bd86280eb957a6759727.png)|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/3e72febdf75d5f6618296823e7ecccb0.png)|
 |---|---|
@@ -44,4 +44,4 @@ $widget = $className::alloc();
 
 [LICENSE](./LICENSE)
 
-[作者: zburu](https://imhan.cn)
+[作者: 子舒](https://zburu.com)

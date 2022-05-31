@@ -28,7 +28,7 @@
       <?php $comments->gravatar(50, $singleCommentOptions->defaultAvatar);    //头像 只输出 img 没有其它标签 
       ?>
       <div class="comment-info">
-        <div class="comment-by-author">
+        <div>
           <cite class="fn"><?php $singleCommentOptions->beforeAuthor();
                             $comments->author();
                             $singleCommentOptions->afterAuthor(); //输出评论者 
@@ -83,21 +83,21 @@
 
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">昵称</span>
+                <span class="input-group-text" id="basic-addon1">昵称*</span>
               </div>
-              <input autocomplete="off" type="text" class="form-control" name="author" id="author" placeholder="">
+              <input autocomplete="off" type="text" class="text form-control" name="author" id="author" value="<?php $this->remember('author'); ?>" required>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">邮箱</span>
               </div>
-              <input autocomplete="off" type="email" class="form-control" name="mail" id="mail" placeholder="">
+              <input autocomplete="off" type="email" class="text form-control" name="mail" id="mail" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?>>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">网站</span>
               </div>
-              <input autocomplete="off" type="url" class="form-control" name="url" id="url" placeholder="https://">
+              <input autocomplete="off" type="url" class="text form-control" name="url" id="url" placeholder="https://" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?>>
             </div>
           </div>
         <?php endif; ?>
@@ -115,7 +115,7 @@
 
   <?php if ($comments->have()) : ?>
     <p><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
-    <?php $comments->listComments(); ?>
-    <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-  <?php endif; ?>
+      <?php $comments->listComments(); ?>
+      <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+    <?php endif; ?>
 </div>

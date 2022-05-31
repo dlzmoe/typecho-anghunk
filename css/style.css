@@ -1,3 +1,18 @@
+@keyframes myfirst {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --color: #007bff;
+  --bg: #007bff;
+}
+
 ::-webkit-scrollbar {
   /* 滚动条整体部分 */
   width: 10px;
@@ -34,7 +49,7 @@
 }
 
 ::selection {
-  background: #25c2a09c;
+  background: #007bff9c;
   color: #fff;
 }
 
@@ -124,7 +139,7 @@ blockquote {
 a:active,
 a:hover {
   outline: 0;
-  color: #25c2a0;
+  color: var(--color);
   text-decoration: underline;
 }
 
@@ -213,20 +228,34 @@ header.header {
 }
 
 .site-header:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .site-header p {
-    margin: 0;
+  margin: 0;
 }
 
-#container {
+.container {
+  width: auto;
   max-width: 740px;
   flex: 1;
   padding: 0px 20px 10px;
   box-sizing: border-box;
   background: #fff;
   box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  animation: myfirst 0.2s;
+}
+
+@keyframes myfirst {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 #logo {
@@ -234,9 +263,9 @@ header.header {
   font-size: 26px;
 }
 
-#logo img{
-    height: 80px;
-    border-radius: 10px;
+#logo img {
+  height: 80px;
+  border-radius: 10px;
 }
 
 #logo:hover {
@@ -253,19 +282,17 @@ header.header {
   font-size: 15px;
 }
 
-.footer .container {}
-
-.footer .container>div {
+.footer>div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.footer .container p {
+.footer p {
   margin: 0;
 }
 
-.footer .container em {
+.footer em {
   padding: 0 6px;
 }
 
@@ -368,13 +395,13 @@ article {
 }
 
 .current-menu-item a {
-  border-bottom: 1px dotted #25c2a0;
-  color: #25c2a0;
+  border-bottom: 1px dotted var(--color);
+  color: var(--color);
   text-decoration: none;
 }
 
 .block-title a {
-  font-size: 18px;  
+  font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -383,13 +410,13 @@ article {
 }
 
 .menu-item a:hover {
-  border-bottom: 1px dotted #25c2a0;
+  border-bottom: 1px dotted var(--color);
   text-decoration: none;
 }
 
 .block-title a:hover {
-  color: #25c2a0;
-  border-bottom: 1px solid #25c2a0;
+  color: var(--color);
+  border-bottom: 1px solid var(--color);
   text-decoration: none;
 }
 
@@ -426,10 +453,12 @@ article {
 }
 
 .breadcrumb {
-    font-size: 16px;
+  font-size: 16px;
+  padding: 0.3rem 1rem;
 }
+
 .content {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .content ol,
@@ -528,7 +557,7 @@ article {
 
 .content a:hover {
   /*background: #000;*/
-  color: #25c2a0;
+  color: var(--color);
   text-decoration: underline;
 }
 
@@ -615,6 +644,17 @@ article {
   padding-right: 0;
 }
 
+#comments>.comment-list .comment-by-author>.comment-img>.comment-info>div>.fn::after {
+  content: "博主";
+  display: inline;
+  background: #999;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-left: 4px;
+  padding: 0 7px;
+}
+
 .comment-list .depth-2 .children {
   margin-left: 0
 }
@@ -653,11 +693,11 @@ article {
 }
 
 .comment-content a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .comment-reply a {
-  background: #92b0bc;
+  background: var(--color)73;
   color: #fff;
   font-size: 12px;
   padding: 3px 8px;
@@ -670,6 +710,10 @@ article {
 
 #comment-form {
   position: relative;
+}
+
+#comment-form .input-group-text {
+  width: 58px;
 }
 
 .comment-form label {
@@ -750,11 +794,11 @@ article {
 }
 
 .page-navigator {
-    display: flex;
+  display: flex;
 }
 
 .page-navigator li {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .place {
@@ -820,7 +864,7 @@ article {
 
 .autoMenu ul li.active {
   text-decoration: underline;
-  color: #25c2a0;
+  color: var(--color);
 }
 
 .prevornext {
@@ -866,15 +910,15 @@ article {
     text-align: left;
     position: relative;
   }
-  
+
   .site-header {
-      opacity: 1;
+    opacity: 1;
   }
-  
+
   .site-header p {
-      margin-top: 10px;
+    margin-top: 10px;
   }
-  
+
   .main-content {
     padding: 10px 0;
   }
@@ -894,7 +938,7 @@ article {
     margin-right: 10px;
   }
 
-  #container {
+  .container {
     padding: 0 16px 10px;
     max-width: 100%;
     margin-left: 10px;
@@ -917,11 +961,11 @@ article {
     padding: 10px 0;
   }
 
-  .footer .container>div {
+  .footer div {
     display: block;
   }
 
-  .footer .container em {
+  .footer em {
     display: none;
   }
 
@@ -965,7 +1009,7 @@ article {
   left: 0;
   width: 0;
   height: 3px;
-  background: #25c2a0;
+  background: var(--color);
   transition: opacity 0.5s;
 }
 
