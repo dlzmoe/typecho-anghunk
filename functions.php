@@ -24,6 +24,88 @@ function timer_stop( $display = 0, $precision = 3 ) {
 }
 
 /*
+* 获取表情
+*/
+function parseBiaoQing() {
+	$emo = false;
+	global $emo;
+	if(!$emo) {
+		$emo = json_decode(file_get_contents(dirname(__FILE__).'/OwO.json'), true);
+	}
+	for ($i = 0; $i < count($emo); $i++) {
+		$aa=array_keys($emo);
+		$type=$emo[$aa[$i]]['type'];
+        $num=count($emo[$aa[$i]]['container']);
+		$emoo=$emo[$aa[$i]]['container'];
+		
+		$emootwo=$emo[$aa[$i]]['name'];
+		
+		
+		$ename=$emo[$aa[$i]];
+		if ($type==='image') {
+			$ul=$ul.'<ul class="OwO-'.$ename['name'].'">'.summ($num,$type,$ename,$emoo,$emootwo).'</ul>';
+		} else {
+			$ul=$ul.'<ul class="OwO-'.$type.'">'.summ($num,$type,$ename,$emoo,$emootwo).'</ul>';
+		}
+		$divv=$divv.'<div class="OwO-bar-item">'.$aa[$i].'</div>';
+		
+	}
+	$divvv='<div class="OwO-bar">'.$divv.'</div>';
+	$divemo='<div class="OwO-emoji">'.$ul.'</div>';
+	return $divvv.$divemo;
+}
+
+/*
+* 获取具体表情
+*/
+function summ ($num,$type,$ename,$emo,$emootwo) {
+    $emoaa="$$".$emo[$j]['icon'].":".$emo[$j]['text']."$$";
+	if ($type==='image') {
+		for ($j = 0; $j < $num; $j++) {
+		    $emoaa="$$".$emootwo.":".$emo[$j]['icon']."$$";
+			$dd=$dd.'<li class="OwO-item" data-title="'.$emoaa.'" title="'.$emo[$j]['text'].'"><img src="'.$emopath.'/usr/themes/Anghunk/libs/emotion/'.$ename['name'].'/'.$emo[$j]['icon'].'.png"></li>';
+		}
+		return $dd;
+	} else {
+		for ($j = 0; $j < $num; $j++) {
+		      $emoaa="$$".$emootwo.":".$emo[$j]['icon']."$$";
+			$dd=$dd.'<li class="OwO-item" data-title="'.$emoaa.'" title="'.$emo[$j]['text'].'">'.$emo[$j]['icon'].'</li>';
+		}
+		return $dd;
+	}
+}
+
+/*
+* 解析表情
+*/
+function getparseBiaoQing($content) {
+	$emopath=$_SERVER['REQUEST_SCHEME'].":". DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR . $_SERVER['HTTP_HOST'];
+	$emo = false;
+	global $emo;
+	if(!$emo) {
+		$emo = json_decode(file_get_contents(dirname(dirname(dirname(__FILE__))).'/themes/Anghunk/OwO.json'), true);
+	}
+	foreach ($emo as $v) {
+		if($v['type'] == 'image') {
+			foreach ($v['container'] as $vv) {
+				$emoaa="$$".$v['name'].":".$vv['icon']."$$";
+				$content = str_replace($emoaa, '  <img style="max-height:40px;vertical-align:middle;" src="'.$emopath.'/usr/themes/Anghunk/libs/emotion/'.$v['name'].'/'.$vv['icon'] .'.png"  alt="'.$vv['text'] .'">  ', $content);
+			}
+		}
+	}
+	return $content;
+}
+
+/*
+* ip归属地
+*/
+require_once("libs/ipdata.class.php");
+function getiphome($ip) {
+    $ip_info=convertips($ip);
+    return $ip_info;
+}
+
+/*
 * 无插件阅读数
 */
 function get_post_view($archive)
@@ -116,6 +198,9 @@ function themeConfig($form){
 
   $footerbuild = new Typecho_Widget_Helper_Form_Element_Text('footerbuild', NULL, '2020-06-14', _t('网站建立时间'), _t('格式如 2020-06-14'));
   $form->addInput($footerbuild);
+  
+  $iphome = new Typecho_Widget_Helper_Form_Element_Radio('iphome', array(0 => _t('开启'), 1 => _t('关闭')), 0, _t('IP归属地开关'));
+  $form->addInput($iphome);
   
 }
 

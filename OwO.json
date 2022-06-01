@@ -1,0 +1,746 @@
+{
+  "阿鲁": {
+    "name": "aru",
+    "type": "image",
+    "container": [
+      {
+        "icon": "despise",
+        "text": "鄙视"
+      },
+      {
+        "icon": "knife",
+        "text": "插刀"
+      },
+      {
+        "icon": "pouting",
+        "text": "亲嘴"
+      },
+      {
+        "icon": "shutup",
+        "text": "闭嘴"
+      },
+      {
+        "icon": "unhappy",
+        "text": "不开心"
+      },
+      {
+        "icon": "discovertruth",
+        "text": "发现真相"
+      },
+      {
+        "icon": "shit",
+        "text": "便便"
+      },
+      {
+        "icon": "distressed",
+        "text": "烦恼"
+      },
+      {
+        "icon": "shy",
+        "text": "害羞"
+      },
+      {
+        "icon": "speechless",
+        "text": "无语"
+      },
+      {
+        "icon": "confuse",
+        "text": "迷惑"
+      },
+      {
+        "icon": "frown",
+        "text": "皱眉"
+      },
+      {
+        "icon": "proud",
+        "text": "得意"
+      },
+      {
+        "icon": "cheer",
+        "text": "欢呼"
+      },
+      {
+        "icon": "meditation",
+        "text": "沉思"
+      },
+      {
+        "icon": "diving",
+        "text": "潜水"
+      },
+      {
+        "icon": "cryingface",
+        "text": "掩面哭泣"
+      },
+      {
+        "icon": "lurking",
+        "text": "潜伏"
+      },
+      {
+        "icon": "thumb",
+        "text": "大拇指"
+      },
+      {
+        "icon": "smile",
+        "text": "微笑"
+      },
+      {
+        "icon": "clap",
+        "text": "拍掌"
+      },
+      {
+        "icon": "envious",
+        "text": "眼馋"
+      },
+      {
+        "icon": "surrender",
+        "text": "投降"
+      },
+      {
+        "icon": "bigeye",
+        "text": "大眼睛"
+      },
+      {
+        "icon": "nose",
+        "text": "抠鼻"
+      },
+      {
+        "icon": "sweat",
+        "text": "流汗"
+      },
+      {
+        "icon": "flower",
+        "text": "小花花"
+      },
+      {
+        "icon": "crying",
+        "text": "流泪"
+      },
+      {
+        "icon": "spit",
+        "text": "吐"
+      },
+      {
+        "icon": "surprised",
+        "text": "吃惊"
+      },
+      {
+        "icon": "blood",
+        "text": "一滩血"
+      },
+      {
+        "icon": "blood2",
+        "text": "吐血"
+      },
+      {
+        "icon": "shy2",
+        "text": "脸红"
+      },
+      {
+        "icon": "angry",
+        "text": "生气"
+      },
+      {
+        "icon": "nomatter",
+        "text": "无所谓"
+      },
+      {
+        "icon": "dead",
+        "text": "死翘翘"
+      },
+      {
+        "icon": "insidious",
+        "text": "阴险"
+      },
+      {
+        "icon": "tongue",
+        "text": "吐舌"
+      },
+      {
+        "icon": "shot",
+        "text": "中枪"
+      },
+      {
+        "icon": "speechless2",
+        "text": "偷看"
+      },
+      {
+        "icon": "smoking",
+        "text": "抽烟"
+      },
+      {
+        "icon": "slface",
+        "text": "哭着打脸"
+      },
+      {
+        "icon": "moface",
+        "text": "摸脸"
+      },
+      {
+        "icon": "expressionless",
+        "text": "面无表情"
+      },
+      {
+        "icon": "frownthingk",
+        "text": "皱眉沉思"
+      },
+      {
+        "icon": "rough",
+        "text": "长草"
+      },
+      {
+        "icon": "rough",
+        "text": "长草"
+      },
+      {
+        "icon": "cucumber",
+        "text": "青瓜"
+      },
+      {
+        "icon": "conscience",
+        "text": "摸良心"
+      },
+      {
+        "icon": "blackface",
+        "text": "黑脸"
+      },
+      {
+        "icon": "palming",
+        "text": "捂眼"
+      },
+      {
+        "icon": "spraywater",
+        "text": "喷水"
+      },
+      {
+        "icon": "spurtblood",
+        "text": "喷血"
+      },
+      {
+        "icon": "snag",
+        "text": "呲牙"
+      },
+      {
+        "icon": "yes",
+        "text": "yes"
+      },
+      {
+        "icon": "longbag",
+        "text": "头有包"
+      },
+      {
+        "icon": "lookcandles",
+        "text": "看蜡烛"
+      },
+      {
+        "icon": "openeyescry",
+        "text": "睁眼哭"
+      },
+      {
+        "icon": "openeyesfrown",
+        "text": "睁眼皱眉"
+      },
+      {
+        "icon": "xxooface",
+        "text": "xxoo脸"
+      },
+      {
+        "icon": "oyfrown",
+        "text": "皱个大眉脸"
+      },
+      {
+        "icon": "overcastface",
+        "text": "阴着脸"
+      },
+      {
+        "icon": "lookon",
+        "text": "看热闹"
+      }
+    ]
+  },
+  "Heo": {
+        "name": "heo",
+		"type": "image",
+		"container": [
+			{
+				"icon": "再见",
+				"text": "heo-再见"
+			},
+			{
+				"icon": "呲牙笑",
+				"text": "heo-呲牙笑"
+			},
+			{
+				"icon": "微笑",
+				"text": "heo-微笑"
+			},
+			{
+				"icon": "亲亲",
+				"text": "heo-亲亲"
+			},
+			{
+				"icon": "愤怒",
+				"text": "heo-愤怒"
+			},
+			{
+				"icon": "惊吓",
+				"text": "heo-惊吓"
+			},
+			{
+				"icon": "尴尬",
+				"text": "heo-尴尬"
+			},
+			{
+				"icon": "捂嘴笑",
+				"text": "heo-捂嘴笑"
+			},
+			{
+				"icon": "捂脸",
+				"text": "heo-捂脸"
+			},
+			{
+				"icon": "生病",
+				"text": "heo-生病"
+			},
+			{
+				"icon": "绿帽",
+				"text": "heo-绿帽"
+			},
+			{
+				"icon": "鼓掌",
+				"text": "heo-鼓掌"
+			},
+			{
+				"icon": "抠鼻",
+				"text": "heo-抠鼻"
+			},
+			{
+				"icon": "感动",
+				"text": "heo-感动"
+			},
+			{
+				"icon": "吐血",
+				"text": "heo-吐血"
+			},
+			{
+				"icon": "鬼脸",
+				"text": "heo-鬼脸"
+			},
+			{
+				"icon": "擦汗",
+				"text": "heo-擦汗"
+			},
+			{
+				"icon": "惊讶",
+				"text": "heo-惊讶"
+			},
+			{
+				"icon": "恶心",
+				"text": "heo-恶心"
+			},
+			{
+				"icon": "禁言",
+				"text": "heo-禁言"
+			},
+			{
+				"icon": "睡觉",
+				"text": "heo-睡觉"
+			},
+			{
+				"icon": "笑哭",
+				"text": "heo-笑哭"
+			},
+			{
+				"icon": "思考",
+				"text": "heo-思考"
+			},
+			{
+				"icon": "疑问",
+				"text": "heo-疑问"
+			},
+			{
+				"icon": "奋斗",
+				"text": "heo-奋斗"
+			},
+			{
+				"icon": "耍酷",
+				"text": "heo-耍酷"
+			},
+			{
+				"icon": "吵架",
+				"text": "heo-吵架"
+			},
+			{
+				"icon": "眩晕",
+				"text": "heo-眩晕"
+			},
+			{
+				"icon": "哭泣",
+				"text": "heo-哭泣"
+			},
+			{
+				"icon": "开心",
+				"text": "heo-开心"
+			},
+			{
+				"icon": "害羞",
+				"text": "heo-害羞"
+			},
+			{
+				"icon": "喜欢",
+				"text": "heo-喜欢"
+			},
+			{
+				"icon": "烦恼",
+				"text": "heo-烦恼"
+			},
+			{
+				"icon": "爆炸",
+				"text": "heo-爆炸"
+			},
+			{
+				"icon": "熬夜",
+				"text": "heo-熬夜"
+			},
+			{
+				"icon": "吃瓜",
+				"text": "heo-吃瓜"
+			},
+			{
+				"icon": "阴险",
+				"text": "heo-阴险"
+			},
+			{
+				"icon": "狗头",
+				"text": "heo-狗头"
+			},
+			{
+				"icon": "滑稽",
+				"text": "heo-滑稽"
+			},
+			{
+				"icon": "被打",
+				"text": "heo-被打"
+			},
+			{
+				"icon": "哈士奇",
+				"text": "heo-哈士奇"
+			},
+			{
+				"icon": "大笑",
+				"text": "heo-大笑"
+			},
+			{
+				"icon": "加班",
+				"text": "heo-加班"
+			},
+			{
+				"icon": "唱歌",
+				"text": "heo-唱歌"
+			},
+			{
+				"icon": "纠结",
+				"text": "heo-纠结"
+			},
+			{
+				"icon": "发红包",
+				"text": "heo-发红包"
+			},
+			{
+				"icon": "送福",
+				"text": "heo-送福"
+			},
+			{
+				"icon": "牛年进宝",
+				"text": "heo-牛年进宝"
+			},
+			{
+				"icon": "狗头围脖",
+				"text": "heo-狗头围脖"
+			},
+			{
+				"icon": "狗头花",
+				"text": "heo-狗头花"
+			},
+			{
+				"icon": "狗头草",
+				"text": "heo-狗头草"
+			},
+			{
+				"icon": "头秃",
+				"text": "heo-头秃"
+			},
+			{
+				"icon": "狗头胖次",
+				"text": "heo-狗头胖次"
+			},
+			{
+				"icon": "我看好你",
+				"text": "heo-我看好你"
+			},
+			{
+				"icon": "好的",
+				"text": "heo-好的"
+			},
+			{
+				"icon": "好奇",
+				"text": "heo-好奇"
+			},
+			{
+				"icon": "偷偷看",
+				"text": "heo-偷偷看"
+			},
+			{
+				"icon": "危险",
+				"text": "heo-危险"
+			},
+			{
+				"icon": "小丑",
+				"text": "heo-小丑"
+			},
+			{
+				"icon": "引起不适",
+				"text": "heo-引起不适"
+			},
+			{
+				"icon": "滑稽喝水",
+				"text": "heo-滑稽喝水"
+			},
+			{
+				"icon": "熊猫",
+				"text": "heo-熊猫"
+			},
+			{
+				"icon": "熊猫唱歌",
+				"text": "heo-熊猫唱歌"
+			},
+			{
+				"icon": "打牌",
+				"text": "heo-打牌"
+			},
+			{
+				"icon": "哈士奇失去意识",
+				"text": "heo-哈士奇失去意识"
+			},
+			{
+				"icon": "应援",
+				"text": "heo-应援"
+			},
+			{
+				"icon": "熊猫喜欢",
+				"text": "heo-熊猫喜欢"
+			},
+			{
+				"icon": "疼痛",
+				"text": "heo-疼痛"
+			},
+			{
+				"icon": "勉强笑",
+				"text": "heo-勉强笑"
+			},
+			{
+				"icon": "看穿一切",
+				"text": "heo-看穿一切"
+			},
+			{
+				"icon": "滑稽狂汗",
+				"text": "heo-滑稽狂汗"
+			},
+			{
+				"icon": "不好意思",
+				"text": "heo-不好意思"
+			},
+			{
+				"icon": "菜狗",
+				"text": "heo-菜狗"
+			},
+			{
+				"icon": "难以置信",
+				"text": "heo-难以置信"
+			},
+			{
+				"icon": "滑稽被子",
+				"text": "heo-滑稽被子"
+			},
+			{
+				"icon": "月饼",
+				"text": "heo-月饼"
+			},
+			{
+				"icon": "倚墙笑",
+				"text": "heo-倚墙笑"
+			},
+			{
+				"icon": "出家人",
+				"text": "heo-出家人"
+			},
+			{
+				"icon": "菜狗花",
+				"text": "heo-菜狗花"
+			},
+			{
+				"icon": "黑线",
+				"text": "heo-黑线"
+			},
+			{
+				"icon": "呦吼",
+				"text": "heo-呦吼"
+			},
+			{
+				"icon": "扶额",
+				"text": "heo-扶额"
+			},
+			{
+				"icon": "打咩",
+				"text": "heo-打咩"
+			},
+			{
+				"icon": "有没有搞错",
+				"text": "heo-有没有搞错"
+			},
+			{
+				"icon": "哈士奇失望",
+				"text": "heo-哈士奇失望"
+			},
+			{
+				"icon": "失望",
+				"text": "heo-失望"
+			},
+			{
+				"icon": "手机相机",
+				"text": "heo-手机相机"
+			},
+			{
+				"icon": "熊猫失望",
+				"text": "heo-熊猫失望"
+			},
+			{
+				"icon": "狗头失望",
+				"text": "heo-狗头失望"
+			},
+			{
+				"icon": "送花",
+				"text": "heo-送花"
+			},
+			{
+				"icon": "LPL",
+				"text": "heo-LPL"
+			},
+			{
+				"icon": "吃手",
+				"text": "heo-吃手"
+			},
+			{
+				"icon": "嘿哈",
+				"text": "heo-嘿哈"
+			},
+			{
+				"icon": "抬眼镜",
+				"text": "heo-抬眼镜"
+			},
+			{
+				"icon": "泪奔",
+				"text": "heo-泪奔"
+			},
+			{
+				"icon": "猪头",
+				"text": "heo-猪头"
+			},
+			{
+				"icon": "3D眼镜",
+				"text": "heo-3D眼镜"
+			},
+			{
+				"icon": "EDG",
+				"text": "heo-EDG"
+			},
+			{
+				"icon": "拜托",
+				"text": "heo-拜托"
+			},
+			{
+				"icon": "波吉",
+				"text": "heo-波吉"
+			},
+			{
+				"icon": "电话",
+				"text": "heo-电话"
+			},
+			{
+				"icon": "斗鸡眼",
+				"text": "heo-斗鸡眼"
+			},
+			{
+				"icon": "恶魔",
+				"text": "heo-恶魔"
+			},
+			{
+				"icon": "恶魔恐惧",
+				"text": "heo-恶魔恐惧"
+			},
+			{
+				"icon": "狗头意外",
+				"text": "heo-狗头意外"
+			},
+			{
+				"icon": "猪头意外",
+				"text": "heo-猪头意外"
+			},
+			{
+				"icon": "熊猫意外",
+				"text": "heo-熊猫意外"
+			},
+			{
+				"icon": "胡子",
+				"text": "heo-胡子"
+			},
+			{
+				"icon": "滑稽奶茶",
+				"text": "heo-滑稽奶茶"
+			},
+			{
+				"icon": "滑稽柠檬",
+				"text": "heo-滑稽柠檬"
+			},
+			{
+				"icon": "裂开",
+				"text": "heo-裂开"
+			},
+			{
+				"icon": "没招",
+				"text": "heo-没招"
+			},
+			{
+				"icon": "惬意",
+				"text": "heo-惬意"
+			},
+			{
+				"icon": "伞兵",
+				"text": "heo-伞兵"
+			},
+			{
+				"icon": "傻笑",
+				"text": "heo-傻笑"
+			},
+			{
+				"icon": "深思",
+				"text": "heo-深思"
+			},
+			{
+				"icon": "托腮",
+				"text": "heo-托腮"
+			},
+			{
+				"icon": "小偷",
+				"text": "heo-小偷"
+			},
+			{
+				"icon": "这是啥",
+				"text": "heo-这是啥"
+			},
+			{
+				"icon": "智慧的眼神",
+				"text": "heo-智慧的眼神"
+			}
+		]
+	}
+}

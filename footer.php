@@ -2,8 +2,7 @@
 <footer class="footer">
     <div>
         <p>网站运行: <span id="days">0</span> 天</p>
-        <em>·</em>
-        <p>访客总人数：<?php echo theAllViews();?></p>
+        </p>
         <em>·</em>
         <p>加载速度: <?php echo timer_stop();?></p>
     </div>
@@ -40,27 +39,7 @@
     <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/js/pjax.js'); ?>"></script>
-    <script>
-        var pjax = new Pjax({
-          selectors: [
-            'title',
-            'body',
-          ],
-          cacheBust: false
-        })
-        function pjax_reload(){
-            var comment = document.getElementById("comments");
-        }
-        
-        document.addEventListener('pjax:send', function (){
-            document.querySelector(".pjax-loading").classList.add("active");
-        });
-        document.addEventListener('pjax:complete', function (){
-            document.querySelector(".pjax-loading").classList.remove("active");
-            pjax_reload(); 
-        });
-    </script>
+   
     <?php $this->footer(); ?>
 </div>
 

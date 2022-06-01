@@ -23,6 +23,8 @@
 
 ### 2.搜索功能
 
+>https://github.com/AlanDecode/Typecho-Plugin-ExSearch
+
 关于搜索功能，建议搭配 `ExSearch` 插件使用，如果你打算添加搜索功能，请在 `/themes/Anghunk/header.php` 文件中 `第32行`的注释取消即可。
 
 >如果后台操作中报错，说明该插件在 typecho1.2 中不兼容，修改方案：将 `/plugins/ExSearch/Plugin.php` 的 `第276行` 注释掉，然后添加一行代码。

@@ -40,8 +40,12 @@
             $comments->date($singleCommentOptions->dateFormat);
             $singleCommentOptions->afterDate();  //输出评论日期 
             ?><em> · </em>
-            <?php IPhome_Plugin::get_IPhome($comments->ip); ?></span>
-            
+            <?php
+            $options = Typecho_Widget::widget('Widget_Options');
+            if ($options->iphome == '0') {
+              echo (getiphome($comments->ip));
+            } ?>
+          </span>
 
         </div>
         <div class="comment-reply">
@@ -50,10 +54,12 @@
       </div>
 
     </div>
+    
     <div class="comment-content alert alert-secondary">
-      <?php $comments->content(); //输出评论内容，包含 <p></p> 标签 
+      <?php $con=$comments->content; echo getparseBiaoQing($con); //输出评论内容，包含 <p></p> 标签 
       ?>
     </div>
+    
     <?php if ($comments->children) { ?>
       <div class="comment-children">
         <?php $comments->threadedComments($singleCommentOptions); //评论嵌套
@@ -81,31 +87,40 @@
           <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a>
           </p>
         <?php else : ?>
-     
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" id="basic-addon1" for="author"><?php _e('昵称'); ?></label>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" id="basic-addon1" for="author"><?php _e('昵称'); ?></label>
+            </div>
+
+            <input placeholder="昵称(必填)" type="text" name="author" id="author" class="form-control" value="<?php $this->remember('author'); ?>" required />
           </div>
-        
-          <input placeholder="昵称(必填)" type="text" name="author" id="author" class="form-control" value="<?php $this->remember('author'); ?>" required />
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" id="basic-addon1" for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label></div>
-          <input placeholder="邮箱(Email)" type="email" name="mail" id="mail" class="form-control" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label></div>
-          <input placeholder="网站(https://)" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
-        </div>
-         
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" id="basic-addon1" for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label>
+            </div>
+            <input placeholder="邮箱(Email)" type="email" name="mail" id="mail" class="form-control" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>
+            </div>
+            <input placeholder="网站(https://)" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
+          </div>
+
         <?php endif; ?>
         <div class="form-group">
-          <textarea placeholder="说点什么吧..." name="text" id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="4"><?php $this->remember('text'); ?></textarea>
+          <textarea placeholder="说点什么吧..." name="text" id="textarea" class="form-control" rows="4"><?php $this->remember('text'); ?></textarea>
+          <p class="item-submit">
+            <a class="bq-button btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">owo</a>
+            <button type="submit" id="submit" class="btn btn-primary"><?php _e('提交评论'); ?></button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body bq-list">
+                  <?php echo parseBiaoQing(); ?>
+                </div>
+              </div>
         </div>
-        <p class="item-submit">
-          <button type="submit" class="btn btn-primary"><?php _e('提交评论'); ?></button>
+
         </p>
       </form>
     </div>

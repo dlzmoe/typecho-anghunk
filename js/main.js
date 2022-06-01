@@ -39,28 +39,21 @@ $(function () {
   })
 
   var codeblocks = document.getElementsByTagName("pre")
-  //循环每个pre代码块，并添加 复制代码
   for (var i = 0; i < codeblocks.length; i++) {
-    //显示 复制代码 按钮
     currentCode = codeblocks[i]
     currentCode.style = "position: relative;"
     var copy = document.createElement("div")
     copy.style = "position:absolute;right:2px;top:2px;background-color: white;padding:0px 12px;border-radius: 4px;cursor: pointer;box-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.05);"
     copy.innerHTML = "复制"
     currentCode.appendChild(copy)
-    //让所有 "复制"按钮 全部隐藏
-    // copy.style.visibility = "hidden"
   }
   for (var i = 0; i < codeblocks.length; i++) {
     !function (i) {
-      //鼠标移到代码块，就显示按钮
       codeblocks[i].onmouseover = function () {
         codeblocks[i].childNodes[1].style.visibility = "visible"
       }
-      //执行 复制代码 功能
       function copyArticle (event) {
         const range = document.createRange();
-        //范围是 code，不包括刚才创建的div
         range.selectNode(codeblocks[i].childNodes[0]);
         const selection = window.getSelection();
         if (selection.rangeCount > 0) selection.removeAllRanges();
@@ -70,16 +63,59 @@ $(function () {
         setTimeout(function () {
           codeblocks[i].childNodes[1].innerHTML = "复制"
         }, 1000);
-        //清除选择区
         if (selection.rangeCount > 0) selection.removeAllRanges(); 0
       }
       codeblocks[i].childNodes[1].addEventListener('click', copyArticle, false);
     }(i);
     !function (i) {
-      //鼠标从代码块移开 则不显示复制代码按钮
-    //   codeblocks[i].onmouseout = function () {
-    //     codeblocks[i].childNodes[1].style.visibility = "hidden"
-    //   }
     }(i);
   }
+  $('.bq-list .OwO-bar-item:nth-child(1)').addClass('active')
+  $('.OwO-emoji ul:nth-child(1)').addClass('active-txt')
+  $(".bq-list .OwO-bar-item").each(function (index) {
+    $(this).click(function () {
+      $(".OwO-bar-item.active").removeClass("active");
+      $(this).addClass("active");
+      $(".OwO-emoji ul.active-txt").removeClass("active-txt");
+      $(".OwO-emoji ul").eq(index).addClass("active-txt");
+    });
+  })
+
+
+  jQuery.fn.extend({
+    insertAtCaret: function (myValue) {
+      return this.each(function (i) {
+        if (document.selection) {
+          //For browsers like Internet Explorer
+          this.focus();
+          var sel = document.selection.createRange();
+          sel.text = myValue;
+          this.focus();
+        }
+        else if (this.selectionStart || this.selectionStart == '0') {
+          //For browsers like Firefox and Webkit based
+          var startPos = this.selectionStart;
+          var endPos = this.selectionEnd;
+          var scrollTop = this.scrollTop;
+          this.value = this.value.substring(0, startPos) + myValue + this.value.substring(endPos, this.value.length);
+          this.focus();
+          this.selectionStart = startPos + myValue.length;
+          this.selectionEnd = startPos + myValue.length;
+          this.scrollTop = scrollTop;
+        } else {
+          this.value += myValue;
+          this.focus();
+        }
+      });
+    }
+  });
+
+  $(".bq-list ul li").each(function (index) {
+    $(this).click(function () {
+      var txt = $(".bq-list ul li").eq(index).attr("data-title")
+      console.log(txt)
+      $("#textarea").insertAtCaret(txt)
+    });
+  })
+
 })
