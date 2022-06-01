@@ -3,7 +3,7 @@
  * 简单整洁的主题，作者博客 <a href="https://imhan.cn" target="_blank">https://imhan.cn</a>
  * @package Anghunk 
  * @author 子舒
- * @version 1.0
+ * @version 2.0
  * @link https://imhan.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

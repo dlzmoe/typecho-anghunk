@@ -2,7 +2,6 @@
 <footer class="footer">
     <div>
         <p>网站运行: <span id="days">0</span> 天</p>
-        </p>
         <em>·</em>
         <p>加载速度: <?php echo timer_stop();?></p>
     </div>
@@ -30,16 +29,29 @@
         var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
         document.getElementById('days').innerHTML = number_of_days;
     </script>
-    <script src="<?php $this->options->themeUrl('/js/jquery3.6.0.js'); ?>"></script>
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/zoom.css'); ?>">
+    <script src="<?php $this->options->themeUrl('/libs/js/jquery3.6.0.js'); ?>"></script>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/zoom.css'); ?>">
     <img src="" alt="" class="bigimg">
     <div class="mask"></div>
-    <script src="<?php $this->options->themeUrl('/js/bootstrap.bundle.min.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/js/zoom.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/js/toc.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/js/pre.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/libs/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/libs/js/zoom.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/libs/js/toc.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/libs/js/pre.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('/libs/js/pangu.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-   
+    <script>
+        const text = pangu.spacing("當你凝視著bug，bug也凝視著你");
+        // text = '當你凝視著 bug，bug 也凝視著你'
+        
+        pangu.spacingElementById('main');
+        pangu.spacingElementByClassName('comment');
+        pangu.spacingElementByTagName('p');
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // listen to any DOM change and automatically perform spacing via MutationObserver()
+            pangu.autoSpacingPage();
+        });
+    </script>
     <?php $this->footer(); ?>
 </div>
 

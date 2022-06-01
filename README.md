@@ -1,8 +1,8 @@
 ## Typecho-theme-Anghunk
 
-![](./css/theme-logo.png)
+![](./libs/css/theme-logo.png)
 
->Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调。
+>Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调，版本已经进入2.0。
 
 演示网址: [https://zburu.com](https://zburu.com)
 
