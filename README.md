@@ -40,8 +40,15 @@ $widget = $className::alloc();
 |---|---|
 |![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/4a7c17ee31fa19ab008471aeaf8366f2.png)|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/a789d3f50ce39d8aa3f6933f3720c7f8.png)|
 
+
+## Contributors 
+
+<a href="https://github.com/zburu" target="_blank"><img style="width:40px;border-radius:50%;" src="https://avatars.githubusercontent.com/u/65840178?v=4"></a>
+<a href="https://www.emoao.com/" target="_blank"><img style="width:40px;border-radius:50%;" src="https://blog.emoao.com/static/img/avatar.webp"></a>
+
 ## LICENSE
 
 [LICENSE](./LICENSE)
 
 [Author: 子舒](https://zburu.com)
+
