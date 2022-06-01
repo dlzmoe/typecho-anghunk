@@ -44,7 +44,7 @@ $widget = $className::alloc();
 ## Contributors 
 
 <a href="https://github.com/zburu" target="_blank"><img style="width:40px;border-radius:50%;" src="https://avatars.githubusercontent.com/u/65840178?v=4"></a>
-<a href="https://www.emoao.com/" target="_blank"><img style="width:40px;border-radius:50%;" src="https://blog.emoao.com/static/img/avatar.webp"></a>
+<a href="https://www.emoao.com/" target="_blank"><img style="width:40px;border-radius:50%;" src="https://q2.qlogo.cn/g?b=qq&nk=2502393029&s=100"></a>
 
 ## LICENSE
 
