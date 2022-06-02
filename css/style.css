@@ -217,9 +217,9 @@ header.header {
   transition: all 0.5s linear;
 }
 
-.site-header:hover {
-  opacity: 1;
-}
+/*.site-header:hover {*/
+/*  opacity: 1;*/
+/*}*/
 
 .site-header p {
   margin: 0;
@@ -786,14 +786,45 @@ article {
   font-size: 16px;
 }
 
+.autoMenu ul li a {
+    
+  position: relative;
+  padding-right: 30px;
+  transition: all 0.2s linear;
+}
+.autoMenu ul li a::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background: #d1d1d1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-radius: 30px;
+}
+
 .autoMenu ul li.sub {
   font-size: 14px;
-  color: #888;
+  color: #d1d1d1;
 }
 
 .autoMenu ul li.active {
-  text-decoration: underline;
-  color: var(--color);
+  text-decoration: none;
+  color: #666
+}
+
+.autoMenu ul li.active::after {
+  background: #666;
+}
+
+.autoMenu ul li:hover,
+.autoMenu ul li:hover a{
+  color: #666;
+  text-decoration: none;
+}
+
+.autoMenu ul li:hover::after {
+  background: #666;
 }
 
 .prevornext {
@@ -891,7 +922,7 @@ article {
     font-size: 18px;
     display: block;
   }
-  
+
   .block-title a {
     text-overflow: inherit;
     overflow: inherit;
@@ -945,7 +976,7 @@ article {
   #comment-form .item-input {
     width: 100%;
   }
-  
+
   .prevornext p:nth-child(2) {
     text-align: left;
   }
@@ -1026,4 +1057,14 @@ article {
 
 .bq-list ul.active-txt {
   display: flex;
+}
+
+.nnjr {
+    list-style: none;
+    font-size: 15px;
+}
+
+.nnjr p {
+    color: #777;
+    margin: 0;
 }

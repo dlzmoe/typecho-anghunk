@@ -20,12 +20,12 @@
     <?php $this->header(); ?>
     <script><?php $this->options->baidutongji(); ?></script>
 </head>
-<body>
+<body id="content">
   <div class="home">
     <header class="header">
       <div class="site-header">
           <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-              <?php $this->author->gravatar(80); ?>
+              <img src="<?php $this->options->headerimg(); ?>">
               <p><?php $this->options->headertitle(); ?></p>    
           </a>
           <nav id="nav-menu">
@@ -34,7 +34,11 @@
                 <?php while($pages->next()): ?>
                     <li class="menu-item<?php if($this->is('page', $pages->slug)): ?> current-menu-item<?php endif; ?>"><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
-                <li class="menu-item"><a class="search-form-input">Search</a></li>
+                
+                 <?php $options = Typecho_Widget::widget('Widget_Options');
+                    if ($options->search == '0') {
+                      echo ('<li class="menu-item"><a class="search-form-input">Search</a></li>');
+                    } ?>
             </ul>
           </nav>
           <div class="autoMenu" id="autoMenu" data-autoMenu></div>

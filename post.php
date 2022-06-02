@@ -22,6 +22,7 @@
                 <p><?php $this->theNext(); ?></p>
                 <p><?php $this->thePrev(); ?></p>
             </div>
+            <?php _getHistoryToday($this->created) ?>
             <?php $this->need('comments.php'); ?>
         </div>
         <?php $this->need('footer.php'); ?>

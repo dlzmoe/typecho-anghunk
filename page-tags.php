@@ -15,7 +15,7 @@ $this->need('header.php'); ?>
                     <?php if($tags->have()): ?>
                     <ul class="tags-list">
                     <?php while ($tags->next()): ?>
-                        <li><a href="<?php $tags->permalink(); ?>"><?php $tags->name(); ?><sup><?php $tags->count(); ?></sup></a></li>
+                        <li><a href="<?php $tags->permalink(); ?>"><?php $tags->name(); ?><sup> <?php $tags->count(); ?></sup></a></li>
                     <?php endwhile; ?>
                     <?php else: ?>
                         <li><?php _e('没有任何标签'); ?></li>
