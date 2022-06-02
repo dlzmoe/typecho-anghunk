@@ -6,10 +6,8 @@ $(function () {
   prettyPrint();
 
   // 图片灯箱事件
-  $('.content img').addClass('smallimg')
-  $('.content img').wrap('<div class="imgbox"></div>')
-  var obj = new zoom('mask', 'bigimg', 'smallimg');
-  obj.init();
+  $('.content img').addClass('slb')
+  $('.slb').simplebox({ fadeSpeed: 400 });
 
   //绑定页面滚动事件
   $('.top').on('click', function () {

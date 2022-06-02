@@ -6,9 +6,9 @@
 
 演示网址: [https://zburu.com](https://zburu.com)
 
-仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
+仓库地址: [https://github.com/zburu/Typecho-theme-Anghunk](https://github.com/zburu/Typecho-theme-Anghunk)
 
-**常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/zburu/Anghunk/issues)提出，这里我会第一时间看到解决。**
+**常见报错可以查看 [Issues](https://github.com/zburu/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/zburu/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。**
 
 
 ## 如何使用

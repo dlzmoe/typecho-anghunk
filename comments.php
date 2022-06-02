@@ -39,9 +39,11 @@
             <?php $singleCommentOptions->beforeDate();
             $comments->date($singleCommentOptions->dateFormat);
             $singleCommentOptions->afterDate();  //输出评论日期 
-            ?><em> · </em>
-            <?php
-            $options = Typecho_Widget::widget('Widget_Options');
+            ?>
+          </span>
+            
+          <span>
+            <?php $options = Typecho_Widget::widget('Widget_Options');
             if ($options->iphome == '0') {
               echo (getiphome($comments->ip));
             } ?>
@@ -90,22 +92,22 @@
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="author"><?php _e('昵称'); ?></label>
+              <label class="input-group-text" id="basic-addon1" for="author"><?php _e('昵称*'); ?></label>
             </div>
 
-            <input placeholder="昵称(必填)" type="text" name="author" id="author" class="form-control" value="<?php $this->remember('author'); ?>" required />
+            <input placeholder="" type="text" name="author" id="author" class="form-control" value="<?php $this->remember('author'); ?>" required />
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <label class="input-group-text" id="basic-addon1" for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label>
             </div>
-            <input placeholder="邮箱(Email)" type="email" name="mail" id="mail" class="form-control" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
+            <input placeholder="" type="email" name="mail" id="mail" class="form-control" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>
             </div>
-            <input placeholder="网站(https://)" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
+            <input placeholder="" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
           </div>
 
         <?php endif; ?>
