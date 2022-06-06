@@ -111,7 +111,6 @@ $(function () {
   $(".bq-list ul li").each(function (index) {
     $(this).click(function () {
       var txt = $(".bq-list ul li").eq(index).attr("data-title")
-      console.log(txt)
       $("#textarea").insertAtCaret(txt)
     });
   })

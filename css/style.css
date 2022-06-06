@@ -224,11 +224,14 @@ header.header {
 .site-header p {
   margin: 0;
 }
-
-.container {
+.main {
   width: auto;
   max-width: 740px;
   flex: 1;
+}
+.container {
+  max-width: 100%;
+  margin-bottom: 20px;
   padding: 0px 20px 10px;
   box-sizing: border-box;
   background: #fff;
@@ -260,14 +263,10 @@ header.header {
 
 #logo:hover {
   color: inherit;
-  /*opacity: 0.8;*/
   text-decoration: none;
 }
 
 .footer {
-  border-top: 1px dotted #999;
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 15px;
 }
@@ -507,8 +506,11 @@ article {
 }
 
 .content h2 {
-  color: #121212;
+  color: var(--color);
+  font-size: 24px;
   font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .content h3 {
@@ -591,8 +593,20 @@ article {
   float: right
 }
 
+#comments .container{
+    padding-top: 30px;
+}
+
 #comments>.comment-list>.comment-body>.comment-meta {
   right: 74px;
+}
+
+#comments>.comment-list>.comment-body {
+  margin-bottom: 20px;;
+  padding: 20px 20px 20px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
 }
 
 .comment-info {
@@ -696,10 +710,6 @@ article {
   white-space: nowrap;
 }
 
-.respond {
-  margin-top: 30px
-}
-
 #comment-form {
   position: relative;
 }
@@ -781,10 +791,7 @@ article {
   font-weight: 600;
 }
 
-.autoMenu ul li {
-  color: #444;
-  font-size: 16px;
-}
+
 
 .autoMenu ul li a {
     
@@ -802,7 +809,7 @@ article {
   top: 50%;
   border-radius: 30px;
 }
-
+.autoMenu ul li,
 .autoMenu ul li.sub {
   font-size: 14px;
   color: #d1d1d1;
@@ -907,11 +914,14 @@ article {
     margin-right: 10px;
   }
 
-  .container {
-    padding: 0 16px 10px;
+  .main {
     max-width: 100%;
     margin-left: 10px;
     margin-right: 10px;
+  }
+  
+  .main .container {
+    padding: 0 16px 10px;
   }
 
   article {
@@ -1029,7 +1039,7 @@ article {
   position: absolute;
   top: 1px;
   left: 1px;
-  width: 98%;
+  width: calc(100% - 12px);
   background: #eee;
 }
 

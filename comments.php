@@ -77,8 +77,8 @@
   <?php $this->comments()->to($comments); ?>
 
   <?php if ($this->allow('comment')) : ?>
-    <hr>
-    <div id="<?php $this->respondId(); ?>" class="respond">
+  <div class="container">
+    <div id="<?php $this->respondId(); ?>">
       <div class="cancel-comment-reply">
         <?php $comments->cancelReply(); ?>
       </div>
@@ -126,6 +126,7 @@
         </p>
       </form>
     </div>
+  </div>
   <?php else : ?>
 
   <?php endif; ?>
