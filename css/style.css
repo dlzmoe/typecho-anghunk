@@ -224,11 +224,14 @@ header.header {
 .site-header p {
   margin: 0;
 }
+
 .main {
   width: auto;
   max-width: 740px;
   flex: 1;
+  animation: myfirst 0.2s;
 }
+
 .container {
   max-width: 100%;
   margin-bottom: 20px;
@@ -236,7 +239,6 @@ header.header {
   box-sizing: border-box;
   background: #fff;
   box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-  animation: myfirst 0.2s;
 }
 
 @keyframes myfirst {
@@ -364,6 +366,10 @@ article {
 #nav-menu ul {
   display: flex;
   flex-direction: column;
+}
+
+#m-nav-menu {
+  display: none;
 }
 
 .topNav-items li {
@@ -593,8 +599,8 @@ article {
   float: right
 }
 
-#comments .container{
-    padding-top: 30px;
+#comments .container {
+  padding-top: 30px;
 }
 
 #comments>.comment-list>.comment-body>.comment-meta {
@@ -602,7 +608,8 @@ article {
 }
 
 #comments>.comment-list>.comment-body {
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
+  ;
   padding: 20px 20px 20px;
   background: #fff;
   box-sizing: border-box;
@@ -794,11 +801,11 @@ article {
 
 
 .autoMenu ul li a {
-    
   position: relative;
   padding-right: 30px;
   transition: all 0.2s linear;
 }
+
 .autoMenu ul li a::after {
   content: "";
   width: 20px;
@@ -809,6 +816,7 @@ article {
   top: 50%;
   border-radius: 30px;
 }
+
 .autoMenu ul li,
 .autoMenu ul li.sub {
   font-size: 14px;
@@ -817,16 +825,16 @@ article {
 
 .autoMenu ul li.active {
   text-decoration: none;
-  color: #666
+  color: #006cff
 }
 
 .autoMenu ul li.active::after {
-  background: #666;
+  background: #006cff;
 }
 
 .autoMenu ul li:hover,
-.autoMenu ul li:hover a{
-  color: #666;
+.autoMenu ul li:hover a {
+  color: #006cff;
   text-decoration: none;
 }
 
@@ -919,7 +927,7 @@ article {
     margin-left: 10px;
     margin-right: 10px;
   }
-  
+
   .main .container {
     padding: 0 16px 10px;
   }
@@ -955,10 +963,6 @@ article {
     display: none;
   }
 
-  #comments {
-    padding: 10px 0;
-  }
-
   .post-title {
     padding: 10px 0 0;
   }
@@ -990,7 +994,49 @@ article {
   .prevornext p:nth-child(2) {
     text-align: left;
   }
+}
 
+@media (max-width:520px) {
+  .home {
+    padding-top: 0 !important;
+  }
+
+  header.header {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    z-index: 9;
+  }
+
+  #logo img {
+    display: none;
+  }
+
+  .site-header p {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #m-nav-menu {
+    display: block;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
 }
 
 .item-submit {
@@ -1070,11 +1116,11 @@ article {
 }
 
 .nnjr {
-    list-style: none;
-    font-size: 15px;
+  list-style: none;
+  font-size: 15px;
 }
 
 .nnjr p {
-    color: #777;
-    margin: 0;
+  color: #777;
+  margin: 0;
 }

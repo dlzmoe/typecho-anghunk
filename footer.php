@@ -3,6 +3,8 @@
     <div>
         <p>网站运行: <span id="days">0</span> 天</p>
         <em>·</em>
+        <p>访客总数: <?php echo theAllViews();?></p>
+        <em>·</em>
         <p>加载速度: <?php echo timer_stop();?></p>
     </div>
     <div>
@@ -36,7 +38,6 @@
     <script src="<?php $this->options->themeUrl('/libs/js/pre.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/pangu.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-    
     <script>
         const text = pangu.spacing("當你凝視著bug，bug也凝視著你");
         // text = '當你凝視著 bug，bug 也凝視著你'
