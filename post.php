@@ -12,7 +12,7 @@
                         <time><?php $this->date('Y 年 m 月 d 日'); ?></time> / 
                         <span>阅读: <?php get_post_view($this) ?></span> / 
                         <span class="post-tags"><?php $this->tags('', true, ''); ?></span> / 
-                        <span><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
+                        <a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a>
                     </div>
                 </div>
                 <div class="content"> 

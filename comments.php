@@ -28,7 +28,6 @@
       <?php $comments->gravatar(50, $singleCommentOptions->defaultAvatar);    //头像 只输出 img 没有其它标签 
       ?>
       <div class="comment-info">
-        <div>
           <cite class="fn"><?php $singleCommentOptions->beforeAuthor();
                             $comments->author();
                             $singleCommentOptions->afterAuthor(); //输出评论者 
@@ -41,25 +40,23 @@
             $singleCommentOptions->afterDate();  //输出评论日期 
             ?>
           </span>
-            
-          <span>
-            <?php $options = Typecho_Widget::widget('Widget_Options');
-            if ($options->iphome == '0') {
-              echo (getiphome($comments->ip));
-            } ?>
-          </span>
-
-        </div>
-        <div class="comment-reply">
-          <?php $comments->reply($singleCommentOptions->replyWord); ?>
-        </div>
       </div>
 
     </div>
     
-    <div class="comment-content alert alert-secondary">
-      <?php $con=$comments->content; echo getparseBiaoQing($con); //输出评论内容，包含 <p></p> 标签 
-      ?>
+    <div class="comment-content">
+      <?php $parentMail = get_comment_at($comments->coid)?><?php echo $parentMail;?>
+      <?php $con=$comments->content; echo getparseBiaoQing($con);?>
+    </div>
+    
+    <div class="comment-reply">
+        <span>
+            <?php $options = Typecho_Widget::widget('Widget_Options');
+            if ($options->iphome == '0') {
+              echo (getiphome($comments->ip));
+            } ?>
+        </span>
+        <?php $comments->reply($singleCommentOptions->replyWord); ?>
     </div>
     
     <?php if ($comments->children) { ?>
@@ -132,7 +129,7 @@
   <?php endif; ?>
 
   <?php if ($comments->have()) : ?>
-    <p><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
+    <p style="color:#ED9111;font-size:20px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
       <?php $comments->listComments(); ?>
       <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
     <?php endif; ?>

@@ -1,6 +1,44 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+
+/*
+* 评论回复时 @ 评论人
+*/
+function get_comment_at($coid)
+{
+    $db   = Typecho_Db::get();
+    $prow = $db->fetchRow($db->select('parent,status')->from('table.comments')
+        ->where('coid = ?', $coid));
+    $mail = "";
+    $parent = @$prow['parent'];
+    if ($parent != "0") {
+        $arow = $db->fetchRow($db->select('author,status,mail')->from('table.comments')
+            ->where('coid = ?', $parent));
+        @$author = @$arow['author'];
+        $mail = @$arow['mail'];
+        if(@$author && $arow['status'] == "approved"){
+            if (@$prow['status'] == "waiting"){
+                echo '<p class="commentReview">（评论审核中）)</p>';
+            }
+            echo '<a href="#comment-' . $parent . '">@' . $author . '</a>';
+        }else{
+            if (@$prow['status'] == "waiting"){
+                echo '<p class="commentReview">（评论审核中）)</p>';
+            }else{
+                echo '';
+            }
+        }
+
+    } else {
+        if (@$prow['status'] == "waiting"){
+            echo '<p class="commentReview">（评论审核中）)</p>';
+        }else{
+            echo '';
+        }
+    }
+}
+
 /*
 * 网站加载速度
 */
@@ -59,16 +97,16 @@ function parseBiaoQing() {
 * 获取具体表情
 */
 function summ ($num,$type,$ename,$emo,$emootwo) {
-    $emoaa="$$".$emo[$j]['icon'].":".$emo[$j]['text']."$$";
+    $emoaa="::".$emo[$j]['icon'].":".$emo[$j]['text']."::";
 	if ($type==='image') {
 		for ($j = 0; $j < $num; $j++) {
-		    $emoaa="$$".$emootwo.":".$emo[$j]['icon']."$$";
+		    $emoaa="::".$emootwo.":".$emo[$j]['icon']."::";
 			$dd=$dd.'<li class="OwO-item" data-title="'.$emoaa.'" title="'.$emo[$j]['text'].'"><img src="'.$emopath.'/usr/themes/Anghunk/libs/emotion/'.$ename['name'].'/'.$emo[$j]['icon'].'.png"></li>';
 		}
 		return $dd;
 	} else {
 		for ($j = 0; $j < $num; $j++) {
-		      $emoaa="$$".$emootwo.":".$emo[$j]['icon']."$$";
+		      $emoaa="::".$emootwo.":".$emo[$j]['icon']."::";
 			$dd=$dd.'<li class="OwO-item" data-title="'.$emoaa.'" title="'.$emo[$j]['text'].'">'.$emo[$j]['icon'].'</li>';
 		}
 		return $dd;
@@ -88,7 +126,7 @@ function getparseBiaoQing($content) {
 	foreach ($emo as $v) {
 		if($v['type'] == 'image') {
 			foreach ($v['container'] as $vv) {
-				$emoaa="$$".$v['name'].":".$vv['icon']."$$";
+				$emoaa="::".$v['name'].":".$vv['icon']."::";
 				$content = str_replace($emoaa, '  <img style="max-height:40px;vertical-align:middle;" src="'.$emopath.'/usr/themes/Anghunk/libs/emotion/'.$v['name'].'/'.$vv['icon'] .'.png"  alt="'.$vv['text'] .'">  ', $content);
 			}
 		}
