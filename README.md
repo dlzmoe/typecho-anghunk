@@ -51,3 +51,5 @@ $widget = $className::alloc();
 [Author: 子舒](https://zburu.com)
 
 特别感谢: [梦繁星](https://www.emoao.com/)
+
+<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://star-history.com/embed?secret=#zburu/Anghunk&Date" frameBorder="0"></iframe>
