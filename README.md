@@ -8,9 +8,9 @@
 
 仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
 
-**常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/zburu/Anghunk/issues) 提出，这里我会第一时间看到解决。**
+常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/zburu/Anghunk/issues) 提出，这里我会第一时间看到解决。
 
-## 如何使用
+## 💡 如何使用
 
 ### 1.下载文件
 
@@ -35,16 +35,16 @@ $widget = $className::alloc();
 
 内置ip归属地显示功能，可选择开启或者关闭。
 
-## 图片展示
+## 🎓 图片展示
 
 图片更新不及时，请进入[演示网址](https://zburu.com)，查看最新的主题。
 
-## Contributors 
+## 👑 Contributors 
 
 <a href="https://github.com/zburu" target="_blank"><img style="width:40px;border-radius:50%;" src="https://avatars.githubusercontent.com/u/65840178?v=4"></a>
 <a href="https://www.emoao.com/" target="_blank"><img style="width:40px;border-radius:50%;" src="https://q2.qlogo.cn/g?b=qq&nk=2502393029&s=100"></a>
 
-## LICENSE
+## ❄️ LICENSE
 
 [LICENSE](./LICENSE)
 
@@ -52,4 +52,6 @@ $widget = $className::alloc();
 
 特别感谢: [梦繁星](https://www.emoao.com/)
 
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://star-history.com/embed?secret=#zburu/Anghunk&Date" frameBorder="0"></iframe>
+## 📝 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=zburu/Anghunk&type=Date)](https://star-history.com/#zburu/Anghunk&Date)
