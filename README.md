@@ -2,14 +2,13 @@
 
 ![](./libs/css/theme-logo.png)
 
->Anghunk一款基于Typecho博客程序的主题，简单整洁是主色调，版本已经进入2.0。
+>Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节，已经进入 2.0 版本。
 
 演示网址: [https://zburu.com](https://zburu.com)
 
-仓库地址: [https://github.com/zburu/Typecho-theme-Anghunk](https://github.com/zburu/Typecho-theme-Anghunk)
+仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
 
-**常见报错可以查看 [Issues](https://github.com/zburu/Typecho-theme-Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在[Issues](https://github.com/zburu/Typecho-theme-Anghunk/issues)提出，这里我会第一时间看到解决。**
-
+**常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/zburu/Anghunk/issues) 提出，这里我会第一时间看到解决。**
 
 ## 如何使用
 
@@ -23,7 +22,7 @@
 
 ### 2.搜索功能
 
-关于搜索功能，建议搭配 [ExSearch](https://github.com/AlanDecode/Typecho-Plugin-ExSearch) 插件使用，如果你打算添加搜索功能，请在 `/themes/Anghunk/header.php` 文件中 `第36行`的注释取消即可。
+搜索功能默认，可下载 [ExSearch](https://github.com/AlanDecode/Typecho-Plugin-ExSearch) 插件使用，然后在后台>外观中，开启搜索。
 
 >如果后台操作中报错，说明该插件在 typecho1.2 中不兼容，修改方案：将 `/plugins/ExSearch/Plugin.php` 的 `第276行` 注释掉，然后添加一行代码。
 
@@ -32,14 +31,13 @@
 $widget = $className::alloc();
 ```
 
+### 3. ip归属地显示
+
+内置ip归属地显示功能，可选择开启或者关闭。
+
 ## 图片展示
 
 图片更新不及时，请进入[演示网址](https://zburu.com)，查看最新的主题。
-
-|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/aa2207866648bd86280eb957a6759727.png)|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/3e72febdf75d5f6618296823e7ecccb0.png)|
-|---|---|
-|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/4a7c17ee31fa19ab008471aeaf8366f2.png)|![](https://zburu.coding.net/p/img/d/pic-cdn/git/raw/main/2022/05/09/a789d3f50ce39d8aa3f6933f3720c7f8.png)|
-
 
 ## Contributors 
 
