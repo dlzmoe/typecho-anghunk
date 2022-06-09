@@ -20,7 +20,7 @@
     <?php $this->header(); ?>
     <script><?php $this->options->baidutongji(); ?></script>
 </head>
-<body id="content">
+<body id="pjax-container">
   <div class="home">
     <header class="header">
       <div class="site-header">

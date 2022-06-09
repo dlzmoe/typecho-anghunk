@@ -1,4 +1,11 @@
 $(function () {
+  var s0 = '<?php $this->options->footerbuild(); ?>';
+  s1 = new Date(s0.replace(/-/g, "/"));
+  s2 = new Date();
+  var days = s2.getTime() - s1.getTime();
+  var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+  document.getElementById('days').innerHTML = number_of_days;
+  
   $('.content a').attr('target', '_blank')
 
   // 代码高亮
