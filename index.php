@@ -1,10 +1,10 @@
 <?php
 /**
- * 简单整洁的主题，作者博客 <a href="https://imhan.cn" target="_blank">https://imhan.cn</a>
+ * Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节，已经进入 2.0 版本，作者博客 <a href="https://imhan.cn" target="_blank">https://imhan.cn</a>
  * @package Anghunk 
  * @author 子舒
  * @version 2.0
- * @link https://imhan.cn
+ * @link https://zburu.com
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
