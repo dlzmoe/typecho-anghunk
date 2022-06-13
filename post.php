@@ -19,8 +19,8 @@
                     <?php $this->content(); ?>
                 </div>
                 <div class="prevornext">
-                    <p><?php $this->theNext(); ?></p>
-                    <p><?php $this->thePrev(); ?></p>
+                    <p><?php $this->theNext('%s', '已经是最新的文章啦'); ?></p>
+                    <p><?php $this->thePrev('%s', '这是第一篇文章喔'); ?></p>
                 </div>
                 <?php _getHistoryToday($this->created) ?>
             </div>
