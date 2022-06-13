@@ -64,7 +64,6 @@ textarea:focus {
   outline: 0
 }
 
-
 body {
   margin: 0;
   line-height: 1.8;
@@ -334,10 +333,6 @@ article {
   opacity: 0.8;
 }
 
-.archive {
-  padding: 10px;
-}
-
 .more {
   margin-bottom: 20px;
   border-bottom: 1px dotted #999;
@@ -419,6 +414,9 @@ article {
   flex: 1;
   display: flex;
   align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .post-excerpt {

@@ -2,6 +2,8 @@
 <footer class="footer">
     <div>
         <p>网站运行: <span id="days">0</span> 天</p>
+        <!--<em>·</em>-->
+        <!--<p>访客总数: <?php echo theAllViews();?></p>-->
         <em>·</em>
         <p>加载速度: <?php echo timer_stop();?></p>
     </div>
@@ -20,23 +22,21 @@
     <div class="pjax-loading"></div>
 </footer>
 <div>
+    <script>
+        var s0 = '<?php $this->options->footerbuild(); ?>';
+  s1 = new Date(s0.replace(/-/g, "/"));
+  s2 = new Date();
+  var days = s2.getTime() - s1.getTime();
+  var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+  document.getElementById('days').innerHTML = number_of_days;
+    </script>
     <script src="<?php $this->options->themeUrl('/libs/js/jquery3.6.0.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/simplebox.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/pre.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/libs/js/pjax.js'); ?>"></script>
-    <script>
-    var pjax = new Pjax({
-      selectors: [
-        "title",
-        "meta[name=description]",
-        "body"
-      ],
-      cacheBust: false
-    })
-    </script>
+    
     <?php $this->footer(); ?>
 </div>
 
