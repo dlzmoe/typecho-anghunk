@@ -4,7 +4,7 @@
 
 >Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节，已经进入 2.0 版本。
 
-演示网址: [https://zburu.com](https://zburu.com)
+演示网址: [https://typecho.zburu.com](https://typecho.zburu.com)
 
 仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
 
@@ -45,7 +45,7 @@ $widget = $className::alloc();
 
 ## 图片展示
 
-图片更新不及时，请进入[演示网址](https://zburu.com)，查看最新的主题。
+图片更新不及时，请进入[演示网址](https://typecho.zburu.com)，查看最新的主题。
 
 ## Contributors 
 
