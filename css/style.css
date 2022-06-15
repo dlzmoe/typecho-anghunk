@@ -69,7 +69,7 @@ body {
   line-height: 1.8;
   background: #e8eaed;
   color: #101010;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 @font-face {
@@ -198,6 +198,7 @@ input[disabled] {
   padding: 30px 0 !important;
   overflow: initial !important;
   display: flex;
+  justify-content: center;
 }
 
 header.header {
@@ -259,6 +260,7 @@ header.header {
 #logo img {
   height: 80px;
   border-radius: 10px;
+  display: none;
 }
 
 #logo:hover {
@@ -323,9 +325,6 @@ header.header {
 
 article {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .index-content {
@@ -468,7 +467,6 @@ article {
 
 .content strong {
   font-weight: 700;
-  font-size: 19px;
 }
 
 .content em {
@@ -710,7 +708,7 @@ article {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 14px; 
+  font-size: 14px;
 }
 
 .comment-reply a {
@@ -933,24 +931,6 @@ article {
     padding: 0 16px 10px;
   }
 
-  article {
-    display: block;
-  }
-
-  .block-title {
-    font-size: 18px;
-    display: block;
-  }
-
-  .block-title a {
-    width: 100%;
-    display: block;
-    word-break: break-all;
-    text-overflow: inherit;
-    overflow: inherit;
-    white-space: inherit;
-  }
-
   .autoMenu {
     display: none;
   }
@@ -1001,13 +981,28 @@ article {
 }
 
 @media (max-width:520px) {
+  .block-title {
+    font-size: 18px;
+    display: block;
+  }
+
+  .block-title a {
+    width: 100%;
+    display: block;
+    word-break: break-all;
+    text-overflow: inherit;
+    overflow: inherit;
+    white-space: inherit;
+    font-weight: 600;
+  }
+
   .home {
-    padding-top: 0 !important;
+    padding: 0 !important;
   }
 
   header.header {
     margin-bottom: 10px;
-    padding: 8px 16px;
+    padding: 3px 16px;
     background: #fff;
     position: fixed;
     top: 0;
@@ -1039,7 +1034,7 @@ article {
   }
 
   .main {
-    margin-top: 70px;
+    margin-top: 60px;
   }
 }
 
