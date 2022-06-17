@@ -56,7 +56,10 @@ $widget = $className::alloc();
 
 ## Star History
 
+## Star History
+
 [![Star History Chart](https://api.star-history.com/svg?repos=98fuel/Anghunk&type=Date)](https://star-history.com/#98fuel/Anghunk&Date)
+
 
 [LICENSE](./LICENSE)
 
