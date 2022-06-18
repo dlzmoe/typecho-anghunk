@@ -4,11 +4,15 @@
 
 >Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节。
 
-演示网址: [https://typecho.zburu.com](https://typecho.zburu.com)
+**版本:**
 
+[v2.0](https://github.com/98fuel/Anghunk/releases/tag/2.0)  
+[v3.0](https://github.com/98fuel/Anghunk/releases/tag/3.0)  
+
+演示网址: [https://typecho.zburu.com](https://typecho.zburu.com)  
 仓库地址: [https://github.com/98fuel/Anghunk](https://github.com/98fuel/Anghunk)
 
-**常见报错可以查看 [Issues](https://github.com/98fuel/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/98fuel/Anghunk/issues) 提出，这里我会第一时间看到解决。**
+常见报错可以查看 [Issues](https://github.com/98fuel/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/98fuel/Anghunk/issues) 提出，这里我会第一时间看到解决。
 
 ## 如何使用
 
