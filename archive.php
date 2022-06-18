@@ -13,13 +13,16 @@
                 ), '', ''); ?></div>
                 <?php while($this->next()): ?>
                 <article>
-                    <div class="posttime">
-                        <time><?php $this->date('Y/m/d'); ?></time>
-                    </div>
                     <div class="block-title">
                         <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                        <div class="posttime"><?php $this->date('Y/m/d'); ?></div>
                     </div>
-        
+                    <div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
+                    <div class="block-time">
+                        <span class="post-tags"><?php $this->tags('', true, ''); ?></span> / 
+                        <span>阅读: <?php get_post_view($this) ?>  /  <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
+                        
+                    </div>
                 </article>
                 
                 <?php endwhile; ?>
