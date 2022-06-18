@@ -20,7 +20,7 @@
     <?php $this->header(); ?>
     <script><?php $this->options->baidutongji(); ?></script>
 </head>
-<body id="pjax-container">
+<body>
   <div class="home">
     <header class="header">
       <div class="site-header">
@@ -45,26 +45,22 @@
           
           
           <div class="btn-group" id="m-nav-menu">
-              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">MENU</button>
+              <div class="m-nav-menu" data-toggle="dropdown" aria-expanded="false"><span></span><span></span><span></span></div>
               <div class="dropdown-menu">
                   <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                 <?php while($pages->next()): ?>
                     <li class="menu-item<?php if($this->is('page', $pages->slug)): ?> current-menu-item<?php endif; ?>"><a class="dropdown-item" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
-                <!--<a class="dropdown-item" href="#">Action</a>-->
-                <!--<a class="dropdown-item" href="#">Another action</a>-->
-                <!--<a class="dropdown-item" href="#">Something else here</a>-->
                 <?php $options = Typecho_Widget::widget('Widget_Options');
                     if ($options->search == '0') {
                       echo ('<div class="dropdown-divider"></div>
-                <a class="dropdown-item search-form-input">Search</a>');
+                <a class="dropdown-item search-form-input" href="#">Search</a>');
                     } ?>
                 
               </div>
           </div>
           
           
-          <div class="autoMenu" id="autoMenu" data-autoMenu></div>
       </div>
     </header>
    

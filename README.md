@@ -2,13 +2,13 @@
 
 ![](./libs/css/theme-logo.png)
 
->Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节，已经进入 2.0 版本。
+>Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节。
 
 演示网址: [https://typecho.zburu.com](https://typecho.zburu.com)
 
-仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
+仓库地址: [https://github.com/98fuel/Anghunk](https://github.com/98fuel/Anghunk)
 
-**常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/zburu/Anghunk/issues) 提出，这里我会第一时间看到解决。**
+**常见报错可以查看 [Issues](https://github.com/98fuel/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/98fuel/Anghunk/issues) 提出，这里我会第一时间看到解决。**
 
 ## 如何使用
 
@@ -17,8 +17,6 @@
 下载仓库在本地，上传到 `/usr/themes/`，并把主题文件夹改名为 `Anghunk`，否则可能会出现一些未知的问题。
 
 在后台管理设置外观中进行基本配置。
-
-建议在后台 `设置 > 阅读` 中，将 `每页文章数目` 设置为20，以获得最佳阅读体验。
 
 ### 2.搜索功能
 
@@ -49,8 +47,12 @@ $widget = $className::alloc();
 
 ## Contributors 
 
-<a href="https://github.com/zburu" target="_blank"><img style="width:40px;border-radius:50%;" src="https://avatars.githubusercontent.com/u/65840178?v=4"></a>
+<a href="https://github.com/98fuel" target="_blank"><img style="width:40px;border-radius:50%;" src="https://avatars.githubusercontent.com/u/65840178?v=4"></a>
 <a href="https://www.emoao.com/" target="_blank"><img style="width:40px;border-radius:50%;" src="https://q2.qlogo.cn/g?b=qq&nk=2502393029&s=100"></a>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=98fuel/Anghunk&type=Date)](https://star-history.com/#98fuel/Anghunk&Date)
 
 ## LICENSE
 

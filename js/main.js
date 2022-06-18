@@ -116,5 +116,9 @@ $(function () {
       $("#textarea").insertAtCaret(txt)
     });
   })
+  
+
 
 })
+
+

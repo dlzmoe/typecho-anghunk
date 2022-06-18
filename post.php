@@ -15,6 +15,7 @@
                         <a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a>
                     </div>
                 </div>
+                <div class="autoMenu" id="autoMenu" data-autoMenu></div>
                 <div class="content"> 
                     <?php $this->content(); ?>
                 </div>

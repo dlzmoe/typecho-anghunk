@@ -129,7 +129,7 @@
   <?php endif; ?>
 
   <?php if ($comments->have()) : ?>
-    <p style="color:#ED9111;font-size:20px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
+    <p style="color:#19130b;font-size:20px;padding:0 12px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
       <?php $comments->listComments(); ?>
       <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
     <?php endif; ?>
