@@ -1,6 +1,4 @@
 $(function () {
-  
-  
   $('.content a').attr('target', '_blank')
 
   // 代码高亮
@@ -8,7 +6,7 @@ $(function () {
   prettyPrint();
 
   // 图片灯箱事件
-  $('.content img').addClass('slb')
+  $('.content img').addClass('slb ')
   $('.slb').simplebox({ fadeSpeed: 400 });
 
   //绑定页面滚动事件

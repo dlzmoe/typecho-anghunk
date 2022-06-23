@@ -21,28 +21,22 @@
     <script><?php $this->options->baidutongji(); ?></script>
 </head>
 <body>
-  <div class="home">
     <header class="header">
       <div class="site-header">
           <a id="logo" href="<?php $this->options->siteUrl(); ?>">
               <img src="<?php $this->options->headerimg(); ?>">
-              <p><?php $this->options->headertitle(); ?></p>    
+              <p><?php $this->options->headertitle(); ?></p>
           </a>
           
-          <nav id="nav-menu">
+           <nav id="nav-menu">
             <ul class="topNav-items">
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                 <?php while($pages->next()): ?>
                     <li class="menu-item<?php if($this->is('page', $pages->slug)): ?> current-menu-item<?php endif; ?>"><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
-                
-                 <?php $options = Typecho_Widget::widget('Widget_Options');
-                    if ($options->search == '0') {
-                      echo ('<li class="menu-item"><a class="search-form-input">Search</a></li>');
-                    } ?>
+                <li class="menu-item"><a class="search-form-input">Search</a></li>
             </ul>
           </nav>
-          
           
           <div class="btn-group" id="m-nav-menu">
               <div class="m-nav-menu" data-toggle="dropdown" aria-expanded="false"><span></span><span></span><span></span></div>
@@ -63,4 +57,6 @@
           
       </div>
     </header>
+  <div class="home">
+    
    

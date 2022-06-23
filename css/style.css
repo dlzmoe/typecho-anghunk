@@ -63,21 +63,24 @@ textarea:focus {
   outline: 0
 }
 
-body {
-  margin: 0;
-  line-height: 1.8;
-  background: #e8eaed;
-  color: #101010;
-  font-size: 16px;
-}
-
 @font-face {
   font-family: 'OPPOSans';
   src: url('./OPPOSans.subset.ttf');
 }
 
-* {
+@font-face {
+  font-family: 'font-cn-subfont';
+  src: url('./font-cn-subfont.woff2');
+}
+
+
+body {
   font-family: 'OPPOSans';
+  margin: 0;
+  line-height: 1.8;
+  background: #e8eaed;
+  color: #101010;
+  font-size: 16px;
 }
 
 ol,
@@ -192,7 +195,7 @@ input[disabled] {
 }
 
 .home {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 30px 0 !important;
   overflow: initial !important;
@@ -206,6 +209,7 @@ header.header {
   padding-right: 30px;
   padding-top: 10px;
   box-sizing: border-box;
+  font-family: 'font-cn-subfont';
 }
 
 .site-header {
@@ -213,6 +217,8 @@ header.header {
   top: 50px;
   opacity: 0.8;
   transition: all 0.5s linear;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .site-header p {
@@ -221,7 +227,7 @@ header.header {
 
 .main {
   width: auto;
-  max-width: 740px;
+  max-width: 100%;
   flex: 1;
   animation: myfirst 0.2s;
 }
@@ -355,7 +361,7 @@ article {
 
 #nav-menu ul {
   display: flex;
-  flex-direction: column;
+  margin: 0;
 }
 
 #m-nav-menu {
@@ -374,7 +380,6 @@ article {
   cursor: pointer;
 }
 
-#nav-menu,
 .main-content {
   padding: 10px
 }
@@ -386,7 +391,7 @@ article {
 }
 
 .block-title a {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -464,6 +469,11 @@ article {
 .breadcrumb {
   font-size: 16px;
   padding: 0.3rem 1rem;
+  margin-bottom: 0;
+}
+
+.post-content {
+    margin-top: 20px;
 }
 
 .content {
@@ -622,7 +632,6 @@ article {
 
 #comments>.comment-list>.comment-body {
   margin-bottom: 20px;
-  ;
   padding: 20px 16px 20px;
   background: #fff;
   box-sizing: border-box;
@@ -668,10 +677,10 @@ article {
   padding-right: 0;
 }
 
-#comments>.comment-list .comment-by-author>.comment-img>.comment-info>div>.fn::after {
+#comments>.comment-list .comment-by-author>.comment-img>.comment-info >.fn::after {
   content: "博主";
   display: inline;
-  background: #999;
+  background: #007bff;
   color: #fff;
   font-size: 14px;
   border-radius: 5px;
@@ -1047,10 +1056,6 @@ article {
     display: block;
   }
 
-  .main {
-    margin-top: 60px;
-  }
-
   #comments>.comment-list>.comment-body>.comment-children {
     margin-left: 0;
   }
@@ -1148,13 +1153,12 @@ article {
 
 .home {
   display: block;
-  max-width: 740px;
   padding-top: 0 !important;
 }
 
 header.header {
   width: 100%;
-  max-width: 740px;
+  max-width: 100%;
   position: sticky;
   top: 0;
   background: #fff;
@@ -1171,11 +1175,11 @@ header.header {
 }
 
 #nav-menu {
-  display: none;
+  /*display: none;*/
 }
 
 #m-nav-menu {
-  display: block;
+  /*display: block;*/
 }
 
 .autoMenu {
@@ -1206,10 +1210,8 @@ header.header {
 }
 
 .main {
-  max-width: 740px;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
 }
 
 .menu-item a,

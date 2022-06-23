@@ -19,7 +19,6 @@
         <i></i>
         <i></i>
     </div>
-    <div class="pjax-loading"></div>
 </footer>
 <div>
     <script>

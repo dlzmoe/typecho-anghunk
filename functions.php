@@ -241,10 +241,8 @@ function _getHistoryToday($created)
 * 后台管理配置
 */
 function themeConfig($form){
-  $headerimg = new Typecho_Widget_Helper_Form_Element_Text('headerimg', NULL, '', _t('网站左侧头像'), _t(''));
-  $form->addInput($headerimg);
   
-  $headertitle = new Typecho_Widget_Helper_Form_Element_Text('headertitle', NULL, 'Anghunk', _t('网站左侧标题'), _t(''));
+  $headertitle = new Typecho_Widget_Helper_Form_Element_Text('headertitle', NULL, 'Anghunk', _t('网站头部标题'), _t(''));
   $form->addInput($headertitle);
 
   $bannerbg = new Typecho_Widget_Helper_Form_Element_Text('bannerbg', NULL, 'https://zburu.com/usr/themes/Anghunk/libs/css/theme-logo.png', _t('首页大图'), _t('在这里填入一个图片URL地址, 以在网站首页顶部显示一个背景图片，建议高度为宽度的1/2，达到一个合适的效果。'));
