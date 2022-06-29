@@ -38,6 +38,7 @@ $this->need('header.php');
                         </div>
                         <div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
                         <div class="block-time">
+                            <em><<a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a>></em>  
                             <span class="post-tags"><?php $this->tags('', true, ''); ?></span> / 
                             <span>阅读: <?php get_post_view($this) ?>  /  <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
                             
