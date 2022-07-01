@@ -10,7 +10,7 @@ $this->need('header.php'); ?>
     <div class="container">
         <div class="main-content">
             <div class="archive">
-        		<h1 class="post-title"><?php $this->title() ?></h1>
+        		<!--<h1 class="post-title"><?php $this->title() ?></h1>-->
                 <div class="post-content">
                     <ul>
                         <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y 年 m 月')->to($archives); ?>

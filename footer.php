@@ -2,8 +2,13 @@
 <footer class="footer">
     <div>
         <p>网站运行: <span id="days">0</span> 天</p>
-        <!--<em>·</em>-->
-        <!--<p>访客总数: <?php echo theAllViews();?></p>-->
+        <?php $options = Typecho_Widget::widget('Widget_Options');
+            if ($options->fangke == '0') {
+              echo ('<em>·</em><p>访客: ');
+              echo (theAllViews());
+              echo ('</p> ');
+            } ?>
+        
         <em>·</em>
         <p>加载速度: <?php echo timer_stop();?></p>
     </div>

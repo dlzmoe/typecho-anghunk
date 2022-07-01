@@ -74,7 +74,7 @@
   <?php $this->comments()->to($comments); ?>
 
   <?php if ($this->allow('comment')) : ?>
-  <div class="container">
+  <div>
     <div id="<?php $this->respondId(); ?>">
       <div class="cancel-comment-reply">
         <?php $comments->cancelReply(); ?>

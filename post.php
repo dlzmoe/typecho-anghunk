@@ -3,9 +3,6 @@
     <div class="main">
         <main class="container">
             <div class="main-content">
-                <div class="breadcrumb">
-                   <a href="<?php $this->options->siteUrl(); ?>" title="<?php $this->options->title(); ?>">首页</a> &gt; <?php $this->category(); ?> 
-                </div>
                 <div>
                     <h1 class="post-title"><?php $this->title() ?></h1>
                     <div class="post-time">
