@@ -38,11 +38,8 @@ $widget = $className::alloc();
 
 ### 4. 网站访客统计
 
-在 `footer.php` 文件中，将 `第5,6行` 注释解开即可。
+内置网站访客统计功能，可选择开启或者关闭。
 
-```php
-<p>访客总数: <?php echo theAllViews();?></p>
-```
 
 ## 图片展示
 

@@ -373,7 +373,7 @@ article {
   display: inline;
   line-height: 1;
   padding: 10px 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .topNav-items li a:hover {
@@ -631,6 +631,7 @@ article {
   padding: 20px 0;
   background: #fff;
   box-sizing: border-box;
+  border-top: 2px solid #eee;
 }
 
 .comment-info {
@@ -641,7 +642,6 @@ article {
 .comment-list .comment-body {
   position: relative;
   padding: 15px 10px 0;
-  border-top: 1px solid rgba(0, 0, 0, .12);
 
 }
 
@@ -659,8 +659,9 @@ article {
 }
 
 .comment-list .comment-body .comment-img .avatar {
-  border-radius: 100%;
+  border-radius: 50%;
   margin-right: 8px;
+  border: 1px solid #eee;
 }
 
 #comments>.comment-list>.comment-body>.comment-children {
@@ -822,6 +823,48 @@ article {
   font-weight: 600;
 }
 
+.autoMenu ul::-webkit-scrollbar {
+  /* 滚动条整体部分 */
+  width: 10px;
+  margin-right: 2px
+}
+
+.autoMenu ul::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.autoMenu ul::-webkit-scrollbar-track {
+  /* 外层轨道 */
+  border-radius: 0;
+}
+
+.autoMenu ul::-webkit-scrollbar-track-piece {
+  /*内层轨道，滚动条中间部分 */
+  background: none;
+  border-radius: 0;
+}
+
+.autoMenu ul::-webkit-scrollbar-thumb {
+  /* 滑块 */
+  width: 10px;
+  border-radius: 0;
+  background: none;
+}
+
+.autoMenu {
+  height: 0;
+  position: sticky;
+  top: 200px;
+  margin-left: 106%;
+}
+
+.autoMenu ul {
+    max-height: 500px;
+    overflow-y: scroll;
+    border-left: 1px solid #d9d9d9;
+    padding-left: 10px;
+}
+
 .autoMenu li a {
   text-decoration: none;
   transition: all 0.2s linear;
@@ -855,6 +898,7 @@ article {
   flex-wrap: wrap;
   margin-top: 30px;
   background: #eee;
+  padding: 4px 10px;
 }
 
 .prevornext p {
@@ -905,7 +949,6 @@ article {
   .topNav-items li {
     margin: 0;
     margin-right: 10px;
-    font-size: 18px;
   }
 
   .main {
@@ -1074,14 +1117,6 @@ article {
   margin: 0;
 }
 
-.autoMenu {
-  height: 0;
-  position: sticky;
-  top: 200px;
-  margin-left: 106%;
-  width: 200px !important;
-}
-
 #logo {
   font-size: 22px;
   padding: 5px 0;
@@ -1121,7 +1156,6 @@ article {
 
   .autoMenu ul {
     max-height: 200px;
-    overflow-y: scroll;
   }
 
 }

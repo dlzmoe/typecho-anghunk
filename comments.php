@@ -111,7 +111,7 @@
         <div class="form-group">
           <textarea placeholder="说点什么吧..." name="text" id="textarea" class="form-control" rows="4"><?php $this->remember('text'); ?></textarea>
           <p class="item-submit">
-            <a class="bq-button btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">owo</a>
+            <a class="bq-button btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">OωO</a>
             <button type="submit" id="submit" class="btn btn-primary"><?php _e('提交评论'); ?></button>
               <div class="collapse" id="collapseExample">
                 <div class="card card-body bq-list">
@@ -129,7 +129,7 @@
   <?php endif; ?>
 
   <?php if ($comments->have()) : ?>
-    <p style="color:#19130b;font-size:20px;padding:0 12px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
+    <p style="color:#19130b;font-size:18px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
       <?php $comments->listComments(); ?>
       <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
     <?php endif; ?>
