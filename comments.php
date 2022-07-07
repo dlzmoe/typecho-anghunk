@@ -87,32 +87,50 @@
           </p>
         <?php else : ?>
 
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="author"><?php _e('昵称*'); ?></label>
-            </div>
 
-            <input placeholder="" type="text" name="author" id="author" class="form-control" value="<?php $this->remember('author'); ?>" required />
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="mail" <?php if ($this->options->commentsRequireMail) : ?> <?php endif; ?>><?php _e('Email'); ?></label>
+          <div class="input-group-wrap">
+            <div class="input-group">
+                <input placeholder="" type="text" name="author" id="author" autocomplete="off" class="input" required />
+                <label class="user-label">Name*</label>
             </div>
-            <input placeholder="" type="email" name="mail" id="mail" class="form-control" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>
+            
+            <div class="input-group">
+                <input placeholder="" type="text" name="mail" id="mail" autocomplete="off" class="input" required />
+                <label class="user-label">E-mail*</label>
             </div>
-            <input placeholder="" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
           </div>
+          <!--<div class="input-group mb-3">-->
+          <!--  <div class="input-group-prepend">-->
+          <!--    <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>-->
+          <!--  </div>-->
+          <!--  <input placeholder="" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />-->
+          <!--</div>-->
 
         <?php endif; ?>
         <div class="form-group">
-          <textarea placeholder="说点什么吧..." name="text" id="textarea" class="form-control" rows="4"><?php $this->remember('text'); ?></textarea>
+            <div class="">
+                <textarea placeholder="说点什么？" name="text" id="textarea" class="input" rows="4"><?php $this->remember('text'); ?></textarea>
+            </div>
+          
           <p class="item-submit">
             <a class="bq-button btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">OωO</a>
-            <button type="submit" id="submit" class="btn btn-primary"><?php _e('提交评论'); ?></button>
+            
+
+                
+                <button type="submit" id="submit">
+  <div class="svg-wrapper-1">
+    <div class="svg-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+      </svg>
+    </div>
+  </div>
+  <span>Send</span>
+</button>
+                
+                
+                
               <div class="collapse" id="collapseExample">
                 <div class="card card-body bq-list">
                   <?php echo parseBiaoQing(); ?>
