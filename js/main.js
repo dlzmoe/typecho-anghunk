@@ -4,6 +4,7 @@ $(function () {
   // 代码高亮
   $("pre,pre code").addClass("prettyprint");
   prettyPrint();
+  $('pre.prettyprint').addClass('markdown-body')
 
   // 图片灯箱事件
   $('.content img').addClass('slb ')

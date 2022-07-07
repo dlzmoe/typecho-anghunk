@@ -260,12 +260,22 @@ function themeConfig($form){
   $footerbuild = new Typecho_Widget_Helper_Form_Element_Text('footerbuild', NULL, '2020-06-14', _t('网站建立时间'), _t('格式如 2020-06-14'));
   $form->addInput($footerbuild);
   
-  $fangke = new Typecho_Widget_Helper_Form_Element_Radio('fangke', array(0 => _t('开启'), 1 => _t('关闭')), 1, _t('底部访客统计'), _t(''));
+  $fangke = new Typecho_Widget_Helper_Form_Element_Radio('fangke', array(0 => _t('开启'), 1 => _t('关闭')), 1, _t('底部访客统计'), _t('默认关闭，开启后报错请查看文档<a href="https://github.com/98fuel/Anghunk" target="_blank">https://github.com/98fuel/Anghunk</a>，如不清楚可邮件联系或者issues.'));
   $form->addInput($fangke);
   
-  $iphome = new Typecho_Widget_Helper_Form_Element_Radio('iphome', array(0 => _t('开启'), 1 => _t('关闭')), 1, _t('评论区IP归属地开关'));
+  $iphome = new Typecho_Widget_Helper_Form_Element_Radio('iphome', array(0 => _t('开启'), 1 => _t('关闭')), 1, _t('评论区IP归属地开关'), _t('默认关闭，选择开启即可显示。'));
   $form->addInput($iphome);
+  
+  $slt = new Typecho_Widget_Helper_Form_Element_Radio('slt', array(0 => _t('开启'), 1 => _t('关闭')), 0, _t('首页文章缩略图'), _t('默认打开，在文章自定义字段 imgurl 中输入图片链接；点击关闭即可不显示。'));
+  $form->addInput($slt);
   
 
 }
 
+/*
+* 文章 自定义字段
+*/
+function themeFields($layout) {
+    $imgurl = new Typecho_Widget_Helper_Form_Element_Textarea('imgurl', NULL, NULL, _t('imgurl'), _t('填写图片链接 https://'));
+    $layout->addItem($imgurl);
+}

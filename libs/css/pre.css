@@ -7,17 +7,17 @@ code.prettyprint{
 
 pre.prettyprint,
 pre code.prettyprint{
-  background: #2b303b; 
+  background: #f6f8fa; 
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
-  line-height: 2;
+  line-height: 1.8;
   padding: 10px;
   border-radius:3px;
   white-space: pre;
   overflow-x: scroll;
 }
 
-pre code.prettyprint * {
-    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
+pre.prettyprint {
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 23%);
 }
 
 .prettyprint code {
@@ -26,12 +26,12 @@ pre code.prettyprint * {
 }
 
 .pln {
-  color: #eaeaea;
+  color: #212529;
 }
 
 @media screen {
   .str {
-    color: #b9ca4a;
+    color: #2e2e2e;
   }
 
   .kwd {
@@ -51,7 +51,7 @@ pre code.prettyprint * {
   }
 
   .pun {
-    color: #eaeaea;
+    color: #24292f;
   }
 
   .opn {
