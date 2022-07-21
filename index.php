@@ -21,18 +21,15 @@ $this->need('header.php');
 						<article>
 							<div class="block-title">
 								<a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-								<div class="posttime"><?php $this->date('Y/m/d'); ?></div>
+								<div class="posttime">发布于<?php $this->date('Y/m/d'); ?></div>
 							</div>
 
 							<div class="article-wrap">
 								<div class="article-text">
 									<div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
 									<div class="block-time">
-										<em>
-											<<a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a>>
-										</em>
-										<span class="post-tags"><?php $this->tags('', true, ''); ?></span> /
-										<span>view: <?php get_post_view($this) ?> / <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
+										<span class="post-tags"><?php $this->tags('', true, ''); ?></span> 
+										<span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
 
 									</div>
 								</div>

@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <!DOCTYPE html>
-<html class="no-js">
+<html class="zh_CN">
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -22,10 +22,7 @@
     <script><?php $this->options->baidutongji(); ?></script>
 </head>
 <body>
-    
-  <div class="home">
-    
-   <header class="header">
+    <header class="header">
       <div class="site-header">
           <a id="logo" href="<?php $this->options->siteUrl(); ?>">
               <img src="<?php $this->options->headerimg(); ?>">
@@ -47,3 +44,6 @@
           
       </div>
     </header>
+  <div class="home">
+    
+   

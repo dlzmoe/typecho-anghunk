@@ -1,5 +1,3 @@
-@import './NotoSerifSC/font.css';
-
 :root {
 	--color: #007bff;
 	--bg: #007bff;
@@ -22,7 +20,7 @@
 
 ::-webkit-scrollbar-track-piece {
   /*内层轨道，滚动条中间部分 */
-	background-color: #CBCBCB;
+	/*background-color: #CBCBCB;*/
 	border-radius: 0;
 }
 
@@ -76,7 +74,6 @@ textarea::placeholder {
 
 body {
 	font-family: 'OPPOSans';
-  /*font-family: 'Noto Serif SC';*/
 	margin: 0;
 	line-height: 1.8;
 	color: #101010;
@@ -201,6 +198,7 @@ input[disabled] {
 	overflow: initial !important;
 	box-shadow: 0px 1px 4px rgb(0 0 0 / 13%);
 	background: #fff;
+	padding-top: 20px;
 }
 
 header.header {
@@ -216,7 +214,6 @@ header.header {
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	border-bottom: 1px solid #eee;
 }
 
 .site-header p {
@@ -252,7 +249,6 @@ header.header {
 #logo {
 	display: inline-block;
 	font-size: 26px;
-	font-family: 'Noto Serif SC';
 	text-align: center;
 }
 
@@ -260,15 +256,12 @@ header.header {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
+	border: 1px solid #dbdbdb;
 }
 
 #logo:hover {
 	color: inherit;
 	text-decoration: none;
-}
-
-#nav-menu {
-	font-family: 'Noto Serif SC';
 }
 
 .archives-item-content p {
@@ -333,7 +326,7 @@ header.header {
 article {
 	margin-bottom: 10px;
 	padding-bottom: 30px;
-	padding-top: 20px;
+	/*padding-top: 20px;*/
 	border-bottom: 1px solid #eee;
 }
 
@@ -369,24 +362,6 @@ article {
 .index-content {
 	font-size: 14px;
 	opacity: 0.8;
-}
-
-.more {
-	margin-bottom: 20px;
-	border-bottom: 1px dotted #999;
-}
-
-.more a {
-	border-bottom: 1px dashed #333;
-	text-decoration: none;
-}
-
-.more span:nth-of-type(n+2):before {
-	content: '、';
-}
-
-.more span:nth-last-of-type(1):before {
-	content: '和';
 }
 
 .archives-time {
@@ -426,7 +401,6 @@ article {
 	white-space: nowrap;
 	transition: all 0.2s linear;
 	border-bottom: 1px solid transparent;
-	font-family: 'Noto Serif SC';
 }
 
 .block-content {
@@ -480,17 +454,16 @@ article {
 }
 
 .post-title {
-	font-family: 'Noto Serif SC';
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 23px;
-	text-align: center;
-	padding: 10px 10px 0;
+	/*text-align: center;*/
+	padding: 10px 0 0;
 }
 
 .post-time {
 	font-size: 14px;
 	color: #999;
-	text-align: center;
+	/*text-align: center;*/
 	margin-top: 10px
 }
 
@@ -895,7 +868,7 @@ article {
 .autoMenu {
 	height: 0;
 	position: sticky;
-	top: 200px;
+	top: 150px;
 	margin-left: 106%;
 }
 
@@ -1012,6 +985,7 @@ article {
 
 	.post-title {
 		padding: 10px 0 0;
+		font-size: 20px;
 	}
 
 	.prevornext p {
@@ -1056,6 +1030,10 @@ article {
 		text-overflow: inherit;
 		overflow: inherit;
 		white-space: inherit;
+	}
+	
+	.article-img {
+	    display: none;
 	}
 
 	.site-header p {
