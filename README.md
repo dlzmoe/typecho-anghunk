@@ -58,4 +58,6 @@ $widget = $className::alloc();
 
 [LICENSE](./LICENSE)
 
+[Author: 子舒](https://zburu.com)
+
 特别感谢: [梦繁星](https://www.emoao.com/)

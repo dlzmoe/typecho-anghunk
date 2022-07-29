@@ -14,7 +14,6 @@
             'author'    =>  _t('%s 发布的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/bootstrap.min.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/pre.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/ui.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/simplebox.min.css'); ?>">
@@ -25,8 +24,7 @@
     <header class="header">
       <div class="site-header">
           <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-              <img src="<?php $this->options->headerimg(); ?>">
-              <p><?php $this->options->headertitle(); ?></p>
+             <?php $this->options->headertitle(); ?>
           </a>
           
            <nav id="nav-menu">
@@ -42,8 +40,25 @@
             </ul>
           </nav>
           
+          
+          <div class="dropdown m-menu-nav">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">menu</a>
+              
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+                <?php while($pages->next()): ?>
+                    <a class="dropdown-item" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                <?php endwhile; ?>
+                <?php $options = Typecho_Widget::widget('Widget_Options');
+                    if ($options->search == '0') {
+                      echo ('<a class="search-form-input dropdown-item" href="#">Search</a>');
+                    } ?>
+            </ul>
+            
+             
+            </div>
       </div>
     </header>
   <div class="home">
-    
+
    

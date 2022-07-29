@@ -38,7 +38,6 @@
     <script src="<?php $this->options->themeUrl('/libs/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/simplebox.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/toc.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/libs/js/pre.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/console.js'); ?>"></script>
     

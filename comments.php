@@ -87,24 +87,20 @@
           </p>
         <?php else : ?>
 
+<!----><div class="input-group-wrap">
+    <p class="input-group">
+        <input type="text" name="author" id="author" class="input" value="<?php $this->remember('author'); ?>" required />
+        <label for="author" class="required user-label"><?php _e('称呼'); ?></label>
+    </p>
+</div>
 
-          <div class="input-group-wrap">
-            <div class="input-group">
-                <input placeholder="" type="text" name="author" id="author" autocomplete="off" class="input" required />
-                <label class="user-label">Name*</label>
-            </div>
-            
-            <div class="input-group">
-                <input placeholder="" type="text" name="mail" id="mail" autocomplete="off" class="input" required />
-                <label class="user-label">E-mail*</label>
-            </div>
-          </div>
-          <!--<div class="input-group mb-3">-->
-          <!--  <div class="input-group-prepend">-->
-          <!--    <label class="input-group-text" id="basic-addon1" for="url" <?php if ($this->options->commentsRequireURL) : ?> <?php endif; ?>><?php _e('网站'); ?></label>-->
-          <!--  </div>-->
-          <!--  <input placeholder="" type="url" name="url" id="url" class="form-control" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />-->
-          <!--</div>-->
+<div class="input-group-wrap">
+    <p class="input-group">
+        <input type="email" name="mail" id="mail" class="input" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
+        <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> class="required user-label" <?php endif; ?>><?php _e('Email'); ?></label>
+    </p>
+</div>
+         
 
         <?php endif; ?>
         <div class="form-group">
@@ -126,7 +122,7 @@
       </svg>
     </div>
   </div>
-  <span>Send</span>
+  <span><?php _e('提交'); ?></span>
 </button>
                 
                 

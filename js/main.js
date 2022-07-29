@@ -1,10 +1,6 @@
 $(function () {
   $('.content a').attr('target', '_blank')
 
-  // 代码高亮
-  $("pre,pre code").addClass("prettyprint");
-  prettyPrint();
-
   // 图片灯箱事件
   $('.content img').addClass('slb ')
   $('.slb').simplebox({ fadeSpeed: 400 });

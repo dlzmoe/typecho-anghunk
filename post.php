@@ -3,7 +3,7 @@
     <div class="main">
         <main class="container">
             <div class="main-content">
-                <div>
+                <div class="post-meta">
                     <h1 class="post-title"><?php $this->title() ?></h1>
                     <div class="post-time">
                         <time> 发布于<?php $this->date('Y 年 m 月 d 日'); ?></time> / 
