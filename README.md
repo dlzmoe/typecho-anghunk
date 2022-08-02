@@ -7,9 +7,9 @@
 ![1659108634043.png](https://img.zburu.com/i/2022/07/29/62e3fd1b5da31.png)
 
 演示网址: [https://typecho.zburu.com](https://typecho.zburu.com)  
-仓库地址: [https://github.com/98fuel/Anghunk](https://github.com/98fuel/Anghunk)
+仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
 
-常见报错可以查看 [Issues](https://github.com/98fuel/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/98fuel/Anghunk/issues) 提出，这里我会第一时间看到解决。
+常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/zburu/Anghunk/issues) 提出，这里我会第一时间看到解决。
 
 ## 如何使用
 
@@ -50,7 +50,7 @@ $widget = $className::alloc();
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=98fuel/Anghunk&type=Date)](https://star-history.com/#98fuel/Anghunk&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=zburu/Anghunk&type=Date)](https://star-history.com/#zburu/Anghunk&Date)
 
 ## LICENSE
 
