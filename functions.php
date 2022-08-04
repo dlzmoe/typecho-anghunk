@@ -254,7 +254,7 @@ function themeConfig($form){
   $footerbeian = new Typecho_Widget_Helper_Form_Element_Text('footerbeian', NULL, NULL, _t('备案号'), _t('如果你的网站备案，请在这里填写备案号，否则请空着它。如：浙ICP备2022002453号-1'));
   $form->addInput($footerbeian);
   
-  $baidutongji = new Typecho_Widget_Helper_Form_Element_Textarea('baidutongji', NULL, NULL, _t('百度统计代码'), _t('引入百度统计代码作为网站的pv统计方法。（不用加 script 标签）'));
+  $baidutongji = new Typecho_Widget_Helper_Form_Element_Textarea('baidutongji', NULL, NULL, _t('百度统计代码'), _t('引入百度统计代码作为网站的pv统计方法。（带 script 标签）'));
   $form->addInput($baidutongji);
 
   $footerbuild = new Typecho_Widget_Helper_Form_Element_Text('footerbuild', NULL, '2020-06-14', _t('网站建立时间'), _t('格式如 2020-06-14'));

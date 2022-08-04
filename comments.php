@@ -44,7 +44,7 @@
 
 		</div>
 
-		<div class="comment-content alert alert-secondary">
+		<div class="comment-content">
 			<?php $parentMail = get_comment_at($comments->coid) ?><?php echo $parentMail; ?>
 			<?php $con = $comments->content;
 			echo getparseBiaoQing($con); ?>
@@ -146,7 +146,7 @@
 		<?php endif; ?>
 
 		<?php if ($comments->have()) : ?>
-			<p style="color:#19130b;font-size:18px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></>
+			<p style="color:#19130b;font-size:18px;"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></p>
 				<?php $comments->listComments(); ?>
 				<?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 			<?php endif; ?>

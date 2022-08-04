@@ -28,18 +28,17 @@
 <div>
     <script>
         var s0 = '<?php $this->options->footerbuild(); ?>';
-  s1 = new Date(s0.replace(/-/g, "/"));
-  s2 = new Date();
-  var days = s2.getTime() - s1.getTime();
-  var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
-  document.getElementById('days').innerHTML = number_of_days;
+        s1 = new Date(s0.replace(/-/g, "/"));
+        s2 = new Date();
+        var days = s2.getTime() - s1.getTime();
+        var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+        document.getElementById('days').innerHTML = number_of_days;
     </script>
     <script src="<?php $this->options->themeUrl('/libs/js/jquery3.6.0.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/simplebox.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/libs/js/toc.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('/js/main.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('/js/console.js'); ?>"></script>
     
     <?php $this->footer(); ?>
 </div>

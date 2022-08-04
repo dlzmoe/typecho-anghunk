@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <!DOCTYPE html>
-<html class="zh_CN">
+<html lang="zh">
 
 <head>
 	<meta charset="<?php $this->options->charset(); ?>">
@@ -18,9 +18,7 @@
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/simplebox.min.css'); ?>">
 	<?php $this->header(); ?>
-	<script>
-		<?php $this->options->baidutongji(); ?>
-	</script>
+    <?php $this->options->baidutongji(); ?>
 </head>
 
 <body>
