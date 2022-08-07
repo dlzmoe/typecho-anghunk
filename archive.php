@@ -11,21 +11,22 @@
 														'author'    =>  _t('<span>%s </span>发布的文章')
 													), '', ''); ?></div>
 			<?php while ($this->next()) : ?>
-				<a href="<?php $this->permalink() ?>" class="article">
+
 					<article>
 						<div class="block-title">
-							<?php $this->title() ?>
+							<a href="<?php $this->permalink() ?>">
+								<?php $this->title() ?>
+							</a>
 						</div>
-
 						<div class="article-wrap">
 							<div class="article-text">
 								<div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
 								<!--<div class="block-time">-->
 								<!--	<span class="post-tags"><?php $this->tags('', true, ''); ?></span> -->
-								<!--	<span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>-->
+
 
 								<!--</div>-->
-								<div class="posttime">发布于<?php $this->date('Y/m/d'); ?></div>
+								<div class="posttime">发布于<?php $this->date('Y/m/d'); ?> · <span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('无评论'), _t('评论: 1'), _t(' 评论: %d')); ?></span></div>
 							</div>
 							<div class="article-img">
 								<a href="<?php $this->permalink() ?>">
@@ -37,13 +38,10 @@
 											echo '';
 										}
 									} ?>
-
 								</a>
 							</div>
 						</div>
 					</article>
-
-				</a>
 
 			<?php endwhile; ?>
 		<?php else : ?>

@@ -241,9 +241,6 @@ function _getHistoryToday($created)
 * 后台管理配置
 */
 function themeConfig($form){
-    
-  $headerimg = new Typecho_Widget_Helper_Form_Element_Text('headerimg', NULL, 'https://img.zburu.com/author.png', _t('网站导航头像'), _t(''));
-  $form->addInput($headerimg);
   
   $headertitle = new Typecho_Widget_Helper_Form_Element_Text('headertitle', NULL, 'Anghunk', _t('网站导航标题'), _t(''));
   $form->addInput($headertitle);

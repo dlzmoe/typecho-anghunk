@@ -102,12 +102,12 @@
 										<?php _e('Email*'); ?>
 									</label>
 								</p>
-								<p class="input-group">
-									<input type="url" name="url" id="url" class="input" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required <?php endif; ?> />
-									<label for="url" class="required user-label">
-										<?php _e('个人网站'); ?>
-									</label>
-								</p>
+								<!--<p class="input-group">-->
+								<!--	<input type="url" name="url" id="url" class="input" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required <?php endif; ?> />-->
+								<!--	<label for="url" class="required user-label">-->
+								<!--		<?php _e('个人网站'); ?>-->
+								<!--	</label>-->
+								<!--</p>-->
 							</div>
 
 						<?php endif; ?>

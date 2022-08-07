@@ -272,30 +272,18 @@ article {
 	padding: 20px 25px;
 }
 
-a.article {
-    display: block;
-	text-decoration: none;
-	color: #333;
-	flex: 1;
-}
-
-article:hover {
-	background: rgba(0, 0, 0, 0.03);
-	text-decoration: none;
-	color: #145ca4;
-}
-
-article:hover * {
-	color: #145ca4;
-}
-
 .article-wrap {
     display: flex;
     width: 100%;
 }
 
+.article-text {
+    flex: 1;
+}
+
 .article-img {
     margin-left: 10px;
+    margin-top: -30px;
 	max-width: 200px;
 	max-height: 110px;
 	overflow: hidden;
@@ -551,6 +539,17 @@ article:hover * {
 	margin-top: 30px;
 }
 
+.cate {
+    display: flex;
+    padding: 0 10px;
+    margin-top: 20px;
+    background: #f3f3f3;
+}
+
+.cate li {
+    margin-right: 20px;
+}
+
 .blog-nav {
 	text-align: center;
 	padding: 0 25px;
@@ -570,9 +569,6 @@ article:hover * {
 
 .next {
 	float: right;
-}
-
-#comments {
 }
 
 #comments > .comment-list > .comment-body > .comment-meta {
@@ -612,7 +608,6 @@ article:hover * {
 	font-style: inherit;
 	font-size: 17px;
 	color: #006699;
-	font-weight: 600;
 	margin-right: 10px;
 }
 
@@ -623,13 +618,10 @@ article:hover * {
 	display: none;
 }
 
-#comments > .comment-list > .comment-body > .comment-children {
-	/*padding-bottom: 10px;*/
-}
-
 #comments > .comment-list > .comment-body > .comment-children .comment-body {
 	padding-left: 0;
 	padding-right: 0;
+	border-top: 1px solid #bbbbbb;
 }
 
 #comments > .comment-list .comment-by-author > .comment-img > .comment-info > .fn::after {
@@ -672,6 +664,7 @@ article:hover * {
 
 .comment-content>p:nth-child(2) {
     display: inline;
+    margin-left: 5px;
 }
 
 .comment-content a {
@@ -918,7 +911,8 @@ article:hover * {
 	}
 	.home {
 		padding: 0;
-		margin-top: 50px;
+		max-width: 800px;
+		margin: 50px auto 0;
 	}
 
 	.place {
@@ -1117,7 +1111,7 @@ article:hover * {
 
 .input-group {
 	position: relative;
-	width: 33%;
+	width: 49%;
 	margin-bottom: 14px;
 }
 
