@@ -68,7 +68,7 @@ function parseBiaoQing() {
 	$emo = false;
 	global $emo;
 	if(!$emo) {
-		$emo = json_decode(file_get_contents(dirname(__FILE__).'/OwO.json'), true);
+		$emo = json_decode(file_get_contents(dirname(__FILE__).'/libs/OwO.json'), true);
 	}
 	for ($i = 0; $i < count($emo); $i++) {
 		$aa=array_keys($emo);
@@ -121,7 +121,7 @@ function getparseBiaoQing($content) {
 	$emo = false;
 	global $emo;
 	if(!$emo) {
-		$emo = json_decode(file_get_contents(dirname(dirname(dirname(__FILE__))).'/themes/Anghunk/OwO.json'), true);
+		$emo = json_decode(file_get_contents(dirname(dirname(dirname(__FILE__))).'/themes/Anghunk/libs/OwO.json'), true);
 	}
 	foreach ($emo as $v) {
 		if($v['type'] == 'image') {
