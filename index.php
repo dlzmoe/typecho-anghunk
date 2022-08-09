@@ -32,7 +32,10 @@ $this->need('header.php');
 
 
 								<!--</div>-->
-								<div class="posttime">发布于<?php $this->date('Y/m/d'); ?> · <span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('无评论'), _t('评论: 1'), _t(' 评论: %d')); ?></span></div>
+								<div class="posttime">
+								    <span>发布于<?php $this->date(' Y年 m月 d日 '); ?></span> · 
+								    <span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('无评论'), _t('评论: 1'), _t(' 评论: %d')); ?></span>
+								</div>
 							</div>
 							<div class="article-img">
 								<a href="<?php $this->permalink() ?>">

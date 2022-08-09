@@ -3,7 +3,7 @@
     <div class="main">
         <div class="container">
             <div class="main-content">
-                    <h1 class="post-title"><?php $this->title() ?></h1>
+                <h1 class="post-title"><?php $this->title() ?></h1>
                 <div class="autoMenu" id="autoMenu" data-autoMenu></div>
                 <div class="content" itemprop="articleBody">
                     <?php $this->content(); ?>

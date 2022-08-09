@@ -6,9 +6,9 @@
                 <div class="post-meta">
                     <h1 class="post-title"><?php $this->title() ?></h1>
                     <div class="post-time">
-                        <time> 发布于<?php $this->date('Y 年 m 月 d 日'); ?></time> / 
+                        <time> 发布于<?php $this->date('Y 年 m 月 d 日'); ?></time> 
                         <!--<span>阅读: <?php get_post_view($this) ?></span> / -->
-                        <span class="post-tags"><?php $this->tags('', true, ''); ?></span> 
+                       
                         <!--<a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a>-->
                     </div>
                 </div>
@@ -16,6 +16,7 @@
                 <div class="content"> 
                     <?php $this->content(); ?>
                 </div>
+                 <span class="post-tags">标签: <?php $this->tags('', true, ''); ?></span> 
                 <div class="prevornext">
                     <p><?php $this->theNext('%s', '已经是最新的文章啦'); ?></p>
                     <p><?php $this->thePrev('%s', '这是第一篇文章喔'); ?></p>
