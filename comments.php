@@ -46,8 +46,7 @@
 
 		<div class="comment-content">
 			<?php $parentMail = get_comment_at($comments->coid) ?><?php echo $parentMail; ?>
-			<?php $con = $comments->content;
-			echo getparseBiaoQing($con); ?>
+			<?php $con = $comments->content;echo getparseBiaoQing($con); ?>
 		</div>
 
 		<div class="comment-reply">

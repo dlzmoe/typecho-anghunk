@@ -11,42 +11,33 @@
 														'author'    =>  _t('<span>%s </span>发布的文章')
 													), '', ''); ?></div>
 			<?php while ($this->next()) : ?>
-
-					<article>
+				<section class="post-list">
+					<a href="<?php $this->permalink() ?>">
 						<div class="block-title">
-							<a href="<?php $this->permalink() ?>">
-								<?php $this->title() ?>
-							</a>
-						</div>
-						<div class="article-wrap">
-							<div class="article-text">
-								<div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
-								<!--<div class="block-time">-->
-								<!--	<span class="post-tags"><?php $this->tags('', true, ''); ?></span> -->
-
-
-								<!--</div>-->
-								<div class="posttime">发布于<?php $this->date('Y/m/d'); ?> · <span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('无评论'), _t('评论: 1'), _t(' 评论: %d')); ?></span></div>
-							</div>
 							<div class="article-img">
-								<a href="<?php $this->permalink() ?>">
-									<?php $options = Typecho_Widget::widget('Widget_Options');
-									if ($options->slt == '0') {
-										if (($this->fields->imgurl)) {
-											echo '<img src="' . $this->fields->imgurl . '">';
-										} else {
-											echo '';
-										}
-									} ?>
-								</a>
+								<?php $options = Typecho_Widget::widget('Widget_Options');
+								if ($options->slt == '0') {
+									if (($this->fields->imgurl)) {
+										echo '<img src="' . $this->fields->imgurl . '">';
+									} else {
+										echo '';
+									}
+								} ?>
 							</div>
+							<?php $this->title() ?>
 						</div>
-					</article>
-
+						<div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
+						<div class="posttime">
+							<span>发布于<?php $this->date(' Y年 m月 d日 '); ?></span>
+							<span class="post-tags"><?php $this->category(',', false); ?></span>
+							<!-- <span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('无评论'), _t('评论: 1'), _t(' 评论: %d')); ?></span> -->
+						</div>
+					</a>
+				</section>
 			<?php endwhile; ?>
 		<?php else : ?>
 			<div class="page404">
-				<h2>404 - 页面没找到</h2>
+				<div>404 - 页面没找到</div>
 				<p>你想查看的页面已被转移或删除了</p>
 			</div>
 		<?php endif; ?>

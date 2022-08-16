@@ -80,7 +80,9 @@ $(function () {
     });
   })
   
-
+  if(window.location.pathname == '/'){
+    $('.cap li:nth-child(1) a').addClass('active')
+  }
 
 })
 

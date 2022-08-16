@@ -18,46 +18,19 @@
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/simplebox.min.css'); ?>">
 	<?php $this->header(); ?>
-    <?php $this->options->baidutongji(); ?>
+	<?php $this->options->baidutongji(); ?>
 </head>
 
 <body>
-	<header class="header">
-		<div class="site-header">
-			<a id="logo" href="<?php $this->options->siteUrl(); ?>">
-				<?php $this->options->headertitle(); ?>
-			</a>
-
-			<nav id="nav-menu">
-				<ul class="topNav-items">
-					<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-					<?php while ($pages->next()) : ?>
-						<li class="menu-item<?php if ($this->is('page', $pages->slug)) : ?> current-menu-item<?php endif; ?>"><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
-					<?php endwhile; ?>
-					<?php $options = Typecho_Widget::widget('Widget_Options');
-					if ($options->search == '0') {
-						echo ('<li class="menu-item"><a class="search-form-input" href="#">Search</a></li>');
-					} ?>
-				</ul>
-			</nav>
-
-			<div class="m-menu-nav">
-				<a class="btn btn-primary" data-toggle="collapse" href="#menunav" role="button" aria-expanded="false" aria-controls="menunav">menu</a>
-				<div class="collapse" id="menunav">
-					<div class="card card-body">
-						<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-						<?php while ($pages->next()) : ?>
-							<a class="dropdown-item" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-						<?php endwhile; ?>
-						<?php $options = Typecho_Widget::widget('Widget_Options');
-						if ($options->search == '0') {
-							echo ('<a class="search-form-input dropdown-item" href="#">Search</a>');
-						} ?>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</header>
 	<div class="home">
-	    
+		<header class="header">
+			<div class="sidebar">
+				<div class="site-header">
+					<a id="logo" href="<?php $this->options->siteUrl(); ?>">
+						<img src="<?php $this->options->headerimg(); ?>" alt="author">
+						<span><?php $this->options->headertitle(); ?></span>
+					</a>
+				</div>
+				<?php $this->need('component/sidebar.php'); ?>
+			</div>
+		</header>
