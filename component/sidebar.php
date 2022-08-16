@@ -21,8 +21,3 @@
     <li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?>: <?php $comments->excerpt(50, '...'); ?></a></li>
   <?php endwhile; ?>
 </ul>
-
-<ul class="weight weight-hot">
-  <p class="title">热门文章: </p>
-  
-</ul>
