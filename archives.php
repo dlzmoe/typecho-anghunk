@@ -20,7 +20,7 @@ $this->need('header.php'); ?>
 
 							<li class="archives-item">
 								<div class="archives-item-content">
-									<h4 class="archives-item-title"><a href="<?php $archives->permalink(); ?>"><?php $archives->date(); ?></a></h4>
+									<h4 class="archives-item-title"><?php $archives->date(); ?></h4>
 									<?php
 									$year = $archives->year;
 									$month = $archives->month;

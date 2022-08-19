@@ -8,10 +8,6 @@
                 <h1 class="post-title"><?php $this->title() ?></h1>
                 <div class="post-time">
                     <time> 发布于<?php $this->date('Y 年 m 月 d 日'); ?></time>
-                    标签: <?php $this->tags('', true, ''); ?>
-                    <!--<span>阅读: <?php get_post_view($this) ?></span> / -->
-
-                    <!--<a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></a>-->
                 </div>
             </div>
             

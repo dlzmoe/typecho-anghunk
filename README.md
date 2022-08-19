@@ -39,6 +39,11 @@ $widget = $className::alloc();
 内置网站访客统计功能，可选择开启或者关闭。
 
 
+### 5. 建议使用插件
+
+![1660873144108.png](https://oss.zburu.com/i/2022/08/19/62fee9b933083.png)
+
+
 ## 图片展示
 
 图片更新不及时，请进入[演示网址](https://typecho.zburu.com)，查看最新的主题。

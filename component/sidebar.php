@@ -14,6 +14,16 @@
 
 <div class="autoMenu" id="autoMenu" data-autoMenu></div>
 
+<ul class="weight weight-hot">
+    <p class="title">最近文章: </p> <?php
+    $this->widget('Widget_Contents_Post_Recent','pageSize=6')->to($recent);
+    if($recent->have()):
+    while($recent->next()):
+    ?>
+    <li><a href="<?php $recent->permalink();?>"><?php $recent->title();?></a></li>
+    <?php endwhile; endif;?>
+</ul>
+
 <ul class="weight weight-comment">
   <p class="title">最新评论: </p>
   <?php $this->widget('Widget_Comments_Recent', 'ignoreAuthor=true')->to($comments); ?>

@@ -14,6 +14,11 @@ $this->need('header.php'); ?>
             <div class="tags">
                 <h1 class="post-title"><?php $this->title() ?></h1>
                 <div class="post-content">
+                     <ul class="cate">
+                        <?php $this->widget('Widget_Metas_Category_List')
+                            ->parse('<li><a href="{permalink}"><span>{name}</span> <span>({count})</span> </a> </li>'); ?>
+                    </ul>
+                    <hr>
                     <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=99999')->to($tags); ?>
                     <?php if ($tags->have()) : ?>
                         <ul class="tags-list">

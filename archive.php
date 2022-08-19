@@ -14,23 +14,13 @@
 				<section class="post-list">
 					<a href="<?php $this->permalink() ?>">
 						<div class="block-title">
-							<div class="article-img">
-								<?php $options = Typecho_Widget::widget('Widget_Options');
-								if ($options->slt == '0') {
-									if (($this->fields->imgurl)) {
-										echo '<img src="' . $this->fields->imgurl . '">';
-									} else {
-										echo '';
-									}
-								} ?>
-							</div>
 							<?php $this->title() ?>
 						</div>
-						<div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
 						<div class="posttime">
-							<span>发布于<?php $this->date(' Y年 m月 d日 '); ?></span>
+							<span>发布于<?php $this->date('Y年m月d日'); ?></span>
 							<span class="post-tags"><?php $this->category(',', false); ?></span>
-							<!-- <span>view: <?php get_post_view($this) ?> · <?php $this->commentsNum(_t('无评论'), _t('评论: 1'), _t(' 评论: %d')); ?></span> -->
+							<!--<span class="post-tags">view: <?php get_post_view($this) ?></span>-->
+							<span class="post-tags"><?php $this->commentsNum(_t('无评论'), _t('1评论'), _t('%d评论')); ?></span>
 						</div>
 					</a>
 				</section>
