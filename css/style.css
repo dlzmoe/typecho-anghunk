@@ -651,9 +651,9 @@ input[disabled] {
 #comments > .comment-list > .comment-body {
 	margin-bottom: 20px;
 	padding: 20px 15px 10px;
-	background: #eaeaea;
+	background: #f3f3f3;
 	box-sizing: border-box;
-	border-top: 2px solid #eee;
+	border-top: 2px solid #f3f3f3;
 	border-radius: 5px;
 }
 
@@ -680,15 +680,15 @@ input[disabled] {
 .comment-list .comment-body .comment-img .fn {
 	font-style: inherit;
 	font-size: 17px;
-	color: #000;
+	color: #808080;
 	margin-right: 10px;
 }
 
 .comment-list .comment-body .comment-img .avatar {
-	border-radius: 50%;
+    width: 50px;
+	border-radius: 10px;
 	margin-right: 8px;
 	border: 1px solid #eee;
-	display: none;
 }
 
 #comments > .comment-list > .comment-body > .comment-children .comment-body {
@@ -769,9 +769,10 @@ input[disabled] {
 	width: 60px;
 }
 
-#submit {
-	margin-left: 10px;
-}
+/*#submit {*/
+/*	color: rgb(38, 84, 148);*/
+/*    background: rgb(217, 233, 255);*/
+/*}*/
 
 #response {
 	font-size: 18px;

@@ -1,5 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php function threadedComments($comments, $singleCommentOptions)
+<?php 
+define('__TYPECHO_GRAVATAR_PREFIX__', 'https://cravatar.cn/avatar/');
+function threadedComments($comments, $singleCommentOptions)
 {
 
   $commentClass = '';
@@ -25,7 +27,7 @@
                                                             //以上部份 不用理会，是判断一些奇偶数评论和作者类的，下面的才是需要修改的，根据需要修改吧， php部份不需要 修改，只需要修改 HTML 部分，下面是我现在用的
                                                             ?>">
     <div class="comment-img">
-      <?php $comments->gravatar(50, $singleCommentOptions->defaultAvatar);    //头像 只输出 img 没有其它标签 
+      <?php $comments->gravatar(100, $singleCommentOptions->defaultAvatar);    //头像 只输出 img 没有其它标签 
       ?>
       <div class="comment-info">
         <cite class="fn">

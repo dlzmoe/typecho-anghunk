@@ -1,6 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 <div class="main">
+    <?php $this->need('component/nav.php'); ?>
 	<div class="main-content">
 		<?php if ($this->have()) : ?>
 			<div class="place"><?php $this->archiveTitle(array(
