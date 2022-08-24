@@ -7,7 +7,6 @@
 
 仓库地址: [https://github.com/zburu/Anghunk](https://github.com/zburu/Anghunk)
 
----
 
 常见报错可以查看 [Issues](https://github.com/zburu/Anghunk/issues)，我列出了一些部署过程中的问题和解决办法，并且如果你有问题也可以在 [Issues](https://github.com/zburu/Anghunk/issues) 提出，这里我会第一时间看到解决。
 
@@ -41,7 +40,7 @@ $widget = $className::alloc();
 内置网站访客统计功能，可选择开启或者关闭。
 
 
-### 5. 建议使用插件
+### 5. 推荐使用插件
 
 ![1660873144108.png](https://oss.zburu.com/i/2022/08/19/62fee9b933083.png)
 
