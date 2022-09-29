@@ -12,7 +12,13 @@
             </div>
             
             <div class="content">
-                <?php $this->content(); ?>
+                <?php
+                  $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+                  $replacement = '<img loading="lazy" class="slb" src="$1" alt="'.$this->title.'" title="'.$this->title.'">';
+                  $content = preg_replace($pattern, $replacement, $this->content);
+                  echo $content;
+                ?>
+                <span class="post-tag">标签: <?php $this->tags(' ', true, ''); ?></span>
             </div>
             
             <div class="prevornext">

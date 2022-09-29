@@ -1,7 +1,7 @@
 
 <div align="center"><h2>Typecho-Anghunk</h2></div>
 
->Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，简单而不失细节。
+>Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节。
 
 演示网址: [https://typecho.zburu.com](https://typecho.zburu.com)  
 

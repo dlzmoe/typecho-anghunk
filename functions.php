@@ -270,6 +270,8 @@ function getHotComments($limit = 10)
 */
 function themeConfig($form)
 {
+  $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, 'https://oss.zburu.com/author.png', _t('自定义网站favicon'), _t(''));
+  $form->addInput($favicon);
 
   $headerimg = new Typecho_Widget_Helper_Form_Element_Text('headerimg', NULL, 'https://oss.zburu.com/author.png', _t('左侧导航头像'), _t(''));
   $form->addInput($headerimg);

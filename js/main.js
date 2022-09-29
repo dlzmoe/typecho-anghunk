@@ -3,7 +3,6 @@ $(function () {
   $('.autoMenu ul>li:first-child').before('<p class="title" style="color: #b3b3b3;margin-bottom: 0;font-size:14px;">文章目录: </a>')
 
   // 图片灯箱事件
-  $('.content img').addClass('slb ')
   $('.slb').simplebox({ fadeSpeed: 400 });
 
   //绑定页面滚动事件
