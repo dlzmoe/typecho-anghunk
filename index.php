@@ -4,7 +4,7 @@
  * Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节，已经进入 3.0 版本，作者博客 <a href="https://zburu.com" target="_blank">https://zburu.com</a>
  * @package Anghunk
  * @author 子舒
- * @version 4.0
+ * @version 3.0
  * @link https://zburu.com
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -18,16 +18,16 @@ $this->need('header.php');
 				<?php if ($this->category != "cateslug") : ?>
 					<a href="<?php $this->permalink() ?>">
 						<div class="block-title">
-							
-								<?php $options = Typecho_Widget::widget('Widget_Options');
-								if ($options->slt == '0') {
-									if (($this->fields->imgurl)) {
-										echo '<div class="article-img" style="background-image:url(' . $this->fields->imgurl . ')"></div>';
-									} else {
-										echo '';
-									}
-								} ?>
-							
+
+							<?php $options = Typecho_Widget::widget('Widget_Options');
+							if ($options->slt == '0') {
+								if (($this->fields->imgurl)) {
+									echo '<div class="article-img" style="background-image:url(' . $this->fields->imgurl . ')"></div>';
+								} else {
+									echo '';
+								}
+							} ?>
+
 							<?php $this->title() ?>
 						</div>
 						<div class="block-content"><?php $this->excerpt(80, '...'); ?></div>
@@ -50,7 +50,7 @@ $this->need('header.php');
 
 	</main>
 	<div class="container">
-		<?php $this->need('footer.php'); ?>
+		<?php $this->need('component/footer.php'); ?>
 	</div>
 </div>
 </body>

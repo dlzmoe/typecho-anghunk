@@ -3,11 +3,18 @@ $(function () {
   $('.autoMenu ul>li:first-child').before('<p class="title" style="color: #b3b3b3;margin-bottom: 0;font-size:14px;">文章目录: </a>')
 
   // 图片灯箱事件
-  $('.slb').simplebox({ fadeSpeed: 400 });
+  $('.slb').simplebox({
+    fadeSpeed: 400
+  });
 
   //绑定页面滚动事件
   $('.top').on('click', function () {
-    $("html, body").animate({ scrollTop: 0 }, { duration: 500, easing: "swing" });
+    $("html, body").animate({
+      scrollTop: 0
+    }, {
+      duration: 500,
+      easing: "swing"
+    });
     return false;
   });
   $(window).bind('scroll', function () {
@@ -19,20 +26,6 @@ $(function () {
     }
   });
 
-  // 底部随机诗词
-  $.ajax({
-    url: 'https://api.emoao.com/api/yy?type=sc',
-    type: 'get',
-    success: function (data) {
-      $('#hitokoto').html(data.hitokoto);
-      $('#hitokoto_from').html(data.hitokoto_from);
-    },
-    error: function (data) {
-      console.log('error', data);
-    }
-  })
-
- 
   $('.bq-list .OwO-bar-item:nth-child(1)').addClass('active')
   $('.OwO-emoji ul:nth-child(1)').addClass('active-txt')
   $(".bq-list .OwO-bar-item").each(function (index) {
@@ -54,8 +47,7 @@ $(function () {
           var sel = document.selection.createRange();
           sel.text = myValue;
           this.focus();
-        }
-        else if (this.selectionStart || this.selectionStart == '0') {
+        } else if (this.selectionStart || this.selectionStart == '0') {
           //For browsers like Firefox and Webkit based
           var startPos = this.selectionStart;
           var endPos = this.selectionEnd;
@@ -79,11 +71,9 @@ $(function () {
       $("#textarea").insertAtCaret(txt)
     });
   })
-  
-  if(window.location.pathname == '/'){
+
+  if (window.location.pathname == '/') {
     $('.cap li:nth-child(1) a').addClass('active')
   }
 
 })
-
-

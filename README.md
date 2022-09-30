@@ -1,4 +1,3 @@
-
 <div align="center"><h2>Typecho-Anghunk</h2></div>
 
 >Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验，没有太过多余的色彩，简单而不失细节。
@@ -38,7 +37,6 @@ $widget = $className::alloc();
 ### 4. 网站访客统计
 
 内置网站访客统计功能，可选择开启或者关闭。
-
 
 ### 5. 推荐使用插件
 

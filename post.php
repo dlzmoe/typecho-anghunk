@@ -28,9 +28,9 @@
             <?php _getHistoryToday($this->created) ?>
         </div>
     </main>
-    <?php $this->need('comments.php'); ?>
+    <?php $this->need('component/comments.php'); ?>
     <div class="container">
-        <?php $this->need('footer.php'); ?>
+        <?php $this->need('component/footer.php'); ?>
     </div>
 </div>
 </div>

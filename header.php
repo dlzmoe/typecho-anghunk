@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/bootstrap.min.css'); ?>">
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/libs/css/simplebox.min.css'); ?>">
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('/css/style.css'); ?>">
+	<script src="<?php $this->options->themeUrl('/libs/js/jquery3.6.0.js'); ?>"></script>
 	<?php $this->header(); ?>
 	<?php $this->options->baidutongji(); ?>
 </head>
