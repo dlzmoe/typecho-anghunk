@@ -7,7 +7,7 @@ Anghunk 是一款基于 Typecho 博客程序的主题，主打写作阅读体验
 
 <p align="center">
   <a href="https://github.com/zburu/Anghunk/">
-    <img src="https://oss.zburu.com/i/2022/10/19/634f4d9781a19.png" alt="Logo" width="300px">
+    <img src="https://cdn.staticaly.com/gh/zburu/pic-cdn@main/2022/10/19/634f4d9781a19.png" alt="Logo" width="300px">
   </a>
   <p align="center">
     一个优雅的 Typecho 主题模板。
@@ -94,6 +94,12 @@ $widget = $className::alloc();
 ###### 4. 推荐使用插件
 
 ![1660873144108.png](https://oss.zburu.com/i/2022/08/19/62fee9b933083.png)
+
+###### 5. giscus评论功能
+
+本主题内置了typecho原生评论功能和giscus评论功能，后者是基于github的静态评论方式，如果不需要，请在 `/Anghunk/component/comments.php ` 文件的 `第86行` 处重新配置。
+
+详细配置地址: https://giscus.app
 
 
 ### 如何参与开源项目
