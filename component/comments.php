@@ -76,87 +76,114 @@ function threadedComments($comments, $singleCommentOptions)
 }
 ?>
 <div class="container">
+  <ul id="tabs">
+    切换评论模式：
+    <li><a href="#" title="tab1">giscus评论</a></li>
+    <li><a href="#" title="tab2">typecho原生评论</a></li>
+  </ul>
+  <div id="content">
+    <div id="tab1">
+      <!--   修改giscus参数     -->
+      <script src="https://giscus.app/client.js" data-repo="" data-repo-id="" data-category="Announcements" data-category-id="" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async>
+      </script>
+    </div>
+    <div id="tab2">
+      <div id="comments">
+        <?php $this->comments()->to($comments); ?>
 
-  <div id="comments">
-    <?php $this->comments()->to($comments); ?>
-
-    <?php if ($this->allow('comment')) : ?>
-      <div>
-        <div id="<?php $this->respondId(); ?>">
-          <div class="cancel-comment-reply">
-            <?php $comments->cancelReply(); ?>
-          </div>
-
-          <h4 id="response">
-            <?php _e('添加新评论'); ?>
-          </h4>
-          <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
-            <?php if ($this->user->hasLogin()) : ?>
-              <p>
-                <?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>">
-                  <?php $this->user->screenName(); ?>
-                </a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">
-                  <?php _e('退出'); ?> &raquo;
-                </a>
-              </p>
-            <?php else : ?>
-
-              <div class="input-group-wrap">
-                <p class="input-group">
-                  <input autocomplete="off" type="text" name="author" id="author" class="input" value="<?php $this->remember('author'); ?>" required />
-                  <label for="author" class="required user-label">
-                    <?php _e('昵称*'); ?>
-                  </label>
-                </p>
-                <p class="input-group">
-                  <input autocomplete="off" type="email" name="mail" id="mail" class="input" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required <?php endif; ?> />
-                  <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> class="required user-label" <?php endif; ?>>
-                    <?php _e('Email*'); ?>
-                  </label>
-                </p>
-                <p class="input-group">
-                  <input autocomplete="off" type="url" name="url" id="url" class="input" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required <?php endif; ?> />
-                  <label for="url" class="required user-label">
-                    <?php _e('url'); ?>
-                  </label>
-                </p>
+        <?php if ($this->allow('comment')) : ?>
+          <div>
+            <div id="<?php $this->respondId(); ?>">
+              <div class="cancel-comment-reply">
+                <?php $comments->cancelReply(); ?>
               </div>
 
-            <?php endif; ?>
-            <div class="form-group">
-              <div class="">
-                <textarea placeholder="说点什么？" name="text" id="textarea" class="input textarea" rows="4"><?php $this->remember('text'); ?></textarea>
-              </div>
+              <h4 id="response">
+                <?php _e('添加新评论'); ?>
+              </h4>
+              <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
+                <?php if ($this->user->hasLogin()) : ?>
+                  <p>
+                    <?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>">
+                      <?php $this->user->screenName(); ?>
+                    </a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">
+                      <?php _e('退出'); ?> &raquo;
+                    </a>
+                  </p>
+                <?php else : ?>
 
-              <p class="item-submit">
-                <a class="bq-button btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">OωO</a>
+                  <div class="input-group-wrap">
+                    <p class="input-group">
+                      <input autocomplete="off" type="text" name="author" id="author" class="input" value="<?php $this->remember('author'); ?>" required />
+                      <label for="author" class="required user-label">
+                        <?php _e('昵称*'); ?>
+                      </label>
+                    </p>
+                    <p class="input-group">
+                      <input autocomplete="off" type="email" name="mail" id="mail" class="input" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required <?php endif; ?> />
+                      <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> class="required user-label" <?php endif; ?>>
+                        <?php _e('Email*'); ?>
+                      </label>
+                    </p>
+                    <p class="input-group">
+                      <input autocomplete="off" type="url" name="url" id="url" class="input" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required <?php endif; ?> />
+                      <label for="url" class="required user-label">
+                        <?php _e('url'); ?>
+                      </label>
+                    </p>
+                  </div>
 
-                <button type="submit" id="submit" class="bq-button btn btn-primary">
-                  <?php _e('提交'); ?>
-                </button>
+                <?php endif; ?>
+                <div class="form-group">
+                  <div class="">
+                    <textarea placeholder="说点什么？" name="text" id="textarea" class="input textarea" rows="4"><?php $this->remember('text'); ?></textarea>
+                  </div>
+
+                  <p class="item-submit">
+                    <a class="bq-button btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">OωO</a>
+
+                    <button type="submit" id="submit" class="bq-button btn btn-primary">
+                      <?php _e('提交'); ?>
+                    </button>
 
 
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body bq-list">
-                  <?php echo parseBiaoQing(); ?>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body bq-list">
+                      <?php echo parseBiaoQing(); ?>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+              </form>
             </div>
+          </div>
+        <?php else : ?>
 
-          </form>
-        </div>
+        <?php endif; ?>
+
+        <?php if ($comments->have()) : ?>
+          <p style="color:#19130b;font-size:18px;">
+            <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?>
+          </p>
+          <?php $comments->listComments(); ?>
+          <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+        <?php endif; ?>
       </div>
-    <?php else : ?>
 
-    <?php endif; ?>
-
-    <?php if ($comments->have()) : ?>
-      <p style="color:#19130b;font-size:18px;">
-        <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?>
-      </p>
-      <?php $comments->listComments(); ?>
-      <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-    <?php endif; ?>
+    </div>
   </div>
-
 </div>
+
+<script>
+  $("#content>div").hide();
+  $("#tabs li:first").attr("id", "current");
+  $("#content>div:first").fadeIn();
+
+  $('#tabs a').click(function(e) {
+    e.preventDefault();
+    $("#content>div").hide();
+    $("#tabs li").attr("id", "");
+    $(this).parent().attr("id", "current");
+    $('#' + $(this).attr('title')).fadeIn();
+  });
+</script>
