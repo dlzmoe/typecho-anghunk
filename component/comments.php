@@ -76,18 +76,7 @@ function threadedComments($comments, $singleCommentOptions)
 }
 ?>
 <div class="container">
-  <ul id="tabs">
-    切换评论模式：
-    <li><a href="#" title="tab1">giscus评论</a></li>
-    <li><a href="#" title="tab2">typecho原生评论</a></li>
-  </ul>
-  <div id="content">
-    <div id="tab1">
-      <!--   修改giscus参数     -->
-      <script src="https://giscus.app/client.js" data-repo="" data-repo-id="" data-category="Announcements" data-category-id="" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async>
-      </script>
-    </div>
-    <div id="tab2">
+
       <div id="comments">
         <?php $this->comments()->to($comments); ?>
 
@@ -169,21 +158,4 @@ function threadedComments($comments, $singleCommentOptions)
           <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
         <?php endif; ?>
       </div>
-
-    </div>
-  </div>
 </div>
-
-<script>
-  $("#content>div").hide();
-  $("#tabs li:first").attr("id", "current");
-  $("#content>div:first").fadeIn();
-
-  $('#tabs a').click(function(e) {
-    e.preventDefault();
-    $("#content>div").hide();
-    $("#tabs li").attr("id", "");
-    $(this).parent().attr("id", "current");
-    $('#' + $(this).attr('title')).fadeIn();
-  });
-</script>
