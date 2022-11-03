@@ -270,13 +270,13 @@ function getHotComments($limit = 10)
 */
 function themeConfig($form)
 {
-  $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, 'https://oss.zburu.com/author.png', _t('自定义网站favicon'), _t(''));
+  $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, 'https://cdn.zburu.com/favicon.ico', _t('自定义网站favicon'), _t(''));
   $form->addInput($favicon);
 
-  $headerimg = new Typecho_Widget_Helper_Form_Element_Text('headerimg', NULL, 'https://oss.zburu.com/author.png', _t('左侧导航头像'), _t(''));
+  $headerimg = new Typecho_Widget_Helper_Form_Element_Text('headerimg', NULL, 'https://cdn.zburu.com/author.png', _t('左侧导航头像'), _t(''));
   $form->addInput($headerimg);
 
-  $headertitle = new Typecho_Widget_Helper_Form_Element_Text('headertitle', NULL, 'zburu', _t('左侧导航名称'), _t(''));
+  $headertitle = new Typecho_Widget_Helper_Form_Element_Text('headertitle', NULL, 'Anghunk', _t('左侧导航名称'), _t(''));
   $form->addInput($headertitle);
 
   $headerannouncement = new Typecho_Widget_Helper_Form_Element_Textarea('headerannouncement', NULL, '欢迎你在闲暇的时间来到我的网站！', _t('左侧简介'), _t(''));
