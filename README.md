@@ -93,7 +93,7 @@ $widget = $className::alloc();
 
 ###### 4. 推荐使用插件
 
-![1660873144108.png](https://oss.zburu.com/i/2022/08/19/62fee9b933083.png)
+![1660873144108.png](https://cdn.staticaly.com/gh/zburu/pic-cdn@main/2022/08/19/62fee9b933083.png)
 
 ###### 5. giscus评论功能
 
@@ -123,6 +123,6 @@ $widget = $className::alloc();
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/zburu/Anghunk/blob/master/LICENSE.txt)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE](https://github.com/zburu/Anghunk/blob/main/LICENSE)
 
 
